@@ -9,7 +9,11 @@
   function apply() {
     const theme = preference === 'system' ? (system.matches ? 'black' : 'light') : preference;
     document.documentElement.dataset.theme = theme;
-    document.querySelector('meta[name="theme-color"]').content = theme === 'black' ? '#000000' : '#ffffff';
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme === 'black' ? '#000000' : '#ffffff';
+    document.querySelectorAll('[data-theme-choice]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === preference));
+    });
   }
 
   apply();
@@ -17,21 +21,25 @@
     if (preference === 'system') apply();
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const select = document.getElementById('theme-select');
-    select.value = preference;
-    select.closest('.theme-control').hidden = false;
-    select.addEventListener('change', () => {
-      preference = valid(select.value);
-      apply();
-      try { localStorage.setItem(key, preference); } catch { /* Keep the choice for this page. */ }
+  function initialize() {
+    const control = document.querySelector('.theme-control');
+    if (!control) return;
+    control.querySelectorAll('[data-theme-choice]').forEach(button => {
+      button.addEventListener('click', () => {
+        preference = valid(button.dataset.themeChoice);
+        apply();
+        try { localStorage.setItem(key, preference); } catch { /* Keep the choice for this page. */ }
+      });
     });
+    apply();
+    control.hidden = false;
     window.addEventListener('storage', event => {
       if (event.key === key || event.key === null) {
         preference = valid(event.newValue);
-        select.value = preference;
         apply();
       }
     });
-  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, { once: true });
+  else initialize();
 })();

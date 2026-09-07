@@ -20,7 +20,7 @@ class Page(HTMLParser):
         if tag=='img':assert 'alt' in a, 'Image lacks alt attribute'
         assert tag not in {'iframe','form'}, 'Unexpected embedded page or form added'
         if tag=='script':
-            assert a in ({'src':'assets/copyright.js','defer':None},{'src':'assets/theme.js'}), 'Unexpected script added'
+            assert a in ({'src':'assets/copyright.js','defer':None},{'src':'assets/theme.js?v=20260907-icons'}), 'Unexpected script added'
 
 page=Page();page.feed((ROOT/'index.html').read_text(encoding='utf-8'))
 assert page.lang=='en' and page.h1==1
