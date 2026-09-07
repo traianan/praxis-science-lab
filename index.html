@@ -10,6 +10,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script src="assets/theme.js"></script>
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/copyright.js" defer></script>
   <meta property="og:type" content="website">
@@ -30,6 +31,14 @@
         <a href="#documentation">Documentation</a>
         <a href="#support">Support <span aria-hidden="true">↗</span></a>
       </nav>
+      <label class="theme-control" hidden>
+        <span class="visually-hidden">Color theme</span>
+        <select id="theme-select" name="theme">
+          <option value="light">Light</option>
+          <option value="black">Black</option>
+          <option value="system" selected>System</option>
+        </select>
+      </label>
     </header>
 
     <main id="main">

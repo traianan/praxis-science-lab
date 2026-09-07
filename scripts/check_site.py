@@ -20,7 +20,7 @@ class Page(HTMLParser):
         if tag=='img':assert 'alt' in a, 'Image lacks alt attribute'
         assert tag not in {'iframe','form'}, 'Unexpected embedded page or form added'
         if tag=='script':
-            assert a=={'src':'assets/copyright.js','defer':None}, 'Unexpected script added'
+            assert a in ({'src':'assets/copyright.js','defer':None},{'src':'assets/theme.js'}), 'Unexpected script added'
 
 page=Page();page.feed((ROOT/'index.html').read_text(encoding='utf-8'))
 assert page.lang=='en' and page.h1==1
@@ -42,7 +42,7 @@ def luminance(color):
     values=[int(color[i:i+2],16)/255 for i in (1,3,5)]
     linear=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in values]
     return sum(v*w for v,w in zip(linear,[.2126,.7152,.0722]))
-for foreground,background in [('#15233b','#ffffff'),('#536076','#ffffff'),('#1739d6','#ffffff'),('#536076','#f3f6fb'),('#344769','#e8edf9')]:
+for foreground,background in [('#15233b','#ffffff'),('#536076','#ffffff'),('#1739d6','#ffffff'),('#536076','#f3f6fb'),('#344769','#e8edf9'),('#f3f5fa','#000000'),('#b4bece','#111318'),('#a7baff','#000000'),('#d5dfff','#202b46'),('#bbc6d9','#111318')]:
     a,b=sorted([luminance(foreground),luminance(background)])
     ratio=(b+.05)/(a+.05)
     assert ratio>=4.5, f'Text contrast below 4.5: {foreground}/{background}'

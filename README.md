@@ -8,7 +8,7 @@ Website: https://traianan.github.io/praxis-science-lab/
 
 A single English homepage with the brand introduction, the first app marked **In development**, a documentation overview and GitHub support links. App-specific policies and secondary pages are intentionally deferred. No app is represented as already available on Google Play.
 
-Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
+Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Black / System selector defaults to System, follows device changes and saves only the theme preference in localStorage. Black uses a true black background. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
 
 ## Publishing
 
