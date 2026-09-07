@@ -18,7 +18,9 @@ class Page(HTMLParser):
         for key in ('href','src'):
             if key in a:self.links.append(a[key])
         if tag=='img':assert 'alt' in a, 'Image lacks alt attribute'
-        assert tag not in {'script','iframe','form'}, 'Unexpected runtime or form added'
+        assert tag not in {'iframe','form'}, 'Unexpected embedded page or form added'
+        if tag=='script':
+            assert a=={'src':'assets/copyright.js','defer':None}, 'Unexpected script added'
 
 page=Page();page.feed((ROOT/'index.html').read_text(encoding='utf-8'))
 assert page.lang=='en' and page.h1==1
