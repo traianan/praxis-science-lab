@@ -1,0 +1,17 @@
+Scientific Calculator
+
+Short description
+Scientific calculations, RPN, number bases, constants and unit conversions.
+
+Full description
+Work through scientific calculations with algebraic entry or an optional RPN stack. Switch between decimal, hexadecimal, octal and binary modes. Use trigonometric and logarithmic functions, constants, unit conversions and a local calculation history.
+
+The app opens in English. Romanian is available in Settings. Calculations work offline and no account is needed. History stores up to 50 results on your device.
+
+Real-number calculations use finite precision. Check important results independently. Developed by Traian Anghel and published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/scientific-calculator/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/scientific-calculator/privacy/
+Suggested category: Tools

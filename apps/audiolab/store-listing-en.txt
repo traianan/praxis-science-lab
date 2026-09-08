@@ -1,0 +1,17 @@
+AudioLab
+
+Short description
+Explore audio locally with spectrum tools, signal generation and file analysis.
+
+Full description
+Explore audio signals on your Android device. Use live microphone analysis, waveform and spectrum views, a spectrogram, signal generation and local audio-file analysis. Save sessions and export available charts or reports.
+
+Microphone access is requested when you start live analysis. Files are selected through the system picker. Processing and session storage are local, with no app account or cloud upload. English, Romanian and Spanish are available.
+
+Displayed levels and analysis depend on the device, microphone and signal. AudioLab is not a calibrated sound-level meter or a medical or hearing-diagnostic tool. Start generated audio at low volume. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/audiolab/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/audiolab/privacy/
+Suggested category: Music & Audio

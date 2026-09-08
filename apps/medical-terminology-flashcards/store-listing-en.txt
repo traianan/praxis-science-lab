@@ -1,0 +1,17 @@
+Medical Terminology Flashcards
+
+Short description
+Study medical word parts with flashcards, quizzes and offline practice.
+
+Full description
+Build your understanding of medical terminology through focused study. Explore terms and word parts, practice with flashcards and quizzes, and assemble word parts. Favorites, spaced repetition and progress tracking help organize study sessions.
+
+Core learning is designed to work offline. Pronunciation requires a compatible installed offline Android voice. No account is required. Designed for post-secondary and vocational learning.
+
+This app is not a medical device and does not diagnose, treat, cure or prevent any medical condition. It does not provide medical advice. Consult a healthcare professional for medical advice, diagnosis or treatment. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/medical-terminology-flashcards/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/medical-terminology-flashcards/privacy/
+Suggested category: Education

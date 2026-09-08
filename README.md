@@ -6,7 +6,7 @@ Website: https://traianan.github.io/praxis-science-lab/
 
 ## Current scope
 
-A single English homepage with the brand introduction, the first app marked **In development**, a documentation overview and GitHub support links. App-specific policies and secondary pages are intentionally deferred. No app is represented as already available on Google Play.
+An English homepage and app-specific information, privacy, support and Google Play preparation pages for five Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
 
 Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Dark / System group of icon buttons (sun, moon, monitor) highlights the active preference, defaults to System, follows device changes and saves only the theme preference in localStorage. Dark uses a true black background; its internal `black` value is retained for compatibility with saved preferences. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
 
@@ -16,20 +16,15 @@ GitHub Pages publishes `main` from the repository root. `.nojekyll` keeps the si
 
 To preview locally, run `python -m http.server 8000` from this directory. Run `python scripts/check_site.py` for static integrity checks. Browser layout/interaction testing is not claimed by that check.
 
-## Future app pages
+## App documentation
 
-Use one stable directory per app. Suggested paths, **not created yet**:
+Each app uses `apps/<slug>/` with `privacy/`, `support/`, `publishing/`, English store text and `media/`. The shared guide is at `publishing/`; website privacy is at `privacy/`.
 
-```text
-apps/
-  medical-terminology-flashcards/
-    index.html
-    privacy/index.html
-    support/index.html
-    media/
-```
+Reviewed source inventories live in `scripts/apps.json`. Regenerate pages with `python scripts/build_documents.py`; feature graphics with `python scripts/build_media.py` (Pillow and Windows Arial). `scripts/build_icons.cjs` uses the bundled Sharp runtime and also synchronizes three Android projects' launcher PNGs; run it only when intentionally updating those app icons. The calculator and terminology icon exports preserve existing app designs. No medical learning content was created.
 
-For example, the future public policy would be located at `https://traianan.github.io/praxis-science-lab/apps/medical-terminology-flashcards/privacy/`. Publish it before adding that URL to Google Play or linking it from the homepage. The earlier provisional `physlab.app` reference in the Android project is unchanged by this separate homepage task.
+Run `python scripts/check_site.py` to validate all pages, local links, listing lengths, graphic dimensions and text contrast. This does not establish Google Play approval, legal identity verification, provider-specific Data safety answers, a completed closed test or device QA.
+
+The terminology app's current release contains no production dataset and must not be submitted as a functioning learning app. Its governed embedded-policy/URL update remains a separate tracked release item. Ceas Atomic's network-provider Data safety review remains open. All final declarations must match the exact uploaded artifact and all active variants.
 
 ## Brand assets
 

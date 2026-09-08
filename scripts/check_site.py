@@ -3,6 +3,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import xml.etree.ElementTree as ET
+import json
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -20,19 +21,33 @@ class Page(HTMLParser):
         if tag=='img':assert 'alt' in a, 'Image lacks alt attribute'
         assert tag not in {'iframe','form'}, 'Unexpected embedded page or form added'
         if tag=='script':
-            assert a in ({'src':'assets/copyright.js','defer':None},{'src':'assets/theme.js?v=20260907-icons'}), 'Unexpected script added'
+            src=urlsplit(a.get('src',''))
+            assert not src.scheme and not src.netloc
+            assert Path(src.path).name in {'copyright.js','theme.js'}, 'Unexpected script added'
 
-page=Page();page.feed((ROOT/'index.html').read_text(encoding='utf-8'))
-assert page.lang=='en' and page.h1==1
-assert len(page.ids)==len(set(page.ids)), 'Duplicate IDs'
-for link in page.links:
-    url=urlsplit(link)
-    if url.scheme:
-        assert url.scheme=='https', f'Non-HTTPS link: {link}'
-    elif url.path:
-        assert not url.path.startswith('/'), 'Root-absolute path breaks the project Pages prefix'
-        assert (ROOT/unquote(url.path)).exists(), f'Missing local asset: {link}'
-    if not url.scheme and url.fragment:assert url.fragment in page.ids, f'Broken anchor: {link}'
+pages={}
+for file in [ROOT/'index.html', *sorted((ROOT/'apps').rglob('*.html')), ROOT/'privacy/index.html', ROOT/'publishing/index.html']:
+    page=Page();page.feed(file.read_text(encoding='utf-8'));pages[file.resolve()]=page
+    assert page.lang=='en' and page.h1==1, f'Language or main heading: {file}'
+    assert len(page.ids)==len(set(page.ids)), f'Duplicate IDs: {file}'
+for file,page in pages.items():
+    for link in page.links:
+        url=urlsplit(link)
+        if url.scheme:
+            assert url.scheme in {'https','mailto'}, f'Unexpected scheme: {link}'
+            continue
+        assert not url.netloc and not url.path.startswith('/'), f'Non-project-relative link: {link}'
+        target=(file.parent/unquote(url.path)).resolve() if url.path else file
+        assert target.is_relative_to(ROOT.resolve()), f'Asset outside site: {link}'
+        if target.is_dir():target=target/'index.html'
+        assert target.exists(), f'Missing local asset: {file}: {link}'
+        if url.fragment:assert url.fragment in pages[target].ids, f'Broken anchor: {link}'
+apps=json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
+for app in apps:
+    assert len(app['title'])<=30 and len(app['short'])<=80 and len(app['description'])<=4000
+    from PIL import Image
+    with Image.open(ROOT/'apps'/app['slug']/'media/feature-graphic.png') as im:
+        assert im.size==(1024,500) and im.mode=='RGB'
 for path in (ROOT/'assets').glob('*.svg'):
     root=ET.parse(path).getroot();assert root.get('viewBox'), f'SVG lacks viewBox: {path}'
 css=(ROOT/'assets/site.css').read_text()
@@ -48,4 +63,4 @@ for foreground,background in [('#15233b','#ffffff'),('#536076','#ffffff'),('#173
     assert ratio>=4.5, f'Text contrast below 4.5: {foreground}/{background}'
     print(f'Contrast {foreground}/{background}: {ratio:.2f}:1')
 assert (ROOT/'.nojekyll').exists()
-print(f'PASS: English page, heading structure, {len(page.links)} links/assets, SVGs, responsive/focus/reduced-motion CSS and primary text contrast. Secondary pages are deferred.')
+print(f'PASS: {len(pages)} English pages, local links/anchors/assets, five store field limits and feature graphics, SVGs, responsive/focus/reduced-motion CSS and text contrast.')

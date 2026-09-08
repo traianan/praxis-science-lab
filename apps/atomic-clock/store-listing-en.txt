@@ -1,0 +1,17 @@
+Atomic Clock
+
+Short description
+Check network time, compare time zones and use a stopwatch or countdown.
+
+Full description
+Compare your device clock with network time. Atomic Clock queries time servers using NTP and can use an HTTPS fallback when configured. View synchronization status and the measured clock offset, choose time zones, and use a stopwatch or countdown.
+
+Select a time server, adjust synchronization settings and choose a 12-hour or 24-hour display. English, Romanian and Spanish are available.
+
+Synchronization needs an Internet connection. Displayed accuracy depends on the server, network and device. This is a general time utility, not a certified time reference. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/atomic-clock/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/atomic-clock/privacy/
+Suggested category: Tools

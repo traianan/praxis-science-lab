@@ -1,0 +1,17 @@
+Frequency Sound Generator
+
+Short description
+Generate tones, explore waveforms, run frequency sweeps and export WAV files.
+
+Full description
+Explore sound with sine, square, sawtooth and triangle waves. Set a frequency, choose the output channel, adjust volume and run a frequency sweep. Save presets, select musical notes, set a stop timer and export a generated WAV file.
+
+Generation and settings work on your device without an account. English, Romanian and Spanish are available. Actual audible output depends on your device, speakers and headphones.
+
+Start at a low volume and keep listening sessions comfortable. This app is not a hearing test, medical treatment or calibrated measurement instrument. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/frequency-generator/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/frequency-generator/privacy/
+Suggested category: Tools

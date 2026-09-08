@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1739d6"><meta name="description" content="Release preparation for Android apps published by Praxis Science Lab.">
+<title>Google Play Publishing Kit | Praxis Science Lab</title><link rel="canonical" href="https://traianan.github.io/praxis-science-lab/publishing/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<script src="../assets/theme.js?v=20260907-icons"></script>
+<link rel="stylesheet" href="../assets/site.css?v=20260908-docs">
+<script src="../assets/copyright.js" defer></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a><div class="page-shell">
+<header class="site-header"><a class="brand" href="../" aria-label="Praxis Science Lab home"><img src="../assets/logo-mark.svg" width="48" height="48" alt=""><span class="wordmark">PRAXIS<span>SCIENCE LAB</span></span></a>
+<nav aria-label="Main navigation"><a href="../#apps">Our apps</a><a href="../publishing/">Publishing kit</a><a href="mailto:traiananghel@gmail.com">Contact</a></nav><div class="theme-control" role="group" aria-label="Color theme" hidden>
+        <button type="button" data-theme-choice="light" aria-label="Light theme" title="Light" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        </button>
+        <button type="button" data-theme-choice="black" aria-label="Dark theme" title="Dark" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14a8.5 8.5 0 0 1-10.5-10.5A8.5 8.5 0 1 0 20.5 14Z"/></svg>
+        </button>
+        <button type="button" data-theme-choice="system" aria-label="System theme" title="System" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v4m-4 0h8"/></svg>
+        </button>
+      </div></header>
+<main id="main" class="document"><p class="eyebrow">PRAXIS SCIENCE LAB / ANDROID</p><h1>Google Play Publishing Kit</h1><p class="document-lead">Release preparation for Android apps published by Praxis Science Lab.</p><p>Reviewed on 8 September 2026. These materials prepare releases; they do not guarantee acceptance or replace the checks in the actual Play Console account.</p>
+<h2>Release order</h2><p>Start with Scientific Calculator. Each other app has an independent release checklist. Account verification and access to production are separate steps; releasing one app does not automatically release the others.</p>
+<h2>Account and testing</h2><p>Use the verified legal identity required by Google and Praxis Science Lab as the public publishing brand where permitted. A brand name does not itself establish a legal organization. Verify the public support email. For applicable new personal accounts, Google requires 12 testers continuously opted in for 14 days before applying for production access. Collect real engagement and feedback; do not manufacture test reports or reviews.</p>
+<p>For the educational terminology app, review Google's Medical Reference and Education declaration and clarify the account-type requirement before choosing the account solely around this project. Educational intent does not make it a clinical device, but does not automatically remove Google's health-content declaration.</p>
+<h2>Submission checks</h2><ul><li>Build a release AAB with a protected upload key, a stable package ID and an increasing version code. Never publish signing keys or tester addresses.</li><li>New mobile submissions currently require target API 36. Inspect the final bundle, not only source configuration. Validate 16 KB native-library compatibility and test on representative devices.</li><li>Complete App access, Ads, Data safety, Target audience, IARC content rating and the Health declaration from actual behavior and content. Do not choose adult-only audiences merely to avoid child-directed requirements.</li><li>Link the app-specific public HTML privacy policy in Play Console and within the app. Reconcile every active version and all SDK behavior with it.</li><li>Check crash handling, offline behavior, accessibility, permissions, background audio and exports where applicable. Run the Play pre-launch report and resolve findings.</li></ul>
+<h2>Store assets</h2><p>Prepare a title up to 30 characters, short description up to 80 and full description up to 4,000. Use a distinct 512 × 512 app icon and a 1024 × 500 feature graphic. Supply at least two actual screenshots: JPEG or 24-bit PNG, dimensions 320–3840 pixels, longest side at most twice the shortest. Add other form-factor assets only for supported devices. Avoid rankings, endorsement claims, false availability or fabricated UI.</p>
+<h2>Tester handoff</h2><p>Send invitations privately once the closed track is ready. Ask testers to install through the opt-in link, use the app over the test period and report device/version, steps, expected result and actual result. Keep a private record of issues and fixes. No tester list belongs on this public site.</p>
+<h2>Account-only decisions</h2><p>The owner must complete identity verification and confirm countries, pricing, audience, ratings, production-access answers and any required declarations in Play Console. No account settings, legal attestations or store submission have been made by this website task.</p>
+<h2>Official references</h2><ul>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/14151465?hl=en">Personal-account testing requirements</a></li>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/13634885?hl=en">Developer account types</a></li>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/10144311?hl=en">User Data and privacy policies</a></li>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/10787469?hl=en">Data safety definitions and exemptions</a></li>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/11926878?hl=en">Target API requirements</a></li>
+<li><a href="https://developer.android.com/guide/practices/page-sizes">16 KB page-size compatibility</a></li>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/9866151?hl=en">Graphic and screenshot requirements</a></li>
+<li><a href="https://support.google.com/googleplay/android-developer/answer/14738291?hl=en">Health apps declaration, including educational reference</a></li>
+<li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google advertising SDK data disclosure</a></li></ul><h2>App kits</h2><ul><li><a href="../apps/scientific-calculator/publishing/">Calculator Științific</a></li><li><a href="../apps/atomic-clock/publishing/">Ceas Atomic</a></li><li><a href="../apps/frequency-generator/publishing/">Frequency Sound Generator</a></li><li><a href="../apps/audiolab/publishing/">AudioLab</a></li><li><a href="../apps/medical-terminology-flashcards/publishing/">Medical Terminology Flashcards</a></li></ul></main>
+<footer class="site-footer"><p>© <span id="copyright-years">2026</span> Praxis Science Lab</p><a href="../privacy/">Website privacy</a><a href="mailto:traiananghel@gmail.com">traiananghel@gmail.com</a></footer></div></body></html>

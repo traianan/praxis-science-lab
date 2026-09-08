@@ -27,3 +27,14 @@
 .theme-control svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:950px){.site-header{grid-template-columns:1fr auto;gap:12px}.site-header nav{grid-column:1/-1;grid-row:2;justify-self:stretch}.theme-control{grid-column:2;grid-row:1}}
 @media(max-width:420px){.site-header{column-gap:8px}.brand{gap:8px}.brand img{width:34px;height:34px}.wordmark{font-size:18px}.wordmark span{font-size:8px}}
+/* Public documentation and app release materials. */
+.document{max-width:880px;margin:64px auto 88px;overflow-wrap:anywhere}
+.document h1{font:normal clamp(32px,5vw,56px)/1.12 Georgia,serif;letter-spacing:-.035em;margin:18px 0 24px}
+.document h2{font-size:25px;margin:40px 0 16px;line-height:1.25}
+.document h3{font-size:18px;margin:24px 0 12px}
+.document p,.document li{color:var(--muted);line-height:1.75}
+.document li{margin:10px 0}.document a,.app-description h3 a{color:var(--accent)}
+.document-lead{font-size:21px}.document-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin:28px 0;padding:18px 0;border-block:1px solid var(--line)}
+.document table{width:100%;border-collapse:collapse;font-size:15px}.document th,.document td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}.document th{color:var(--ink)}.document td{color:var(--muted)}
+.apps .app-card+.app-card{margin-top:18px}.app-description .text-link{display:inline-block;margin-top:12px;min-height:44px}
+@media(max-width:700px){.document{margin-top:40px}.document th,.document td{padding:8px;font-size:13px}}
