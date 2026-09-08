@@ -20,6 +20,18 @@ def items(values):
 
 def page(route, title, subtitle, body):
     prefix = '../' * len(Path(route).parts) if route else './'
+    parts = Path(route).parts
+    navigation = ''
+    back = f'<a class="back-link" href="{prefix}"><span aria-hidden="true">←</span> Back to home</a>'
+    if len(parts) >= 2 and parts[0] == 'apps':
+        app_prefix = '../' if len(parts) > 2 else './'
+        back = (f'<a class="back-link" href="{app_prefix}"><span aria-hidden="true">←</span> Back to app</a>'
+                if len(parts) > 2 else f'<a class="back-link" href="{prefix}#apps"><span aria-hidden="true">←</span> All apps</a>')
+        links = []
+        for section, label in [('privacy', 'Privacy policy'), ('support', 'Support &amp; testing'), ('publishing', 'Google Play materials')]:
+            current = ' aria-current="page"' if len(parts) > 2 and parts[2] == section else ''
+            links.append(f'<a href="{app_prefix}{section}/"{current}>{label}</a>')
+        navigation = '<nav class="document-links" aria-label="App navigation">'+''.join(links)+'</nav>'
     output = ROOT/route/'index.html'
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(f'''<!doctype html>
@@ -28,12 +40,12 @@ def page(route, title, subtitle, body):
 <title>{e(title)} | Praxis Science Lab</title><link rel="canonical" href="{BASE}{route}/">
 <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
 <script src="{prefix}assets/theme.js?v=20260907-icons"></script>
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20260908-docs">
+<link rel="stylesheet" href="{prefix}assets/site.css?v=20260908-nav">
 <script src="{prefix}assets/copyright.js" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><div class="page-shell">
 <header class="site-header"><a class="brand" href="{prefix}" aria-label="Praxis Science Lab home"><img src="{prefix}assets/logo-mark.svg" width="48" height="48" alt=""><span class="wordmark">PRAXIS<span>SCIENCE LAB</span></span></a>
 <nav aria-label="Main navigation"><a href="{prefix}#apps">Our apps</a><a href="{prefix}publishing/">Publishing kit</a><a href="mailto:{EMAIL}">Contact</a></nav>{theme}</header>
-<main id="main" class="document"><p class="eyebrow">PRAXIS SCIENCE LAB / ANDROID</p><h1>{e(title)}</h1><p class="document-lead">{e(subtitle)}</p>{body}</main>
+<main id="main" class="document">{back}<p class="eyebrow">PRAXIS SCIENCE LAB / ANDROID</p><h1>{e(title)}</h1><p class="document-lead">{e(subtitle)}</p>{navigation}{body}<div class="document-return">{back}</div></main>
 <footer class="site-footer"><p>© <span id="copyright-years">2026</span> Praxis Science Lab</p><a href="{prefix}privacy/">Website privacy</a><a href="mailto:{EMAIL}">{EMAIL}</a></footer></div></body></html>''',encoding='utf-8')
 
 contact = f'<p>Praxis Science Lab is the publishing brand used by Traian Anghel. For support or privacy questions, email <a href="mailto:{EMAIL}">{EMAIL}</a>. Include the app name and version. Do not send passwords, medical records, private recordings or other sensitive information.</p>'
@@ -44,8 +56,7 @@ for a in APPS:
     slug=a['slug']; route=f'apps/{slug}'; url=BASE+route+'/'
     media=ROOT/route/'media'; media.mkdir(parents=True,exist_ok=True)
     cards.append(f'''<article class="app-card"><div class="app-description"><div class="app-title-line"><h3><a href="{route}/">{e(a['name'])}</a></h3><span class="status">{e(a['status'])}</span></div><p>{e(a['short'])}</p><p class="app-platform">ANDROID</p><a class="text-link" href="{route}/">App information, privacy and support <span aria-hidden="true">↗</span></a></div></article>''')
-    links=f'<div class="document-links"><a href="{url}privacy/">Privacy policy</a><a href="{url}support/">Support &amp; testing</a><a href="{url}publishing/">Google Play materials</a></div>'
-    intro = f'<p><span class="status">{e(a["status"])}</span> Not yet available on Google Play.</p>{links}'
+    intro = f'<p><span class="status">{e(a["status"])}</span> Not yet available on Google Play.</p>'
     if slug=='medical-terminology-flashcards':
         desc='<p>An educational terminology study project. Release preparation and the production learning content are still in progress.</p>'
     else: desc=paragraphs(a['description'])
@@ -91,6 +102,7 @@ home=home.replace('Each app will have its own privacy policy, legal information 
 home=home.replace('App-specific pages are coming with our releases.','<a href="publishing/">Open the Google Play publishing kit</a>')
 home=home.replace('Have a question about a project or something to report? Our public GitHub support area is the place to start.',f'For app support or privacy questions, email <a href="mailto:{EMAIL}">{EMAIL}</a>.')
 home=home.replace('assets/site.css?v=20260907-icons','assets/site.css?v=20260908-docs')
+home=home.replace('assets/site.css?v=20260908-docs','assets/site.css?v=20260908-nav')
 home=home.replace('<p>Curiosity, put into practice.</p>','<a href="privacy/">Website privacy</a>')
 (ROOT/'index.html').write_text(home,encoding='utf-8')
 

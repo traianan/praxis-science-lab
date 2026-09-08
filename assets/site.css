@@ -38,3 +38,8 @@
 .document table{width:100%;border-collapse:collapse;font-size:15px}.document th,.document td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}.document th{color:var(--ink)}.document td{color:var(--muted)}
 .apps .app-card+.app-card{margin-top:18px}.app-description .text-link{display:inline-block;margin-top:12px;min-height:44px}
 @media(max-width:700px){.document{margin-top:40px}.document th,.document td{padding:8px;font-size:13px}}
+.document-links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:6px;text-decoration:none}
+.document-links a:hover{background:var(--wash);text-decoration:underline}
+.document-links a[aria-current="page"]{background:var(--accent);color:var(--paper);font-weight:700}
+.back-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-bottom:20px;font-weight:600}
+.document-return{margin-top:40px;padding-top:20px;border-top:1px solid var(--line)}
