@@ -6,7 +6,7 @@ Scope: five distinct Android applications. `ceas-atomic-scaffold` is a scaffold 
 
 These are source observations, not signed-artifact or Google Play approvals.
 
-## Calculator Științific
+## Scientific Calculator
 
 Package: `com.traian64.calcstiintificcniorga`
 
@@ -25,7 +25,7 @@ Outstanding:
 - Final upload-key-signed AAB and verification on a physical Android device are still required.
 - Complete account verification, actual audience/IARC forms, and the closed test required by the account.
 
-## Ceas Atomic
+## Atomic Clock
 
 Package: `app.physlab.ceas_atomic`
 

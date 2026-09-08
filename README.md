@@ -24,7 +24,7 @@ Reviewed source inventories live in `scripts/apps.json`. Regenerate pages with `
 
 Run `python scripts/check_site.py` to validate all pages, local links, listing lengths, graphic dimensions and text contrast. This does not establish Google Play approval, legal identity verification, provider-specific Data safety answers, a completed closed test or device QA.
 
-The terminology app's current release contains no production dataset and must not be submitted as a functioning learning app. Its governed embedded-policy/URL update remains a separate tracked release item. Ceas Atomic's network-provider Data safety review remains open. All final declarations must match the exact uploaded artifact and all active variants.
+The terminology app's current release contains no production dataset and must not be submitted as a functioning learning app. Its governed embedded-policy/URL update remains a separate tracked release item. Atomic Clock's network-provider Data safety review remains open. All final declarations must match the exact uploaded artifact and all active variants.
 
 ## Brand assets
 
