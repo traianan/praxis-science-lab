@@ -6,6 +6,7 @@ from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[1]
 for a in json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8')):
+    if not a.get('publishing_assets', True): continue
     folder=ROOT/'apps'/a['slug'];url=f'https://traianan.github.io/praxis-science-lab/apps/{a["slug"]}/'
     shots=sorted((folder/'media').glob('screenshot-*.png'))
     if a['slug']!='medical-terminology-flashcards':assert len(shots)>=2,a['slug']

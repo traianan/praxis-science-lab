@@ -61,7 +61,7 @@ for a in APPS:
         desc='<p>An educational terminology study project. Release preparation and the production learning content are still in progress.</p>'
     else: desc=paragraphs(a['description'])
     page(route,a['name'],a['short'],intro+desc+f'<h2>Language</h2><p>{e(a["language"])}</p><h2>Using the app</h2><p>{e(a["safety"])}</p>'+contact)
-    privacy=f'<p>Effective date: {DATE}. This notice describes Android version {e(a["version"])} and the configuration documented below.</p>'+contact
+    privacy=f'<p>Effective date: {a.get("policy_date", DATE)}. This notice describes Android version {e(a["version"])} and the configuration documented below.</p>'+contact
     privacy+=f'<h2>Information handled by the app</h2>{paragraphs(a["data"])}<h2>Permissions, services and sharing</h2>{paragraphs(a["permissions"])}<h2>Retention and deletion</h2>{paragraphs(a["retention"])}'
     privacy+='<h2>Security</h2><p>Private app files use Android application storage protections. No additional database-encryption guarantee is made. Keep your device protected and control access to files you export. There is no Praxis Science Lab account to delete for this app.</p>'
     privacy+='<h2>Support messages and external pages</h2>'+support_privacy+external
@@ -92,6 +92,10 @@ for a in APPS:
     if shots:
         body+='<p>Actual Android test-build captures, prepared for listing review. Recheck against the final upload build.</p><ul>'+''.join(f'<li><a href="../media/{shot.name}">{e(shot.stem.replace("-"," ").title())}</a></li>' for shot in shots)+'</ul>'
     body+='<h2>Remaining release checks</h2>'+items(a['gaps'])+f'<p><a href="{BASE}publishing/">Shared Google Play preparation guide</a></p>'
+    if not a.get('publishing_assets', True):
+        body = re.sub(r'<p><a href="../publishing-kit.zip".*?</p>', '', body)
+        body = re.sub(r'<p><a href="../media/app-icon.png".*?</p>', '', body)
+        body = re.sub(r'<p><a href="../media/feature-graphic.png".*?</p>', '', body)
     page(route+'/publishing',a['name']+' — Publishing Materials','English listing, data inventory, graphics and release checks.',body)
 
 start=home.index('<article class="app-card">')
@@ -129,3 +133,4 @@ guide='''<p>Reviewed on 8 September 2026. These materials prepare releases; they
 guide+='<h2>App kits</h2><ul>'+''.join(f'<li><a href="../apps/{a["slug"]}/publishing/">{e(a["name"])}</a></li>' for a in APPS)+'</ul>'
 page('publishing','Google Play Publishing Kit','Release preparation for Android apps published by Praxis Science Lab.',guide)
 print(f'Built documentation for {len(APPS)} Android apps, plus website privacy and publishing guide.')
+

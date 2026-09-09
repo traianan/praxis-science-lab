@@ -1,0 +1,19 @@
+XLab Tools
+
+Short description
+A screen ruler, digital level, tone generator and sound analysis in one app.
+
+Full description
+Measure and explore with four tools on your Android phone. Calibrate the screen ruler, check tilt with the digital level, generate sine, square or triangle tones and run frequency sweeps.
+
+Sound Meter offers live levels, an oscilloscope and an FFT spectrum. Switch views while keeping measurements and controls visible. Read the built-in Help before your first measurement; calibration and session saving have dedicated dialogs.
+
+Save ruler and level readings, tone presets and sound-level sessions locally. Choose a light, dark or system theme and configure screen wakefulness and level haptics. The current development version works offline without an account.
+
+Measurements depend on the phone and calibration. Sound levels are shown in dBFS until a reference adjustment is applied; adjusted SPL remains an estimate. Start generated tones at low volume. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/xlab-tools/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/xlab-tools/privacy/
+Suggested category: Tools

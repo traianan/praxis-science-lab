@@ -45,6 +45,7 @@ for file,page in pages.items():
 apps=json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
 for app in apps:
     assert len(app['title'])<=30 and len(app['short'])<=80 and len(app['description'])<=4000
+    if not app.get("publishing_assets", True): continue
     from PIL import Image
     with Image.open(ROOT/'apps'/app['slug']/'media/feature-graphic.png') as im:
         assert im.size==(1024,500) and im.mode=='RGB'
@@ -63,4 +64,4 @@ for foreground,background in [('#15233b','#ffffff'),('#536076','#ffffff'),('#173
     assert ratio>=4.5, f'Text contrast below 4.5: {foreground}/{background}'
     print(f'Contrast {foreground}/{background}: {ratio:.2f}:1')
 assert (ROOT/'.nojekyll').exists()
-print(f'PASS: {len(pages)} English pages, local links/anchors/assets, five store field limits and feature graphics, SVGs, responsive/focus/reduced-motion CSS and text contrast.')
+print(f'PASS: {len(pages)} English pages, local links/anchors/assets, store field limits and available feature graphics, SVGs, responsive/focus/reduced-motion CSS and text contrast.')

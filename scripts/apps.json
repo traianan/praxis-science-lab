@@ -58,5 +58,45 @@
     "checks": ["Use only an approved production content build for store screenshots and release testing.", "Test offline study, flashcards, quizzes, word building, progress and selective reset.", "Verify offline pronunciation and behavior when no offline voice exists.", "Complete TalkBack traversal and any configured consent/ad flows before release."],
     "evidence": ["docs/play/PRIVACY_POLICY.md", "docs/play/READINESS.md", "docs/RELEASE_ISSUES.md", "app/src/main/AndroidManifest.xml", "app/build.gradle.kts"],
     "gaps": ["Production educational content is absent. Do not publish the listing as a usable released learning product or reuse synthetic test screenshots.", "Final audience, health declaration, account type, advertising configuration, Data safety and manual accessibility/device checks remain open.", "The existing app's embedded policy and provisional URL still require a governed update to match this public policy before distribution."]
+  },
+  {
+    "slug": "xlab-tools",
+    "name": "XLab Tools",
+    "title": "XLab Tools",
+    "repo": "XLab-Tools",
+    "package": "com.xlab.tools",
+    "version": "0.6.1 (8)",
+    "language": "English. Additional languages are planned.",
+    "status": "In development",
+    "category": "Tools",
+    "publishing_assets": false,
+    "short": "A screen ruler, digital level, tone generator and sound analysis in one app.",
+    "description": "Measure and explore with four tools on your Android phone. Calibrate the screen ruler, check tilt with the digital level, generate sine, square or triangle tones and run frequency sweeps.\n\nSound Meter offers live levels, an oscilloscope and an FFT spectrum. Switch views while keeping measurements and controls visible. Read the built-in Help before your first measurement; calibration and session saving have dedicated dialogs.\n\nSave ruler and level readings, tone presets and sound-level sessions locally. Choose a light, dark or system theme and configure screen wakefulness and level haptics. The current development version works offline without an account.\n\nMeasurements depend on the phone and calibration. Sound levels are shown in dBFS until a reference adjustment is applied; adjusted SPL remains an estimate. Start generated tones at low volume. Published by Praxis Science Lab.",
+    "data": "Ruler and level measurements, tone presets, sound-level statistics, session names, calibration profiles and preferences are stored on the device. Microphone samples and waveform/spectrum frames are processed temporarily in memory. They are not saved as audio files or transmitted. Saved sound sessions contain numeric level statistics and the recent level graph, not audio or analysis frames. The current version has no account, advertising, analytics or cloud service.",
+    "permissions": "Microphone permission is requested when starting Sound Meter. It can be denied or revoked in Android Settings; the other tools do not need it. The level uses available motion sensors. Audio capture and tone playback stop when the app leaves the foreground. The current Android application declares no Internet permission. Advertising is planned for a future version; this notice will be updated before advertising is enabled.",
+    "retention": "Clear app storage in Android Settings or uninstall to remove local measurements, calibration profiles and preferences. Android app backup is disabled in this build. Praxis Science Lab has no server copy of your measurements.",
+    "safety": "Read each tool’s Help and calibrate where appropriate. Phone sensors and screen measurements have device-dependent limits. Sound Meter is not a certified sound-level meter and does not provide A-weighted dBA measurements. Use low audio output volume.",
+    "checks": [
+      "Calibrate the ruler with a physical reference and check a different known length.",
+      "Set the level zero, test Hold/Resume and verify sensor use stops when leaving the tool.",
+      "At low volume, test tone waveforms, frequency changes, sweeps and Stop.",
+      "Start and stop Sound Meter, switch Level/Oscilloscope/Spectrum, read Help and save a session.",
+      "Deny microphone permission, test background behavior and check theme and saved settings after restarting."
+    ],
+    "evidence": [
+      "app/src/main/AndroidManifest.xml",
+      "app/build.gradle.kts",
+      "feature/sound/src/main/kotlin/com/xlab/tools/sound/SoundScreen.kt",
+      "engine/audio",
+      "core/storage",
+      "docs/VERIFICATION-0.6.1.md"
+    ],
+    "gaps": [
+      "Prepare a signed release AAB and confirm the permanent package identifier before publishing.",
+      "Validate measurements, permissions and audio behavior on representative physical devices.",
+      "Prepare final store artwork and screenshots from the release build.",
+      "Advertising is planned but not implemented. Review SDK behavior, privacy information and consent requirements before enabling it."
+    ],
+    "policy_date": "2026-09-09"
   }
 ]
