@@ -27,3 +27,7 @@ The site ZIPs contain public media and listing text only. Application repositori
 ## Clear Audio website addition — 11 September 2026
 
 Added a seventh app with product, privacy, support and publishing pages, authentic screenshots and a development APK download. Static checks pass for 31 English pages and verify the APK checksum. Browser checks at 1440px/light and 390px/dark show no horizontal overflow; screenshots load and the downloaded APK matches the tested package (23,587,492 bytes, SHA-256 CCB9D49734FB4131F0BAB13878B3A31C4F9AC5F2D120FAC31A2E16A710855926). Existing independently maintained app policies are preserved. This is a website publication, not a Google Play release.
+
+## Compact Android app grid — 11 September 2026
+
+The seven Android apps now reuse the web-project card grid: two columns above 700px, one column below. Redundant platform and repeated navigation rows were removed; linked titles and availability badges remain. Static integrity checks pass for all 31 pages. Browser inspection at 1440px/light confirms identical 568px Android/web card widths; 390px/dark uses a single 346px column with no horizontal overflow. Only the homepage is regenerated for this change.

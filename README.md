@@ -42,3 +42,5 @@ XLab Tools documents development version 0.6.1: ruler, level, tone generation an
 Clear Audio has a dedicated page at `apps/clear-audio/`, three authentic English screenshots and a direct development APK download (0.12.0-dev, Android 9+). The app defaults to English and also supports Romanian and Spanish. Its local 10-band EQ, experimental external processing and Google test-ad configuration are documented explicitly. The download checksum is verified by `check_site.py`; no signing key, phone report or tester data is included.
 
 Use `python scripts/build_documents.py --app clear-audio` to update Clear Audio and the shared app indexes without regenerating other apps' independently maintained pages. Store-upload graphics and the publishing ZIP for Clear Audio remain pending; the website download is not a Google Play release.
+
+The homepage Android apps use the same compact two-column cards as the web projects, stacking into one column at 700px and below. Each card links through its title and retains a small availability badge. Regenerate only this section with `python scripts/build_documents.py --home-only`.

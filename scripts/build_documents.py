@@ -12,6 +12,7 @@ DATE = '2026-09-08'
 APPS = json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
 parser = argparse.ArgumentParser()
 parser.add_argument('--app', choices=[a['slug'] for a in APPS], help='Rebuild only this app and the shared indexes.')
+parser.add_argument('--home-only', action='store_true', help='Update only the homepage app cards.')
 args = parser.parse_args()
 home = (ROOT/'index.html').read_text(encoding='utf-8')
 theme = re.search(r'<div class="theme-control".*?</div>', home, re.S).group()
@@ -60,8 +61,8 @@ cards=[]
 for a in APPS:
     slug=a['slug']; route=f'apps/{slug}'; url=BASE+route+'/'
     media=ROOT/route/'media'; media.mkdir(parents=True,exist_ok=True)
-    cards.append(f'''<article class="app-card"><div class="app-description"><div class="app-title-line"><h3><a href="{route}/">{e(a['name'])}</a></h3><span class="status">{e(a['status'])}</span></div><p>{e(a['short'])}</p><p class="app-platform">ANDROID</p><a class="text-link" href="{route}/">App information, privacy and support <span aria-hidden="true">↗</span></a></div></article>''')
-    if args.app and slug != args.app:
+    cards.append(f'''<li><h3><a href="{route}/">{e(a['name'])} <span aria-hidden="true">↗</span></a></h3><p>{e(a['short'])}</p><span class="status">{e(a['status'])}</span></li>''')
+    if args.home_only or (args.app and slug != args.app):
         continue
     intro = f'<p><span class="status">{e(a["status"])}</span> Not yet available on Google Play.</p>'
     if slug=='medical-terminology-flashcards':
@@ -116,17 +117,28 @@ for a in APPS:
         body = re.sub(r'<p><a href="../media/feature-graphic.png".*?</p>', '', body)
     page(route+'/publishing',a['name']+' — Publishing Materials','English listing, data inventory, graphics and release checks.',body)
 
-start=home.index('<article class="app-card">')
-end=home.index('\n      </section>',start)
-home=home[:start]+'\n'.join(cards)+home[end:]
+start_marker='<!-- ANDROID_APPS_START -->'
+end_marker='<!-- ANDROID_APPS_END -->'
+if start_marker in home:
+    start=home.index(start_marker)
+    end=home.index(end_marker,start)+len(end_marker)
+else:
+    start=home.index('<article class="app-card">')
+    end=home.index('\n      </section>',start)
+grid=start_marker+'\n<ul class="projects-grid android-apps-grid">\n'+'\n'.join(cards)+'\n</ul>\n'+end_marker
+home=home[:start]+grid+home[end:]
 home=home.replace('Our first app.','Our Android apps.')
 home=home.replace('Each app will have its own privacy policy, legal information and support resources here when it is released.','Find a dedicated privacy policy, support page and release-preparation materials for each Android app.')
 home=home.replace('App-specific pages are coming with our releases.','<a href="publishing/">Open the Google Play publishing kit</a>')
 home=home.replace('Have a question about a project or something to report? Our public GitHub support area is the place to start.',f'For app support or privacy questions, email <a href="mailto:{EMAIL}">{EMAIL}</a>.')
 home=home.replace('assets/site.css?v=20260907-icons','assets/site.css?v=20260908-docs')
 home=home.replace('assets/site.css?v=20260908-docs','assets/site.css?v=20260908-nav')
+home=re.sub(r'assets/site\.css\?v=[^"\s]+','assets/site.css?v=20260911-compact-apps',home)
 home=home.replace('<p>Curiosity, put into practice.</p>','<a href="privacy/">Website privacy</a>')
 (ROOT/'index.html').write_text(home,encoding='utf-8')
+if args.home_only:
+    print(f'Updated compact homepage grid for {len(APPS)} Android apps.')
+    raise SystemExit(0)
 
 page('privacy','Website Privacy','Privacy information for the Praxis Science Lab documentation website.',f'<p>Effective date: {DATE}.</p>'+contact+'<h2>Site operation</h2><p>This static website uses GitHub Pages hosting. It has no application account, advertising, analytics script, contact form or tracking cookies added by Praxis Science Lab. It stores your selected color theme in browser local storage. You can remove it through browser site-data controls.</p><p>GitHub receives ordinary connection information when serving pages, including your IP address. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy information</a>. GitHub controls hosting logs and their retention. External links and your email provider have separate privacy practices.</p><h2>Contact and deletion</h2>'+support_privacy+'<p>You can ask us to access, correct or delete correspondence through the contact above. App-specific privacy policies describe local app data separately. GitHub issues are public and require a GitHub account; do not use them for private information.</p><h2>Updates</h2><p>The effective date changes when this notice is revised.</p>')
 

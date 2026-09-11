@@ -46,6 +46,7 @@
 .projects-intro{color:var(--muted);margin-bottom:24px}.projects-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.projects-grid li{padding:22px 24px;border:1px solid var(--line);border-radius:10px;background:var(--wash)}.projects-grid h3{font-size:18px;line-height:1.4}.projects-grid a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.projects-grid a:hover{text-decoration-thickness:2px}.projects-grid p{color:var(--muted);font-size:15px;margin-top:6px}@media(max-width:700px){.projects-grid{grid-template-columns:1fr}.projects-grid li{padding:18px 20px}}
 
 /* Direct development downloads and authentic app captures. */
+.android-apps-grid .status{display:inline-block;margin-top:10px;padding:3px 9px;font-size:12px;line-height:1.5;white-space:normal}
 .app-download{margin:28px 0;padding:28px;border:1px solid var(--card-line);border-radius:14px;background:var(--wash)}
 .app-download h2{margin:0 0 12px}.app-download .button{color:#fff;margin:18px 0;gap:20px;text-decoration:none}
 .app-download .download-note{font-size:15px;margin-bottom:14px}.app-download p a{text-decoration:underline;text-underline-offset:4px}
