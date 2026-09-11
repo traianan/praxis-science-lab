@@ -1,0 +1,21 @@
+Clear Audio
+
+Short description
+Shape your sound with clear voice, a 10-band equalizer and local audio playback.
+
+Full description
+Listen to your own audio files with Clear Audio. Choose Clear voice, Balanced or Night mode, adjust a 10-band equalizer and compare Original with Processed at the same phone volume. The player includes pause and resume, seeking, 15-second skips and a sleep timer.
+
+Save sound settings for the speaker, wired headphones, Bluetooth or USB. Optional automatic profiles follow the confirmed output category. The waveform shows actual digital samples from the local player. English is the default; Romanian and Spanish are available from More → App language.
+
+Audio files are processed on your phone and local playback works offline. The 10-band EQ applies to files played in Clear Audio. Processing sound from other apps is experimental and depends on the phone and audio route; calls and independent per-app volume mixing are not supported.
+
+This development version uses Google test ads on the More page, separately from playback controls. Ad requests are suspended when detected audio activity or a call makes the page ineligible. Playback remains available when ads or consent services are unavailable. Commercial advertising is not configured.
+
+Clear Audio does not promise percentage-based volume boosts, measure sound pressure at your ear or guarantee hearing or speaker protection. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/clear-audio/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/clear-audio/privacy/
+Suggested category: Music & Audio

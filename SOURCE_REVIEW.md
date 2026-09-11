@@ -104,3 +104,13 @@ Outstanding:
 
 
 See VALIDATION.md for completed builds, screenshot preparation and remaining release checks. Earlier screenshot action items above now mean revalidation against the final signed upload artifact.
+
+## Clear Audio — 11 September 2026
+
+Reviewed development version: `0.12.0-dev (13)`, package `ro.claraudio.probe`. Public name: Clear Audio; English default with Romanian and Spanish options. The local PCM player provides three audio modes, a 10-band EQ, seeking, a sleep timer and output-category profiles. External processing remains experimental. No microphone or root is needed for local playback.
+
+Source references: `claraudio/app/build.gradle.kts`, main/debug Android manifests, `Language.kt`, `AdSession.kt`, `AboutActivity.kt`, `docs/VALIDATION-0.12.md` and `docs/package-0.12.json`. The published APK and the tested OPPO installation have SHA-256 `CCB9D49734FB4131F0BAB13878B3A31C4F9AC5F2D120FAC31A2E16A710855926`.
+
+The website distributes the existing development APK with test Google advertising identifiers, not the separate release configuration. The policy distinguishes local audio data from advertising/consent services and optional diagnostic exports. DUMP is declared only for optional development diagnostics and is not granted by installation. No signing material or device diagnostic report was copied to this repository. Three screenshots are authentic emulator captures of the same application version.
+
+Commercial advertising, the final release AAB, store declarations and wider physical-device validation remain separate release work.

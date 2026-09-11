@@ -6,7 +6,7 @@ Website: https://traianan.github.io/praxis-science-lab/
 
 ## Current scope
 
-An English homepage and app-specific information, privacy, support and Google Play preparation pages for six Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
+An English homepage and app-specific information, privacy, support and Google Play preparation pages for seven Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
 
 Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Dark / System group of icon buttons (sun, moon, monitor) highlights the active preference, defaults to System, follows device changes and saves only the theme preference in localStorage. Dark uses a true black background; its internal `black` value is retained for compatibility with saved preferences. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
 
@@ -38,3 +38,7 @@ The terminology app's current release contains no production dataset and must no
 The original geometric P pairs a strong vertical stem with a yellow point: a compact mark for ideas put into practice. Primary blue `#1739d6`, ink `#15233b`, accent yellow `#ffe076`, white background. Arial/Helvetica wordmark and interface; Georgia editorial headline. Keep the symbol proportions and clear space, and use the blue square version on an unknown background. No external image or font asset is required.
 
 XLab Tools documents development version 0.6.1: ruler, level, tone generation and sound analysis. Its store artwork and downloadable publishing kit are pending; no debug APK is published on this site.
+
+Clear Audio has a dedicated page at `apps/clear-audio/`, three authentic English screenshots and a direct development APK download (0.12.0-dev, Android 9+). The app defaults to English and also supports Romanian and Spanish. Its local 10-band EQ, experimental external processing and Google test-ad configuration are documented explicitly. The download checksum is verified by `check_site.py`; no signing key, phone report or tester data is included.
+
+Use `python scripts/build_documents.py --app clear-audio` to update Clear Audio and the shared app indexes without regenerating other apps' independently maintained pages. Store-upload graphics and the publishing ZIP for Clear Audio remain pending; the website download is not a Google Play release.

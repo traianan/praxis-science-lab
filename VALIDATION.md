@@ -23,3 +23,7 @@ Praxis Science Lab · traiananghel@gmail.com
 - `ceas-atomic/build/app/outputs/apk/debug/app-debug.apk` — SHA256 `87ceb062686a9333a999aaa76afba3c5bd5d8a6315a3fcb4f030bbb5f7e3d404`
 
 The site ZIPs contain public media and listing text only. Application repositories already contained uncommitted development work; they were not bulk-committed. No tester addresses, keys, accounts or clinical content were created or published.
+
+## Clear Audio website addition — 11 September 2026
+
+Added a seventh app with product, privacy, support and publishing pages, authentic screenshots and a development APK download. Static checks pass for 31 English pages and verify the APK checksum. Browser checks at 1440px/light and 390px/dark show no horizontal overflow; screenshots load and the downloaded APK matches the tested package (23,587,492 bytes, SHA-256 CCB9D49734FB4131F0BAB13878B3A31C4F9AC5F2D120FAC31A2E16A710855926). Existing independently maintained app policies are preserved. This is a website publication, not a Google Play release.

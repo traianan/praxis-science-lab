@@ -3,12 +3,16 @@ from pathlib import Path
 from html import escape as e
 import json
 import re
+import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://traianan.github.io/praxis-science-lab/'
 EMAIL = 'traiananghel@gmail.com'
 DATE = '2026-09-08'
 APPS = json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
+parser = argparse.ArgumentParser()
+parser.add_argument('--app', choices=[a['slug'] for a in APPS], help='Rebuild only this app and the shared indexes.')
+args = parser.parse_args()
 home = (ROOT/'index.html').read_text(encoding='utf-8')
 theme = re.search(r'<div class="theme-control".*?</div>', home, re.S).group()
 
@@ -34,13 +38,14 @@ def page(route, title, subtitle, body):
         navigation = '<nav class="document-links" aria-label="App navigation">'+''.join(links)+'</nav>'
     output = ROOT/route/'index.html'
     output.parent.mkdir(parents=True, exist_ok=True)
+    css_version = '20260911-clear-audio' if route.startswith('apps/clear-audio') else '20260908-nav'
     output.write_text(f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1739d6"><meta name="description" content="{e(subtitle, quote=True)}">
 <title>{e(title)} | Praxis Science Lab</title><link rel="canonical" href="{BASE}{route}/">
 <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
 <script src="{prefix}assets/theme.js?v=20260907-icons"></script>
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20260908-nav">
+<link rel="stylesheet" href="{prefix}assets/site.css?v={css_version}">
 <script src="{prefix}assets/copyright.js" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><div class="page-shell">
 <header class="site-header"><a class="brand" href="{prefix}" aria-label="Praxis Science Lab home"><img src="{prefix}assets/logo-mark.svg" width="48" height="48" alt=""><span class="wordmark">PRAXIS<span>SCIENCE LAB</span></span></a>
@@ -56,11 +61,20 @@ for a in APPS:
     slug=a['slug']; route=f'apps/{slug}'; url=BASE+route+'/'
     media=ROOT/route/'media'; media.mkdir(parents=True,exist_ok=True)
     cards.append(f'''<article class="app-card"><div class="app-description"><div class="app-title-line"><h3><a href="{route}/">{e(a['name'])}</a></h3><span class="status">{e(a['status'])}</span></div><p>{e(a['short'])}</p><p class="app-platform">ANDROID</p><a class="text-link" href="{route}/">App information, privacy and support <span aria-hidden="true">↗</span></a></div></article>''')
+    if args.app and slug != args.app:
+        continue
     intro = f'<p><span class="status">{e(a["status"])}</span> Not yet available on Google Play.</p>'
     if slug=='medical-terminology-flashcards':
         desc='<p>An educational terminology study project. Release preparation and the production learning content are still in progress.</p>'
     else: desc=paragraphs(a['description'])
-    page(route,a['name'],a['short'],intro+desc+f'<h2>Language</h2><p>{e(a["language"])}</p><h2>Using the app</h2><p>{e(a["safety"])}</p>'+contact)
+    download = ''
+    if a.get('download'):
+        d = a['download']
+        download = f'''<section class="app-download" aria-labelledby="download-title"><h2 id="download-title">Try {e(a['name'])}</h2><p>{e(d['label'])} · Android {e(d['android'])} or later · {e(d['size'])}</p><a class="button" href="{e(d['path'], quote=True)}" download>Download Android APK <span aria-hidden="true">↓</span></a><p class="download-note">A development build for testing. English is the default; Romanian and Spanish are available in More → App language. This is a direct download, not a Google Play release.</p><p><a href="support/#install">Installation and update help</a> · <a href="downloads/SHA256SUMS.txt">SHA-256 checksum</a></p></section>'''
+    gallery = ''
+    if a.get('screenshots'):
+        gallery = '<h2>Inside the app</h2><p>Actual screenshots from version '+e(a['version'])+'.</p><div class="app-gallery">'+''.join(f'<figure><img src="media/{e(shot["file"], quote=True)}" alt="{e(shot["alt"], quote=True)}" width="320" height="640" loading="lazy"><figcaption>{e(shot["caption"])}</figcaption></figure>' for shot in a['screenshots'])+'</div>'
+    page(route,a['name'],a['short'],intro+download+desc+gallery+f'<h2>Language</h2><p>{e(a["language"])}</p><h2>Using the app</h2><p>{e(a["safety"])}</p>'+contact)
     privacy=f'<p>Effective date: {a.get("policy_date", DATE)}. This notice describes Android version {e(a["version"])} and the configuration documented below.</p>'+contact
     privacy+=f'<h2>Information handled by the app</h2>{paragraphs(a["data"])}<h2>Permissions, services and sharing</h2>{paragraphs(a["permissions"])}<h2>Retention and deletion</h2>{paragraphs(a["retention"])}'
     privacy+='<h2>Security</h2><p>Private app files use Android application storage protections. No additional database-encryption guarantee is made. Keep your device protected and control access to files you export. There is no Praxis Science Lab account to delete for this app.</p>'
@@ -68,9 +82,12 @@ for a in APPS:
     privacy+='<h2>Your choices</h2><p>You can clear local data and use the contact above to ask about support correspondence or request access, correction or deletion where applicable. We may need information to identify the relevant request. You may also contact your local data protection authority. Local app information is processed to provide the functions you use; support correspondence is processed to respond to your request.</p>'
     if slug=='atomic-clock':privacy+='<p>Time providers: <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy</a>, <a href="https://developers.google.com/time">Google Public NTP</a>, and <a href="https://www.apple.com/legal/privacy/">Apple privacy</a>. NTP Pool contains independently operated servers; provider practices may differ.</p>'
     if slug=='medical-terminology-flashcards':privacy+='<p>Provider information: <a href="https://policies.google.com/privacy">Google privacy policy</a>. Any future activation of advertising will be documented before that release is distributed.</p>'
+    if slug=='clear-audio':privacy+='<p>Provider information: <a href="https://policies.google.com/privacy">Google privacy policy</a>, <a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure">Google Mobile Ads Next-Gen data disclosure</a> and <a href="https://developers.google.com/admob/android/privacy">Google UMP privacy options</a>. Privacy options are available from More when the provider requires them. Test ad identifiers do not mean that no connection or device information is processed.</p>'
     privacy+='<h2>Changes</h2><p>We update this notice when app behavior or relevant practices change. The date and version above identify the policy you are reading.</p>'
     page(route+'/privacy',a['name']+' — Privacy Policy','How Praxis Science Lab handles information for this Android app.',privacy)
     support=contact+'<h2>Report a problem</h2><p>Tell us your Android version, device model, app version, what you did, what happened and what you expected. Remove personal information from attachments. Never post a tester email list or private feedback in a public repository.</p>'
+    if a.get('download'):
+        support+='<h2 id="install">Install or update the development APK</h2><ol><li>Open the app page on an Android 9 or newer device and download the APK.</li><li>Open the downloaded file and follow the Android installer prompts. It is distributed directly from this site, not through Google Play.</li><li>If ClarAudio or Clear Audio is already installed from our development builds, install the update over it to keep settings and profiles. If Android reports a signing conflict, contact support before uninstalling; uninstalling removes private app data.</li><li>Open Clear Audio. Use More → App language to choose English, Română or Español. USB debugging is not needed for local file playback.</li></ol><p>This development build uses Google test ad identifiers and includes advanced diagnostic tools. Do not grant DUMP or other diagnostic privileges for normal use. Keep source audio files backed up independently.</p>'
     support+='<h2>Testing checklist</h2>'+items(a['checks'])+'<h2>Data removal</h2>'+paragraphs(a['retention'])+f'<p><a href="{url}privacy/">Read the privacy policy</a></p>'
     support+='<h2>Joining a test</h2><p>Testing invitations and opt-in links will be supplied once a Google Play testing track is available. This page does not enroll you in a test. Report your experience honestly; no positive review is required.</p>'
     page(route+'/support',a['name']+' — Support','Help, data-removal information and a practical tester checklist.',support)
@@ -78,12 +95,13 @@ for a in APPS:
     listing=f"{a['title']}\n\nShort description\n{a['short']}\n\nFull description\n{a['description']}\n\nPublisher: Praxis Science Lab\nSupport: {EMAIL}\nWebsite: {url}\nPrivacy: {url}privacy/\nSuggested category: {a['category']}\n"
     (ROOT/route/'store-listing-en.txt').write_text(listing,encoding='utf-8')
     console='<table><tr><th>Field</th><th>Prepared value / action</th></tr>'
-    for label,value in [('Title',a['title']),('Package',a['package']),('Reviewed version',a['version']),('Publisher','Praxis Science Lab'),('Support email',EMAIL),('Suggested category',a['category']),('App access','No login or restricted account access'),('Ads','Current development configuration disabled; recheck every active artifact' if slug=='medical-terminology-flashcards' else 'No advertising found in reviewed app dependencies'),('Target audience and IARC','Answer from the real intended audience and final content. No age rating has been assigned here.'),('Health declaration','Educational medical reference: review the applicable declaration and account rules' if slug=='medical-terminology-flashcards' else 'No health functionality in the reviewed scope; complete the form accurately')]:
+    for label,value in [('Title',a['title']),('Package',a['package']),('Reviewed version',a['version']),('Publisher','Praxis Science Lab'),('Support email',EMAIL),('Suggested category',a['category']),('App access','No login or restricted account access'),('Ads',a.get('ads_notice', 'Current development configuration disabled; recheck every active artifact' if slug=='medical-terminology-flashcards' else 'No advertising found in reviewed app dependencies')),('Target audience and IARC','Answer from the real intended audience and final content. No age rating has been assigned here.'),('Health declaration','Educational medical reference: review the applicable declaration and account rules' if slug=='medical-terminology-flashcards' else 'No health functionality in the reviewed scope; complete the form accurately')]:
         console+=f'<tr><td>{e(label)}</td><td>{e(value)}</td></tr>'
     console+='</table>'
     safety_note = 'Candidate: no off-device app data collection or sharing found in the reviewed implementation. Local-only processing is different from collection in the Play form. Verify the exact signed package, included SDKs and every active release before submitting.'
     if slug=='atomic-clock':safety_note='Not finalized: network time providers receive IP/request information. Determine the applicable data categories, purposes, retention and sharing treatment with provider evidence. Do not assume that processing is ephemeral or that all transfers are encrypted.'
     if slug=='medical-terminology-flashcards':safety_note='Not finalized: the current blank-ID configuration disables ad requests, but advertising libraries remain included. Verify startup and every active release. If ads are enabled, inventory SDK identifiers, approximate location, interactions and diagnostics and update policy/consent/store answers first.'
+    if a.get('data_safety_note'):safety_note=a['data_safety_note']
     body='<p class="quiet-note">Preparation materials, not a submission or Google approval. Use these fields only for a verified release with the described functionality.</p><p><a href="../publishing-kit.zip" download>Download the English publishing kit (ZIP)</a></p>'+console
     body+=f'<h2>English listing</h2><p><a href="../store-listing-en.txt" download>Download store listing text</a></p><h3>Short description</h3><p>{e(a["short"])}</p><h3>Full description</h3>{paragraphs(a["description"])}'
     body+='<h2>Data safety worksheet</h2>'+paragraphs(safety_note)+paragraphs(a['data'])+paragraphs(a['permissions'])

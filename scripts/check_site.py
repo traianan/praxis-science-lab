@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import xml.etree.ElementTree as ET
 import json
+import hashlib
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -45,6 +46,13 @@ for file,page in pages.items():
 apps=json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
 for app in apps:
     assert len(app['title'])<=30 and len(app['short'])<=80 and len(app['description'])<=4000
+    if app.get('download'):
+        folder=ROOT/'apps'/app['slug']; download=app['download']
+        assert hashlib.sha256((folder/download['path']).read_bytes()).hexdigest().upper()==download['sha256']
+        assert download['sha256'] in (folder/'downloads/SHA256SUMS.txt').read_text()
+        from PIL import Image
+        for shot in app.get('screenshots',[]):
+            with Image.open(folder/'media'/shot['file']) as im: assert im.size==(320,640)
     if not app.get("publishing_assets", True): continue
     from PIL import Image
     with Image.open(ROOT/'apps'/app['slug']/'media/feature-graphic.png') as im:
