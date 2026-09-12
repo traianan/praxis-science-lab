@@ -222,5 +222,46 @@
     "Configure an AdMob account and published consent messages before any live advertising; keep disabled until verified.",
     "Complete the applicable Play Console forms and testing/review process using the final upload-signed AAB."
   ]
+},
+{
+  "slug": "droplet",
+  "name": "Droplet — Speaker Care",
+  "title": "Droplet — Speaker Care",
+  "repo": "droplet-speaker",
+  "package": "app.praxis.droplet_speaker",
+  "version": "0.1.0 (1)",
+  "language": "English by default; Romanian and Spanish available in Settings",
+  "status": "In testing",
+  "category": "Tools",
+  "policy_date": "2026-09-12",
+  "publishing_assets": false,
+  "short": "Timed speaker tones, adjustable frequency and a quick sound comparison.",
+  "description": "Try timed sound sessions designed to explore whether speaker vibrations help dislodge residual water near the speaker opening. Choose a gentle 30-second cycle, 60-second pulses or a 90-second frequency sweep. A manual mode offers 80–300 Hz tones for 30 seconds.\n\nFollow progress on a countdown, stop at any time and compare the sound with a short five-second tone. Completed sessions and your own better-or-unchanged assessment are saved locally. The app does not detect moisture or objectively measure improvement.\n\nPlayback uses the built-in speaker, checks for external audio devices and stops when the app leaves the foreground or loses audio focus. English, Romanian and Spanish are available. No account is required.\n\nWater-removal effectiveness has not been validated on physical phones and is not guaranteed. Droplet does not repair damaged speakers, remove internal moisture or boost the phone beyond its normal volume. Advertising is planned; it is disabled in the current development build.",
+  "safety": "Follow the phone manufacturer’s guidance after liquid exposure. If immersed, turn the phone off and allow it to dry as instructed before using sound. Keep the speaker opening unobstructed, disconnect headphones and external audio devices, and use moderate volume away from your ears. Do not intentionally wet a device for testing. Stop if the sound is uncomfortable or distorted.",
+  "data": "Language preferences, up to 50 completed sessions and optional better-or-unchanged feedback are stored locally. Sound is generated on the device. There is no microphone recording, account, cloud history or automatic upload of session records.",
+  "permissions": "The app checks Android audio output devices and audio focus for playback. It does not request microphone, location or storage access. Internet and network-state permissions and Google Mobile Ads/UMP libraries are included for planned advertising. Ad requests and consent initialization are disabled in this build. A future advertising release requires an updated privacy notice and configuration before distribution.",
+  "retention": "Use Clear history in History to delete saved sessions. Clear Android app storage or uninstall Droplet to remove local preferences and history. Automatic Android app backup is disabled.",
+  "ads_notice": "Planned advertising; disabled in version 0.1.0. Demo identifiers only. Banner placement is in History, outside sound sessions.",
+  "data_safety_note": "Not finalized for a monetized release: Google advertising libraries are included but disabled in this build. Inspect startup traffic and the exact signed release, then reconcile SDK behavior, consent, privacy notice and Play declarations before enabling advertising.",
+  "checks": [
+    "Confirm playback uses the built-in speaker and external headphones, USB audio and Bluetooth routes prevent or stop a session.",
+    "Check Stop, leaving the app, interruptions, countdown completion and manual frequency limits.",
+    "Compare at moderate volume on a dry device; do not intentionally expose a phone to liquid.",
+    "Verify English, Romanian and Spanish, large text and narrow screens.",
+    "Check that only completed care sessions enter history, comparison returns to feedback, and Clear history removes records."
+  ],
+  "gaps": [
+    "Validate acoustic behavior and external audio routes on representative physical phones. Water-removal efficacy is not established.",
+    "Configure production AdMob and consent, update the privacy notice and complete SDK Data safety review before activating ads.",
+    "Prepare final store artwork, authentic screenshots and an upload-signed release AAB.",
+    "Complete the applicable Play Console testing, declarations and review for the final artifact."
+  ],
+  "screenshots": [
+    {
+      "file": "screenshot-home.png",
+      "alt": "Droplet home screen with a gentle 30-second cycle and Start button",
+      "caption": "Actual Android emulator capture, development version 0.1.0."
+    }
+  ]
 }
 ]

@@ -1,0 +1,19 @@
+Droplet — Speaker Care
+
+Short description
+Timed speaker tones, adjustable frequency and a quick sound comparison.
+
+Full description
+Try timed sound sessions designed to explore whether speaker vibrations help dislodge residual water near the speaker opening. Choose a gentle 30-second cycle, 60-second pulses or a 90-second frequency sweep. A manual mode offers 80–300 Hz tones for 30 seconds.
+
+Follow progress on a countdown, stop at any time and compare the sound with a short five-second tone. Completed sessions and your own better-or-unchanged assessment are saved locally. The app does not detect moisture or objectively measure improvement.
+
+Playback uses the built-in speaker, checks for external audio devices and stops when the app leaves the foreground or loses audio focus. English, Romanian and Spanish are available. No account is required.
+
+Water-removal effectiveness has not been validated on physical phones and is not guaranteed. Droplet does not repair damaged speakers, remove internal moisture or boost the phone beyond its normal volume. Advertising is planned; it is disabled in the current development build.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/droplet/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/droplet/privacy/
+Suggested category: Tools
