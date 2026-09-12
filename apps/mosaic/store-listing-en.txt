@@ -1,0 +1,21 @@
+Mosaic
+
+Short description
+Create photo collages with frames, stickers and individual photo adjustments.
+
+Full description
+Create collages with up to nine photos in Mosaic for Android 10 and later. Choose from eight layout families and adjust spacing, rounded corners and canvas proportions.
+
+Adjust brightness, contrast and saturation for each photo. Reposition, zoom, rotate and mirror images. Add 11 decorative frames, 18 original vector stickers and editable text, with undo and redo.
+
+Save named projects locally and return to your current draft. Export JPG or PNG without a watermark; JPG supports up to 3072 pixels on the longest edge. Share exports through Android.
+
+The editor and export work offline. Newly imported originals stay privately on the device, while smaller previews keep editing responsive. English, Romanian and Spanish are available. No account is required.
+
+Version 0.5.0 is in testing. Commercial ads are not configured. The development build includes an optional Google demo ad in Settings; the signed release does not expose that test button.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/mosaic/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/mosaic/privacy/
+Suggested category: Photography

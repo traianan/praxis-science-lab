@@ -1,0 +1,27 @@
+TITLE
+Mosaic
+
+SHORT DESCRIPTION
+Crea collages con marcos, stickers y ajustes de fotos fáciles de usar.
+
+FULL DESCRIPTION
+Convierte tus fotos en collages con Mosaic, de Praxis Science Lab.
+
+Elige hasta nueve fotos y organízalas con ocho familias de diseños. Ajusta el espacio, las esquinas y el fondo; añade marcos, stickers originales y tus textos.
+
+• Brillo, contraste y saturación para cada foto
+• Encuadre, zoom, rotación y espejo
+• 11 marcos decorativos y 18 stickers vectoriales originales
+• Texto editable con fuente, color y fondo
+• Deshacer y rehacer; proyectos guardados localmente
+• Formatos cuadrados, verticales y horizontales
+• Exportación JPG y PNG; JPG hasta 3072 píxeles en el lado mayor
+• Sin marca de agua
+• Interfaz en inglés, rumano y español
+
+Las fotos se editan en el dispositivo. No necesitas una cuenta. El editor y la exportación funcionan sin internet. Compartir utiliza el menú de Android.
+
+Mosaic conserva copias privadas para los proyectos. Desinstalar elimina esos proyectos; las imágenes exportadas a la galería permanecen.
+
+Esta versión inicial no tiene anuncios comerciales activados.
+Contacto: traiananghel@gmail.com

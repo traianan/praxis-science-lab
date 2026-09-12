@@ -346,5 +346,61 @@
       "caption": "Actual Android emulator screenshot, development version 0.3.2. Project names and camera scene are test data."
     }
   ]
-}
+},
+  {
+    "slug": "mosaic",
+    "name": "Mosaic",
+    "title": "Mosaic",
+    "repo": "mosaic",
+    "package": "ro.mosaic.app",
+    "version": "0.5.0 (5)",
+    "language": "English by default; Romanian and Spanish available in Settings. Help and privacy information are available in all three languages.",
+    "status": "In testing",
+    "category": "Photography",
+    "policy_date": "2026-09-12",
+    "publishing_assets": true,
+    "short": "Create photo collages with frames, stickers and individual photo adjustments.",
+    "description": "Create collages with up to nine photos in Mosaic for Android 10 and later. Choose from eight layout families and adjust spacing, rounded corners and canvas proportions.\n\nAdjust brightness, contrast and saturation for each photo. Reposition, zoom, rotate and mirror images. Add 11 decorative frames, 18 original vector stickers and editable text, with undo and redo.\n\nSave named projects locally and return to your current draft. Export JPG or PNG without a watermark; JPG supports up to 3072 pixels on the longest edge. Share exports through Android.\n\nThe editor and export work offline. Newly imported originals stay privately on the device, while smaller previews keep editing responsive. English, Romanian and Spanish are available. No account is required.\n\nVersion 0.5.0 is in testing. Commercial ads are not configured. The development build includes an optional Google demo ad in Settings; the signed release does not expose that test button.",
+    "safety": "Uninstalling removes private projects; gallery exports remain. New imports preserve the original encoded file, up to 100 MB per file. Editor previews are limited to 1200 pixels. Export decodes photos successively with a bounded memory budget; extreme zoom or older low-resolution imports may require interpolation. Memory pressure can release undo history while keeping the project.",
+    "data": "Selected photos, text, collage settings, project thumbnails and language preferences remain in private app storage. Mosaic does not upload photos or collages to a developer-operated server. There is no app account or cloud backup.\n\nExport writes an image to Pictures/Mosaic through MediaStore. Sharing sends the chosen export to the application selected by the user, which has its own practices.",
+    "permissions": "Mosaic accesses selected photos through the Android document picker and exports images to the gallery. It does not request camera, microphone, contacts or precise location.\n\nGoogle Mobile Ads Next-Gen 1.4.0 and Google UMP 4.0.0 are included. Commercial identifiers are unset and that flow is disabled in the signed 0.5.0 release. In the debug build, opening Test advertisement can contact Google. Demo ads generate no revenue but may process connection information, identifiers, interactions and diagnostics. Google policy: https://policies.google.com/privacy\n\nFuture commercial advertising will obtain applicable privacy choices through UMP before requests. Advertising privacy options appear in Settings when required. A banner is limited to export completion, without blocking editing or saving.",
+    "retention": "Delete named copies through Projects. Free unused storage removes app-owned photo copies only when no project, draft, recovery file or current undo/redo history references them. Unreadable metadata stops cleanup. Clearing storage or uninstalling removes private projects and settings; Android backup is disabled. Gallery exports remain until deleted separately. Google controls retention of data processed by its advertising services.",
+    "ads_notice": "No commercial ads configured in the signed release. Optional Google demo ad in the development APK only. UMP and export-banner integration require the owner’s AdMob identifiers and account settings.",
+    "data_safety_note": "Review the exact uploaded artifact and actual SDK initialization. Photos are processed locally. Enabling commercial advertising requires reviewing Google traffic, privacy choices and Play declarations; demo ads are not necessarily network-free.",
+    "checks": [
+      "Import and export large images, including nine-photo collages; check JPG and PNG.",
+      "Adjust individual photos, rotate the device and reopen saved projects.",
+      "Clean unused storage and verify shared project photos remain available.",
+      "Check EN/RO/ES, small screens, landscape and tablet layouts.",
+      "Test offline editing, export and app restart; use only demo ads during development."
+    ],
+    "gaps": [
+      "Connect AdMob, configure real identifiers and UMP messages, and verify privacy choices using test devices.",
+      "Complete audience, content rating, Data safety and account-specific testing requirements in Play Console.",
+      "Run the Play pre-launch report and representative physical-device testing before production rollout."
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-1.png",
+        "width": 1080,
+        "height": 1920,
+        "alt": "Mosaic layout controls",
+        "caption": "Actual Android editor screenshot, version 0.5.0. Landscape illustrations are original test images."
+      },
+      {
+        "file": "screenshot-2.png",
+        "width": 1080,
+        "height": 1920,
+        "alt": "Mosaic decorative frames",
+        "caption": "Actual Android editor screenshot, version 0.5.0. Landscape illustrations are original test images."
+      },
+      {
+        "file": "screenshot-3.png",
+        "width": 1080,
+        "height": 1920,
+        "alt": "Mosaic text and stickers",
+        "caption": "Actual Android editor screenshot, version 0.5.0. Landscape illustrations are original test images."
+      }
+    ]
+  }
 ]

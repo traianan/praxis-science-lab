@@ -1,0 +1,27 @@
+TITLE
+Mosaic
+
+SHORT DESCRIPTION
+Creează colaje foto cu rame, stickere și reglaje ușor de folosit.
+
+FULL DESCRIPTION
+Transformă fotografiile în colaje cu Mosaic, de la Praxis Science Lab.
+
+Alege până la nouă fotografii și aranjează-le folosind opt familii de grile. Ajustează spațierea, colțurile și fundalul, apoi adaugă rame decorative, stickere originale și textele tale.
+
+• Luminozitate, contrast și saturație pentru fiecare fotografie
+• Încadrare, zoom, rotire și oglindire
+• 11 rame decorative și 18 stickere vectoriale originale
+• Text editabil cu font, culoare și fundal
+• Undo/redo și proiecte salvate local
+• Formate pătrate, portret și peisaj
+• Export JPG și PNG; JPG până la 3072 px pe latura mare
+• Fără filigran
+• Interfață în engleză, română și spaniolă
+
+Fotografiile sunt editate pe dispozitiv. Nu este necesar un cont. Editorul și exportul funcționează fără internet. Distribuirea folosește meniul Android.
+
+Mosaic păstrează copii private pentru proiectele salvate. Dezinstalarea șterge aceste proiecte; exporturile din galerie rămân.
+
+Această versiune inițială nu are reclame comerciale activate.
+Contact: traiananghel@gmail.com
