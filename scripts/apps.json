@@ -1,63 +1,174 @@
 [
   {
-    "slug": "scientific-calculator", "name": "Scientific Calculator", "title": "Scientific Calculator", "repo": "calc-stiintific-cn-iorga", "package": "com.traian64.calcstiintificcniorga", "version": "1.1.3 (5)", "language": "English by default; Romanian is available in Settings", "status": "Preparing for testing", "category": "Tools",
+    "slug": "scientific-calculator",
+    "name": "Scientific Calculator",
+    "title": "Scientific Calculator",
+    "repo": "calc-stiintific-cn-iorga",
+    "package": "com.traian64.calcstiintificcniorga",
+    "version": "1.1.3 (5)",
+    "language": "English by default; Romanian is available in Settings",
+    "status": "Preparing for testing",
+    "category": "Tools",
     "short": "Scientific calculations, RPN, number bases, constants and unit conversions.",
     "description": "Work through scientific calculations with algebraic entry or an optional RPN stack. Switch between decimal, hexadecimal, octal and binary modes. Use trigonometric and logarithmic functions, constants, unit conversions and a local calculation history.\n\nThe app opens in English. Romanian is available in Settings. Calculations work offline and no account is needed. History stores up to 50 results on your device.\n\nReal-number calculations use finite precision. Check important results independently. Developed by Traian Anghel and published by Praxis Science Lab.",
     "data": "Calculation history (up to 50 results), number formatting, angle and base preferences, and language are stored in app-private storage. Calculations run on the device. The app does not transmit these records to Praxis Science Lab. No accounts, advertising, analytics or crash-reporting service are implemented.",
     "permissions": "No camera, microphone, contacts or location permission is requested. The Android package declares Internet access through its framework, but the calculator has no application network requests and over-the-air updates are disabled. Opening the privacy or publisher link uses your browser.",
     "retention": "Clear calculation history in the app to remove saved results. Clear the app's storage in Android Settings or uninstall to remove its remaining local settings and records. Android cloud backup is disabled for this app. Praxis Science Lab has no server copy to restore.",
     "safety": "A calculation tool for learning and general use. Results have finite numerical precision; verify important calculations independently.",
-    "checks": ["Launch, calculate 2 + 3 = 5 and recover from an invalid operation with AC.", "Switch ALG/RPN, angle units and DEC/HEX/OCT/BIN; verify expected sample results.", "Open constants and conversions; save and clear calculation history.", "Change language, restart, use airplane mode and open Privacy policy from About."],
-    "evidence": ["app.json", "package.json", "src/hooks/useCalculator.ts", "src/engine/session.ts", "src/components/modals/AboutModal.tsx"],
-    "gaps": ["Final upload-key-signed AAB and verification on a physical Android device are still required.", "Complete account verification, actual audience/IARC forms, and the closed test required by the account."]
+    "checks": [
+      "Launch, calculate 2 + 3 = 5 and recover from an invalid operation with AC.",
+      "Switch ALG/RPN, angle units and DEC/HEX/OCT/BIN; verify expected sample results.",
+      "Open constants and conversions; save and clear calculation history.",
+      "Change language, restart, use airplane mode and open Privacy policy from About."
+    ],
+    "evidence": [
+      "app.json",
+      "package.json",
+      "src/hooks/useCalculator.ts",
+      "src/engine/session.ts",
+      "src/components/modals/AboutModal.tsx"
+    ],
+    "gaps": [
+      "Final upload-key-signed AAB and verification on a physical Android device are still required.",
+      "Complete account verification, actual audience/IARC forms, and the closed test required by the account."
+    ]
   },
   {
-    "slug": "atomic-clock", "name": "Atomic Clock", "title": "Atomic Clock", "repo": "ceas-atomic", "package": "app.physlab.ceas_atomic", "version": "1.0.0 (1)", "language": "English, Romanian and Spanish", "status": "In development", "category": "Tools",
+    "slug": "atomic-clock",
+    "name": "Atomic Clock",
+    "title": "Atomic Clock",
+    "repo": "ceas-atomic",
+    "package": "app.physlab.ceas_atomic",
+    "version": "1.0.0 (1)",
+    "language": "English, Romanian and Spanish",
+    "status": "In development",
+    "category": "Tools",
     "short": "Check network time, compare time zones and use a stopwatch or countdown.",
     "description": "Compare your device clock with network time. Atomic Clock queries time servers using NTP and can use an HTTPS fallback when configured. View synchronization status and the measured clock offset, choose time zones, and use a stopwatch or countdown.\n\nSelect a time server, adjust synchronization settings and choose a 12-hour or 24-hour display. English, Romanian and Spanish are available.\n\nSynchronization needs an Internet connection. Displayed accuracy depends on the server, network and device. This is a general time utility, not a certified time reference. Published by Praxis Science Lab.",
     "data": "Server choice, synchronization settings, the last synchronization result and selected time zones are stored on your device. To synchronize, the app sends network time requests to the selected server and configured fallbacks. Recipients see your source IP address, request timing and protocol information. The HTTPS fallback also sends an app-identifying User-Agent. The app does not create an account or send a location-sensor reading, and has no advertising or analytics SDK.",
     "permissions": "Internet access is used for NTP and optional HTTPS synchronization. The default server is time.cloudflare.com. Fallbacks include NTP Pool hosts; Google Time, Apple Time and a custom host can also be selected. If a server fails, other configured providers may be contacted. NTP uses UDP and is not encrypted. The Cloudflare HTTPS fallback uses encrypted transport. Server operators process connection information under their own policies; a custom server is controlled by its operator.",
     "retention": "Remove saved time-zone entries in the app. Clear app storage in Android Settings or uninstall to remove local app records. This build does not explicitly disable Android backup, so device backup or transfer settings may retain or restore app preferences. Remove any device backup separately if needed. Remote server logs are controlled by the time-service operators; clearing app storage does not delete those logs.",
     "safety": "Network time accuracy varies. Do not rely on the app as a certified or safety-critical timing instrument.",
-    "checks": ["Synchronize on Wi-Fi and mobile data; inspect the server, offset and status.", "Disable connectivity and verify the offline/last-sync information.", "Add and remove a time zone, test stopwatch and countdown, restart and check settings.", "Open privacy information and test a failed custom server and the fallback behavior."],
-    "evidence": ["pubspec.yaml", "android/app/src/main/AndroidManifest.xml", "lib/core/config/app_config.dart", "lib/core/ntp/ntp_client.dart", "lib/core/ntp/http_time_fallback.dart"],
-    "gaps": ["Data safety needs provider-level review of IP/request processing and retention. Do not submit an unqualified no-data-collected answer.", "NTP traffic is unencrypted: do not declare all transmitted data encrypted.", "Recheck the prepared screenshots against the final signed AAB and verify native libraries and physical-device behavior."]
+    "checks": [
+      "Synchronize on Wi-Fi and mobile data; inspect the server, offset and status.",
+      "Disable connectivity and verify the offline/last-sync information.",
+      "Add and remove a time zone, test stopwatch and countdown, restart and check settings.",
+      "Open privacy information and test a failed custom server and the fallback behavior."
+    ],
+    "evidence": [
+      "pubspec.yaml",
+      "android/app/src/main/AndroidManifest.xml",
+      "lib/core/config/app_config.dart",
+      "lib/core/ntp/ntp_client.dart",
+      "lib/core/ntp/http_time_fallback.dart"
+    ],
+    "gaps": [
+      "Data safety needs provider-level review of IP/request processing and retention. Do not submit an unqualified no-data-collected answer.",
+      "NTP traffic is unencrypted: do not declare all transmitted data encrypted.",
+      "Recheck the prepared screenshots against the final signed AAB and verify native libraries and physical-device behavior."
+    ]
   },
   {
-    "slug": "frequency-generator", "name": "Frequency Sound Generator", "title": "Frequency Sound Generator", "repo": "frequency-generator", "package": "app.physlab.frequency_generator", "version": "1.0.0 (1)", "language": "English, Romanian and Spanish", "status": "In development", "category": "Tools",
+    "slug": "frequency-generator",
+    "name": "Frequency Sound Generator",
+    "title": "Frequency Sound Generator",
+    "repo": "frequency-generator",
+    "package": "app.physlab.frequency_generator",
+    "version": "1.0.0 (1)",
+    "language": "English, Romanian and Spanish",
+    "status": "In development",
+    "category": "Tools",
     "short": "Generate tones, explore waveforms, run frequency sweeps and export WAV files.",
     "description": "Explore sound with sine, square, sawtooth and triangle waves. Set a frequency, choose the output channel, adjust volume and run a frequency sweep. Save presets, select musical notes, set a stop timer and export a generated WAV file.\n\nGeneration and settings work on your device without an account. English, Romanian and Spanish are available. Actual audible output depends on your device, speakers and headphones.\n\nStart at a low volume and keep listening sessions comfortable. This app is not a hearing test, medical treatment or calibrated measurement instrument. Published by Praxis Science Lab.",
     "data": "Generator settings, language, presets and the last generator state are stored locally. Audio is synthesized on your device. Exported WAV files are written to a destination managed by the device. The app has no account, advertising SDK, analytics service or application backend and does not upload presets or generated audio to Praxis Science Lab.",
     "permissions": "The Android release does not request microphone access. A legacy write-storage permission is limited to Android API 28 and below for WAV export. Newer Android versions use the platform's file/media facilities. If you open or share an exported file with another service, that destination handles the file under its own policy.",
     "retention": "Delete saved presets using the app's controls. Clear Android app storage or uninstall to remove private settings. Exported WAV files remain in your selected destination until you delete them separately. Android backup is not explicitly disabled in this build; device backup and transfer settings can retain preferences. Copies you share with another service must be managed there.",
     "safety": "Start at low volume. Frequency settings do not guarantee speaker output or calibrated sound levels. No hearing-test or therapeutic claims are made.",
-    "checks": ["At a low device volume, start and stop each waveform; verify silence after Stop.", "Test left/right output, a short sweep and timer auto-stop.", "Save and delete a preset, export a short WAV and open it from the selected destination.", "Background the app during output, restart, and check language and privacy links."],
-    "evidence": ["pubspec.yaml", "android/app/src/main/AndroidManifest.xml", "lib/core/config/app_config.dart", "lib/core/services", "lib/state"],
-    "gaps": ["Recheck screenshots against the final signed AAB and inspect merged permissions, legacy export and physical-device audio behavior."]
+    "checks": [
+      "At a low device volume, start and stop each waveform; verify silence after Stop.",
+      "Test left/right output, a short sweep and timer auto-stop.",
+      "Save and delete a preset, export a short WAV and open it from the selected destination.",
+      "Background the app during output, restart, and check language and privacy links."
+    ],
+    "evidence": [
+      "pubspec.yaml",
+      "android/app/src/main/AndroidManifest.xml",
+      "lib/core/config/app_config.dart",
+      "lib/core/services",
+      "lib/state"
+    ],
+    "gaps": [
+      "Recheck screenshots against the final signed AAB and inspect merged permissions, legacy export and physical-device audio behavior."
+    ]
   },
   {
-    "slug": "audiolab", "name": "AudioLab", "title": "AudioLab", "repo": "audiolab", "package": "app.physlab.audiolab", "version": "0.3.1 (4)", "language": "English, Romanian and Spanish", "status": "In development", "category": "Music & Audio",
+    "slug": "audiolab",
+    "name": "AudioLab",
+    "title": "AudioLab",
+    "repo": "audiolab",
+    "package": "app.physlab.audiolab",
+    "version": "0.3.1 (4)",
+    "language": "English, Romanian and Spanish",
+    "status": "In development",
+    "category": "Music & Audio",
     "short": "Explore audio locally with spectrum tools, signal generation and file analysis.",
     "description": "Explore audio signals on your Android device. Use live microphone analysis, waveform and spectrum views, a spectrogram, signal generation and local audio-file analysis. Save sessions and export available charts or reports.\n\nMicrophone access is requested when you start live analysis. Files are selected through the system picker. Processing and session storage are local, with no app account or cloud upload. English, Romanian and Spanish are available.\n\nDisplayed levels and analysis depend on the device, microphone and signal. AudioLab is not a calibrated sound-level meter or a medical or hearing-diagnostic tool. Start generated audio at low volume. Published by Praxis Science Lab.",
     "data": "Live microphone samples and user-selected audio files are processed on your device. AudioLab stores preferences, session names and state, file references and numeric measurement records in its private local database. Microphone analysis is started by the user and stops when the app leaves the foreground. The app has no account, analytics, advertising or cloud service. The Android release removes Internet and network-state permissions.",
     "permissions": "RECORD_AUDIO is requested for live analysis. You can deny or revoke it in Android Settings and continue with features that do not need the microphone. Audio-file access is granted through the system picker. Exporting a chart, session or PDF writes the information you choose to a system-selected destination, which may be a cloud-backed document provider. Such a provider handles its copy under its own policy. The app does not automatically upload microphone audio.",
     "retention": "Saved sessions can be deleted in the app. Clear Android app storage or uninstall to remove the private database, including stored measurements and settings. Android app backup is disabled. Original audio files and exported reports, charts or session files are separate from private storage and remain until you delete them from their destination. Removing a session does not delete an original source file.",
     "safety": "Use low output volume. Digital level readings are not certified sound-pressure measurements. This app does not diagnose hearing or provide medical advice.",
-    "checks": ["Deny microphone permission and verify the app remains usable; grant it only when testing live analysis.", "Start/stop analysis and background the app; confirm microphone use ends.", "Select a non-sensitive audio file, inspect a spectrum, save/delete a session and export a report.", "Test generation at low volume and verify Stop, route changes and privacy access."],
-    "evidence": ["pubspec.yaml", "android/app/src/main/AndroidManifest.xml", "lib/data/store.dart", "lib/main.dart", "android/app/src/main/kotlin"],
-    "gaps": ["Verify microphone denial/revocation and foreground-only operation on the final signed build.", "Recheck the prepared screenshots against the final release and test native-library alignment, audio routes and exported-report accuracy on physical hardware."]
+    "checks": [
+      "Deny microphone permission and verify the app remains usable; grant it only when testing live analysis.",
+      "Start/stop analysis and background the app; confirm microphone use ends.",
+      "Select a non-sensitive audio file, inspect a spectrum, save/delete a session and export a report.",
+      "Test generation at low volume and verify Stop, route changes and privacy access."
+    ],
+    "evidence": [
+      "pubspec.yaml",
+      "android/app/src/main/AndroidManifest.xml",
+      "lib/data/store.dart",
+      "lib/main.dart",
+      "android/app/src/main/kotlin"
+    ],
+    "gaps": [
+      "Verify microphone denial/revocation and foreground-only operation on the final signed build.",
+      "Recheck the prepared screenshots against the final release and test native-library alignment, audio routes and exported-report accuracy on physical hardware."
+    ]
   },
   {
-    "slug": "medical-terminology-flashcards", "name": "Medical Terminology Flashcards", "title": "Medical Terminology Flashcards", "repo": "Medical-Terminology-Flashcards", "package": "ro.traiananghel.medicalterminology", "version": "0.1.0 (1)", "language": "English", "status": "In development", "category": "Education",
+    "slug": "medical-terminology-flashcards",
+    "name": "Medical Terminology Flashcards",
+    "title": "Medical Terminology Flashcards",
+    "repo": "Medical-Terminology-Flashcards",
+    "package": "ro.traiananghel.medicalterminology",
+    "version": "0.1.0 (1)",
+    "language": "English",
+    "status": "In development",
+    "category": "Education",
     "short": "Study medical word parts with flashcards, quizzes and offline practice.",
     "description": "Build your understanding of medical terminology through focused study. Explore terms and word parts, practice with flashcards and quizzes, and assemble word parts. Favorites, spaced repetition and progress tracking help organize study sessions.\n\nCore learning is designed to work offline. Pronunciation requires a compatible installed offline Android voice. No account is required. Designed for post-secondary and vocational learning.\n\nThis app is not a medical device and does not diagnose, treat, cure or prevent any medical condition. It does not provide medical advice. Consult a healthcare professional for medical advice, diagnosis or treatment. Published by Praxis Science Lab.",
     "data": "Study history, progress, favorites, preferences and ad frequency limits are stored in private device storage. Search text is used in memory, not stored as search history. No patient information, health records, microphone audio or location-sensor data is requested. The app has no account, application analytics, cloud synchronization or crash-reporting service. Studied terms and progress are not attached to advertising requests.",
     "permissions": "The current development release includes Google Mobile Ads Next-Gen 1.4.0 and User Messaging Platform 4.0.0, but blank production identifiers keep advertising and consent requests disabled. This policy covers that configuration. An advertising-enabled release requires an updated policy and Data safety declaration before distribution. Google ad services can process identifiers, approximate location inferred from IP, interactions and diagnostics. The package excludes the Android advertising-ID permission, which does not exclude all identifiers. Pronunciation passes selected text to an installed offline text-to-speech voice; that engine is supplied separately by its provider.",
     "retention": "Use in-app reset controls to remove the selected learning records. Settings, ad-frequency state and a storage-recovery copy can remain until all Android app storage is cleared. Clearing app storage or uninstalling removes private app records. Cloud backup and device transfer are disabled. There is no developer server copy. Device services and any future advertising providers control their own records.",
     "safety": "Educational reference only. This is not a medical device and does not diagnose, treat, cure or prevent any condition. Consult a healthcare professional for medical advice, diagnosis or treatment.",
-    "checks": ["Use only an approved production content build for store screenshots and release testing.", "Test offline study, flashcards, quizzes, word building, progress and selective reset.", "Verify offline pronunciation and behavior when no offline voice exists.", "Complete TalkBack traversal and any configured consent/ad flows before release."],
-    "evidence": ["docs/play/PRIVACY_POLICY.md", "docs/play/READINESS.md", "docs/RELEASE_ISSUES.md", "app/src/main/AndroidManifest.xml", "app/build.gradle.kts"],
-    "gaps": ["Production educational content is absent. Do not publish the listing as a usable released learning product or reuse synthetic test screenshots.", "Final audience, health declaration, account type, advertising configuration, Data safety and manual accessibility/device checks remain open.", "The existing app's embedded policy and provisional URL still require a governed update to match this public policy before distribution."]
+    "checks": [
+      "Use only an approved production content build for store screenshots and release testing.",
+      "Test offline study, flashcards, quizzes, word building, progress and selective reset.",
+      "Verify offline pronunciation and behavior when no offline voice exists.",
+      "Complete TalkBack traversal and any configured consent/ad flows before release."
+    ],
+    "evidence": [
+      "docs/play/PRIVACY_POLICY.md",
+      "docs/play/READINESS.md",
+      "docs/RELEASE_ISSUES.md",
+      "app/src/main/AndroidManifest.xml",
+      "app/build.gradle.kts"
+    ],
+    "gaps": [
+      "Production educational content is absent. Do not publish the listing as a usable released learning product or reuse synthetic test screenshots.",
+      "Final audience, health declaration, account type, advertising configuration, Data safety and manual accessibility/device checks remain open.",
+      "The existing app's embedded policy and provisional URL still require a governed update to match this public policy before distribution."
+    ]
   },
   {
     "slug": "xlab-tools",
@@ -100,7 +211,17 @@
     "policy_date": "2026-09-09"
   },
   {
-    "slug": "clear-audio", "name": "Clear Audio", "title": "Clear Audio", "repo": "claraudio", "package": "ro.claraudio.probe", "version": "0.12.0-dev (13)", "language": "English by default. Choose English, Română or Español in More → App language.", "status": "Development APK available", "category": "Music & Audio", "publishing_assets": false, "policy_date": "2026-09-11",
+    "slug": "clear-audio",
+    "name": "Clear Audio",
+    "title": "Clear Audio",
+    "repo": "claraudio",
+    "package": "ro.claraudio.probe",
+    "version": "0.12.0-dev (13)",
+    "language": "English by default. Choose English, Română or Español in More → App language.",
+    "status": "Development APK available",
+    "category": "Music & Audio",
+    "publishing_assets": false,
+    "policy_date": "2026-09-11",
     "short": "Shape your sound with clear voice, a 10-band equalizer and local audio playback.",
     "description": "Listen to your own audio files with Clear Audio. Choose Clear voice, Balanced or Night mode, adjust a 10-band equalizer and compare Original with Processed at the same phone volume. The player includes pause and resume, seeking, 15-second skips and a sleep timer.\n\nSave sound settings for the speaker, wired headphones, Bluetooth or USB. Optional automatic profiles follow the confirmed output category. The waveform shows actual digital samples from the local player. English is the default; Romanian and Spanish are available from More → App language.\n\nAudio files are processed on your phone and local playback works offline. The 10-band EQ applies to files played in Clear Audio. Processing sound from other apps is experimental and depends on the phone and audio route; calls and independent per-app volume mixing are not supported.\n\nThis development version uses Google test ads on the More page, separately from playback controls. Ad requests are suspended when detected audio activity or a call makes the page ineligible. Playback remains available when ads or consent services are unavailable. Commercial advertising is not configured.\n\nClear Audio does not promise percentage-based volume boosts, measure sound pressure at your ear or guarantee hearing or speaker protection. Published by Praxis Science Lab.",
     "data": "Selected audio files are decoded and processed on the device. Sound settings, equalizer gains, output-category profiles and language are stored in app-private storage. Audio files, samples and titles are not supplied to the advertising driver. Clear Audio has no user account, developer analytics service or application cloud backend. Google advertising and consent services may process connection and device information as described below. A compatibility report is exported only when you choose a destination; review it before sharing because it can include device, playback and diagnostic details.",
@@ -109,244 +230,283 @@
     "safety": "Start at a comfortable, moderate device volume and compare the same passage. Digital gain and the configured sample-peak limiter do not establish a safe acoustic level or guarantee speaker protection. Clear Audio is not a hearing test, hearing aid or calibrated sound-level meter. The 10-band EQ is available for the local player; external-app processing has device-dependent limits.",
     "ads_notice": "Google test ad identifiers in the downloadable development APK. Commercial advertising is not configured; the separate release build disables ads.",
     "data_safety_note": "Not finalized for Google Play: the downloadable development build can contact Google advertising and consent services using sample identifiers. Review SDK data handling, consent configuration and every active artifact before making store declarations. Local audio processing does not imply that advertising services process no data.",
-    "checks": ["Open an audio file, compare Clear voice, Balanced and Night mode at the same moderate phone volume, and compare Original / Processed.", "Enable the local 10-band EQ, choose a curve, adjust one band and verify the setting survives a restart.", "Pause and resume, seek within a file, use the 15-second skips and verify the sleep timer stops playback.", "Save and load an output profile; confirm that loading it preserves Original and an existing pause.", "Switch English / Română / Español in More → App language and verify settings are preserved.", "If testing Other apps, record the phone, Android version, audio route and actual audible result. Do not infer universal compatibility from a successful API status."],
-    "evidence": ["app/build.gradle.kts", "app/src/main/AndroidManifest.xml", "app/src/debug/AndroidManifest.xml", "app/src/main/java/ro/claraudio/probe/Language.kt", "app/src/main/java/ro/claraudio/probe/AdSession.kt", "docs/VALIDATION-0.12.md", "docs/package-0.12.json"],
-    "gaps": ["The direct download is a development-signed APK, not a Google Play release. Prepare and verify a signed release AAB separately.", "Complete production advertising identifiers, published consent messages and Data safety review before enabling commercial ads.", "Add the public privacy-policy link inside the app before a store release; the current app has local explanations and a Google SDK information link.", "Validate accessibility, playback and audio outputs on more physical devices. External-app processing remains experimental.", "Prepare final store graphics and review screenshots against the exact upload artifact."],
-    "download": {"path": "downloads/ClearAudio-0.12.0-dev.apk", "label": "Version 0.12.0-dev", "android": "9", "size": "22.5 MiB", "sha256": "CCB9D49734FB4131F0BAB13878B3A31C4F9AC5F2D120FAC31A2E16A710855926"},
+    "checks": [
+      "Open an audio file, compare Clear voice, Balanced and Night mode at the same moderate phone volume, and compare Original / Processed.",
+      "Enable the local 10-band EQ, choose a curve, adjust one band and verify the setting survives a restart.",
+      "Pause and resume, seek within a file, use the 15-second skips and verify the sleep timer stops playback.",
+      "Save and load an output profile; confirm that loading it preserves Original and an existing pause.",
+      "Switch English / Română / Español in More → App language and verify settings are preserved.",
+      "If testing Other apps, record the phone, Android version, audio route and actual audible result. Do not infer universal compatibility from a successful API status."
+    ],
+    "evidence": [
+      "app/build.gradle.kts",
+      "app/src/main/AndroidManifest.xml",
+      "app/src/debug/AndroidManifest.xml",
+      "app/src/main/java/ro/claraudio/probe/Language.kt",
+      "app/src/main/java/ro/claraudio/probe/AdSession.kt",
+      "docs/VALIDATION-0.12.md",
+      "docs/package-0.12.json"
+    ],
+    "gaps": [
+      "The direct download is a development-signed APK, not a Google Play release. Prepare and verify a signed release AAB separately.",
+      "Complete production advertising identifiers, published consent messages and Data safety review before enabling commercial ads.",
+      "Add the public privacy-policy link inside the app before a store release; the current app has local explanations and a Google SDK information link.",
+      "Validate accessibility, playback and audio outputs on more physical devices. External-app processing remains experimental.",
+      "Prepare final store graphics and review screenshots against the exact upload artifact."
+    ],
+    "download": {
+      "path": "downloads/ClearAudio-0.12.0-dev.apk",
+      "label": "Version 0.12.0-dev",
+      "android": "9",
+      "size": "22.5 MiB",
+      "sha256": "CCB9D49734FB4131F0BAB13878B3A31C4F9AC5F2D120FAC31A2E16A710855926"
+    },
     "screenshots": [
-      {"file": "screenshot-01-listen.png", "alt": "Clear Audio playing a local sample with a digital waveform and playback controls.", "caption": "Listen · local files and a real digital waveform."},
-      {"file": "screenshot-02-equalizer.png", "alt": "The enabled 10-band equalizer and its selected Vocal curve.", "caption": "Equalizer · ten bands, presets and saved adjustments."},
-      {"file": "screenshot-03-profiles.png", "alt": "Audio profiles for the selected speaker output with optional automatic application.", "caption": "Profiles · saved settings for each output category."}
+      {
+        "file": "screenshot-01-listen.png",
+        "alt": "Clear Audio playing a local sample with a digital waveform and playback controls.",
+        "caption": "Listen · local files and a real digital waveform."
+      },
+      {
+        "file": "screenshot-02-equalizer.png",
+        "alt": "The enabled 10-band equalizer and its selected Vocal curve.",
+        "caption": "Equalizer · ten bands, presets and saved adjustments."
+      },
+      {
+        "file": "screenshot-03-profiles.png",
+        "alt": "Audio profiles for the selected speaker output with optional automatic application.",
+        "caption": "Profiles · saved settings for each output category."
+      }
     ]
   },
-{
-  "slug": "spinora",
-  "name": "Spinora",
-  "title": "Spinora",
-  "repo": "spinora",
-  "package": "ro.traian.spinora",
-  "version": "0.1.0 (1)",
-  "language": "English by default. Choose English, Română or Español in Settings → Language. Existing saved wheel text stays as you wrote it.",
-  "status": "In testing",
-  "category": "Tools",
-  "publishing_assets": false,
-  "policy_date": "2026-09-12",
-  "short": "Create colorful decision wheels, spin your options and save the results.",
-  "description": "A little spin. A clear decision. Spinora helps you choose between everyday options with a customizable decision wheel. Create wheels with 2–50 equally likely options, save them on your device and spin whenever you need a choice.\n\nStart with a template for meals, yes or no, colors, weekend plans, numbers or a break. Customize slice and text colors, bold, italic and underline styles, or add an image from your gallery. Reorder options, paste a list, duplicate a wheel and choose from four themes and three result sounds.\n\nSet a spin duration from 3 to 10 seconds. Keep the latest 200 results in local history, spin again or remove the selected option while keeping at least two options on the wheel. The interface adapts to phones and tablets.\n\nThe app opens in English and also supports Romanian and Spanish. Wheels work offline without an account. Optional Google demo ads can be enabled in Settings; they are off by default and do not generate revenue. Commercial advertising is not configured.\n\nSpinora is currently a development version under testing. Google Play availability, final branding and release materials are still being prepared. Published by Praxis Science Lab.",
-  "data": "Wheel names, option text and styling, settings, language and the latest 200 results are stored in app-private storage on your device. Selected gallery images are copied into the app’s private documents directory. There is no Praxis Science Lab account, cloud synchronization or application backend, and the app does not upload your wheels or images to Praxis Science Lab.\n\nOptional Google demo advertising can connect to Google when enabled. A demo identifier does not mean no information is processed by the advertising service.",
-  "permissions": "You select individual images through the platform gallery picker. Internet access supports optional test ads and vibration supports optional haptic feedback. This version includes google_mobile_ads 9.1.0 with Google sample application and banner identifiers. The SDK and its dependencies may process network and device information, identifiers, advertising interactions and diagnostics according to Google’s policies.\n\nThe test-ad switch is off by default. When enabled, the app initializes the advertising SDK and requests non-personalized demo banners on the main navigation screens. It does not display banners on the wheel or result screen. No production ad identifiers or live monetization are configured. A production consent flow is not yet implemented; non-personalized requests are not a substitute for that flow. Advertising behavior and disclosures must be reviewed before a commercial release.",
-  "retention": "Delete individual wheels or clear result history in the app. Clear app storage in Android Settings or uninstall to remove all private wheels, results, imported image copies and settings. Imported image copies may remain in private storage after removing an image or abandoning an edit; clearing app storage or uninstalling removes them. Original gallery images are not deleted by these actions. Android app backup is disabled.\n\nPraxis Science Lab has no server copy to restore. Clearing local storage does not delete information held by Google; Google controls retention for its services.",
-  "safety": "Use Spinora for everyday choices and activities. Every option has an equal chance. Long labels are shortened on the wheel and shown in full in the editor and result. A development build is available for local testing; there is no public Google Play installation link yet.",
-  "ads_notice": "Optional Google demo banners, disabled by default. No commercial advertising or production consent configuration yet.",
-  "data_safety_note": "Not finalized for Google Play. Local wheels and images stay on the device, but optional Google advertising may process network, device and advertising information. Review the exact signed artifact, SDK disclosures and production consent flow before submitting Data safety answers.",
-  "checks": [
-    "Create a wheel with 2–50 options, edit colors and text styles, reorder options and save it.",
-    "Spin a wheel and check that the selected result matches the pointer; try Spin again and Remove this option.",
-    "Import a gallery image and check it in the wheel, editor and result. Check sounds and vibration on a physical device.",
-    "Switch English, Romanian and Spanish in Settings and restart; verify saved wheels and preferences remain.",
-    "Test offline operation, history clearing and phone/tablet layouts.",
-    "If enabling Test ads, check that only demo banners appear, that a failed request leaves the app usable and that the wheel screen remains free of ads."
-  ],
-  "evidence": [
-    "pubspec.yaml",
-    "lib/main.dart",
-    "lib/editor.dart",
-    "lib/models.dart",
-    "lib/store.dart",
-    "lib/ads.dart",
-    "android/app/src/main/AndroidManifest.xml",
-    "output/VERIFICARE.md"
-  ],
-  "gaps": [
-    "Confirm the final name and permanent package identifier; prepare an upload-key-signed release AAB.",
-    "Complete physical-device testing of gallery selection, audio, vibration, accessibility and advertising. Automated tests and emulator startup do not cover all these features.",
-    "Configure production AdMob identifiers and the appropriate consent flow, then reconcile the privacy policy and Play declarations before enabling commercial ads.",
-    "Add the public privacy-policy link inside the app; the current app displays local privacy information.",
-    "Prepare final launcher/store artwork and authentic device screenshots from the release build. The website interface previews are not Play Store screenshot assets.",
-    "Complete the testing and account requirements shown in the actual Play Console account."
-  ],
-  "previews": [
-    {
-      "file": "preview-home.png",
-      "width": 390,
-      "height": 844,
-      "alt": "Spinora interface preview with saved decision wheels and navigation for My wheels, Explore, History and Settings.",
-      "caption": "My wheels · saved choices, ready for another spin."
-    },
-    {
-      "file": "preview-wheel.png",
-      "width": 390,
-      "height": 844,
-      "alt": "Spinora interface preview showing a six-option food wheel and the Spin the wheel button.",
-      "caption": "Decision wheel · colorful options and a clear result."
-    }
-  ]
-},
-{
-  "slug": "earmate",
-  "name": "EarMate",
-  "title": "EarMate",
-  "repo": "earmate",
-  "package": "app.physlab.earmate",
-  "version": "1.0.3 (4)",
-  "language": "English by default; Romanian and Spanish available in Settings",
-  "status": "In testing",
-  "category": "Music & Audio",
-  "policy_date": "2026-09-12",
-  "publishing_assets": false,
-  "short": "Local soundscapes, a five-band EQ and tools for compatible BLE devices.",
-  "description": "Create a comfortable listening soundscape with white, pink or brown noise, rain and waves. Shape EarMate sounds with a five-band equalizer, use built-in presets or save your own, and customize the Home cards.\n\nFor compatible Bluetooth Low Energy devices, EarMate can read the standard battery service and estimate proximity from signal strength. With location permission, it can record the phone position when a BLE connection is unexpectedly lost while the app is running. These features depend on the device: not every pair of headphones exposes a BLE battery service, and powered-off headphones cannot be located.\n\nPair headphones for audio in Android settings. The equalizer affects EarMate soundscapes, not other apps. Playback pauses when the app leaves the foreground or loses audio focus. English is the default; Romanian and Spanish are available. No user account is required. Published by Praxis Science Lab.",
-  "data": "Preferences, language, custom equalizer presets, the selected BLE device identifier and name, up to 400 battery samples, and an optional last-seen phone location and time are stored in app-private storage. Audio is synthesized locally; the app does not record the microphone. These records are not uploaded to a Praxis Science Lab backend.\n\nThe current build disables advertising requests by default. It includes the Google Mobile Ads and UMP libraries for later configuration. A development build explicitly enabling test ads contacts Google only after the UMP flow permits ad requests; Google may process device identifiers, IP-derived approximate location, ad interactions and diagnostics under its policies. Test identifiers do not guarantee that no information is processed.",
-  "permissions": "Nearby Devices/Bluetooth permissions are used to discover and connect to BLE peripherals. Location permission is requested by an explicit location/radar action, or when needed for scanning on older Android versions. If permission has been granted, an unexpected BLE disconnection can save the phone position while the app is running. There is no background GPS tracking of the headphones.\n\nOpening a map sends your IP address and the requested map area to OpenStreetMap tile servers. Opening external Maps passes the selected coordinates to the chosen maps app, which follows its own policy. Opening the public privacy page uses your browser and GitHub Pages. No microphone, contacts or camera permission is requested.\n\nIf a build enables Google consent messages and test advertising, the Google services receive the information needed to obtain consent and serve permitted ads. Required privacy options are available from Settings. Real advertising is not activated in this test release.",
-  "retention": "Use Clear all data in Settings to stop playback, disconnect BLE and remove local presets, battery history, saved location, device selection and preferences. Clearing Android app storage or uninstalling removes the private app records. Android cloud backup is disabled; device transfer behavior may depend on Android and the manufacturer. Data or logs held by map, advertising, browser or support providers are controlled by those providers and are not deleted by clearing EarMate data.",
-  "safety": "Start with low phone and app volume. EQ applies only to EarMate audio. Radar distances are rough RSSI estimates and the map shows the phone position at disconnection, not a live headphone location. This is not a medical, hearing-test or calibrated measurement app.",
-  "ads_notice": "Google Mobile Ads SDK included; ad requests disabled by default. Test-only activation is gated by Google UMP. No live advertising account configured.",
-  "data_safety_note": "Not ready for automatic submission: inspect the final signed artifact and all enabled configurations. The default test build does not request ads, but map requests disclose an IP address and map area to OpenStreetMap. If advertising is enabled, review Google Mobile Ads disclosures, consent and applicable device-ID, location, interaction and diagnostic categories. Local storage alone is not off-device collection.",
-  "checks": [
-    "Pair headphones for audio in Android settings and listen to all five soundscapes at low volume.",
-    "Verify Pause/Play, EQ presets and stopping when headphones disconnect or the app leaves the foreground.",
-    "Grant Nearby Devices access, scan and check battery reporting on a compatible BLE peripheral.",
-    "Test radar signal loss and the saved phone location; verify the feature does not claim to find powered-off headphones.",
-    "Save a preset, hide/reorder cards, change language and restart. Check the public privacy page."
-  ],
-  "evidence": [
-    "pubspec.yaml",
-    "lib/core/audio/soundscape_controller.dart",
-    "lib/core/ble/ble_service.dart",
-    "lib/core/ads/ad_consent.dart",
-    "android/app/src/main/kotlin/app/physlab/earmate/MainActivity.kt",
-    "audit/AUDIT-RO.md"
-  ],
-  "gaps": [
-    "Listening, routing and Bluetooth compatibility must still be checked with real headphones.",
-    "Configure an AdMob account and published consent messages before any live advertising; keep disabled until verified.",
-    "Complete the applicable Play Console forms and testing/review process using the final upload-signed AAB."
-  ]
-},
-{
-  "slug": "droplet",
-  "name": "Droplet — Speaker Care",
-  "title": "Droplet — Speaker Care",
-  "repo": "droplet-speaker",
-  "package": "app.praxis.droplet_speaker",
-  "version": "0.1.0 (1)",
-  "language": "English by default; Romanian and Spanish available in Settings",
-  "status": "In testing",
-  "category": "Tools",
-  "policy_date": "2026-09-12",
-  "publishing_assets": false,
-  "short": "Timed speaker tones, adjustable frequency and a quick sound comparison.",
-  "description": "Try timed sound sessions designed to explore whether speaker vibrations help dislodge residual water near the speaker opening. Choose a gentle 30-second cycle, 60-second pulses or a 90-second frequency sweep. A manual mode offers 80–300 Hz tones for 30 seconds.\n\nFollow progress on a countdown, stop at any time and compare the sound with a short five-second tone. Completed sessions and your own better-or-unchanged assessment are saved locally. The app does not detect moisture or objectively measure improvement.\n\nPlayback uses the built-in speaker, checks for external audio devices and stops when the app leaves the foreground or loses audio focus. English, Romanian and Spanish are available. No account is required.\n\nWater-removal effectiveness has not been validated on physical phones and is not guaranteed. Droplet does not repair damaged speakers, remove internal moisture or boost the phone beyond its normal volume. Advertising is planned; it is disabled in the current development build.",
-  "safety": "Follow the phone manufacturer’s guidance after liquid exposure. If immersed, turn the phone off and allow it to dry as instructed before using sound. Keep the speaker opening unobstructed, disconnect headphones and external audio devices, and use moderate volume away from your ears. Do not intentionally wet a device for testing. Stop if the sound is uncomfortable or distorted.",
-  "data": "Language preferences, up to 50 completed sessions and optional better-or-unchanged feedback are stored locally. Sound is generated on the device. There is no microphone recording, account, cloud history or automatic upload of session records.",
-  "permissions": "The app checks Android audio output devices and audio focus for playback. It does not request microphone, location or storage access. Internet and network-state permissions and Google Mobile Ads/UMP libraries are included for planned advertising. Ad requests and consent initialization are disabled in this build. A future advertising release requires an updated privacy notice and configuration before distribution.",
-  "retention": "Use Clear history in History to delete saved sessions. Clear Android app storage or uninstall Droplet to remove local preferences and history. Automatic Android app backup is disabled.",
-  "ads_notice": "Planned advertising; disabled in version 0.1.0. Demo identifiers only. Banner placement is in History, outside sound sessions.",
-  "data_safety_note": "Not finalized for a monetized release: Google advertising libraries are included but disabled in this build. Inspect startup traffic and the exact signed release, then reconcile SDK behavior, consent, privacy notice and Play declarations before enabling advertising.",
-  "checks": [
-    "Confirm playback uses the built-in speaker and external headphones, USB audio and Bluetooth routes prevent or stop a session.",
-    "Check Stop, leaving the app, interruptions, countdown completion and manual frequency limits.",
-    "Compare at moderate volume on a dry device; do not intentionally expose a phone to liquid.",
-    "Verify English, Romanian and Spanish, large text and narrow screens.",
-    "Check that only completed care sessions enter history, comparison returns to feedback, and Clear history removes records."
-  ],
-  "gaps": [
-    "Validate acoustic behavior and external audio routes on representative physical phones. Water-removal efficacy is not established.",
-    "Configure production AdMob and consent, update the privacy notice and complete SDK Data safety review before activating ads.",
-    "Prepare final store artwork, authentic screenshots and an upload-signed release AAB.",
-    "Complete the applicable Play Console testing, declarations and review for the final artifact."
-  ],
-  "screenshots": [
-    {
-      "file": "screenshot-home.png",
-      "alt": "Droplet home screen with a gentle 30-second cycle and Start button",
-      "caption": "Actual Android emulator capture, development version 0.1.0."
-    }
-  ]
-},
-{
-  "slug": "prism-player",
-  "name": "Prism Player",
-  "title": "Prism Player",
-  "repo": "prism-player",
-  "package": "app.praxis.prism",
-  "version": "0.1.0 (1)",
-  "language": "English by default; Romanian and Spanish available in Style → Language",
-  "status": "In testing",
-  "category": "Music & Audio",
-  "policy_date": "2026-09-12",
-  "publishing_assets": false,
-  "short": "Offline music, colorful themes, playlists, equalizer and a sleep timer.",
-  "description": "Bring your own music to Prism Player, a colorful offline audio player for Android 9 and later. Choose local audio files or scan the music saved on your phone, then browse songs, artists, albums, genres and folders. Search your library and sort tracks by title, addition time or duration.\n\nCreate and reorder playlists, save favorites and browse recently added or most-played tracks. Manage the playback queue, shuffle, repeat, seek and adjust playback speed. Music can continue in the background with Android media controls.\n\nShape Prism playback with the equalizer bands available on your device and bass adjustment where supported. Set a sleep timer to pause at the chosen time or after the current song finishes. Choose four color palettes, light or dark appearance and three geometric artwork styles; embedded album covers are also supported.\n\nEnglish, Romanian and Spanish are available. Your audio files stay on your device and no account is required. Music is not supplied with the app. Advertising is planned, but disabled in this development build; offline playback does not require watching an ad.",
-  "safety": "Use comfortable listening levels and reduce volume if you hear distortion. The equalizer affects Prism playback only; band count and bass support depend on the device. Removing a library entry or playlist does not delete the source audio file.",
-  "data": "The app reads audio files selected through the Android document picker or made available by an optional music-library permission. Track locations and metadata, playlists, favorites, play counts, language and appearance preferences are stored locally. Embedded album artwork is read locally. Audio files and library records are not uploaded by Prism. There is no account, microphone recording or cloud music library.",
-  "permissions": "Optional audio-library access is used for scanning: READ_MEDIA_AUDIO on Android 13 and later, or READ_EXTERNAL_STORAGE on earlier supported versions. The document picker can grant access to selected files without a library-wide permission. Media playback uses a foreground service, audio focus and a wake lock to support background listening and system controls. No microphone, location or all-files-management permission is requested. Internet and network-state permissions and Google Mobile Ads/UMP libraries are included for planned advertising, which is disabled in this build.",
-  "retention": "Remove library entries and playlists in the app to remove those local records while keeping the source audio files. Clear Android app storage or uninstall Prism to remove its library records, preferences and cached artwork; audio files stored elsewhere on the device remain. Library data is excluded from Android backup and device transfer.",
-  "ads_notice": "Advertising planned; disabled in version 0.1.0. Only demo identifiers are configured. Intended banner placement: Style, while playback is paused.",
-  "data_safety_note": "Not finalized for production advertising. Google advertising libraries are included but disabled. Before activating ads, verify the exact signed artifact, SDK startup and data practices, consent configuration, privacy notice and all relevant Play declarations.",
-  "checks": [
-    "Import local MP3 files and test the music scan with permission allowed and denied. Verify access after restarting the app.",
-    "Test background playback, system media controls, interruptions and headphone/Bluetooth disconnection on real devices.",
-    "Check search, playlists, favorite persistence, queue reordering and non-destructive entry removal.",
-    "Test equalizer availability, playback speed, shuffle, repeat and both sleep-timer modes.",
-    "Check English, Romanian and Spanish, large text, narrow screens and large libraries."
-  ],
-  "gaps": [
-    "Complete representative physical-device, Bluetooth, large-library and document-provider testing.",
-    "Configure production AdMob and consent, and update privacy and Data safety information before enabling ads.",
-    "Prepare final store artwork, screenshots and a release AAB signed with the upload key.",
-    "Complete the applicable Google Play testing, declarations and review for the final artifact."
-  ],
-  "screenshots": [
-    {
-      "file": "screenshot-style-ro.png",
-      "alt": "Prism Player appearance settings in Romanian with violet, coral, turquoise and gold palettes",
-      "caption": "Actual development-app capture in Romanian, version 0.1.0, Android emulator."
-    }
-  ]
-},
-{
-  "slug": "geostamp-camera",
-  "name": "GeoStamp Camera",
-  "title": "GeoStamp Camera",
-  "repo": "geostamp-camera",
-  "package": "app.praxis.geostamp",
-  "version": "0.3.2 (5)",
-  "language": "English by default; Romanian and Spanish available from the language button. Quick Help is available in all three languages.",
-  "status": "In testing",
-  "category": "Photography",
-  "policy_date": "2026-09-12",
-  "publishing_assets": false,
-  "short": "GPS photo stamps, project albums, street maps and local PDF exports.",
-  "description": "Give each photo a place and a purpose with GeoStamp Camera for Android 10 and later. Capture photos with coordinates, date, time, a project name and your own notes. Keep the original alongside a separately stamped copy. Import existing images using their own GPS and capture-date metadata when available.\n\nChoose the active project directly in Camera. After capture or import, pick an existing project or create a new one on the spot. Edit a saved stamp to change its project, note, colors, text size or placement while preserving the original capture coordinates and time.\n\nExplore geotagged photos on OpenStreetMap street maps. Add a map thumbnail to a saved photo, or enable the visible automatic camera map: it is included when already loaded, without making the shutter wait for internet. New map areas require a connection.\n\nFilter project albums, select photos for PDF export, share stamped copies and back up or restore albums with a ZIP file saved to a location you choose. GPS accuracy is shown in metres, with an optional wait for a more precise fix. Quick Help explains the main workflows.\n\nEnglish, Romanian and Spanish are available. No app account is required. The current development build uses Google test advertisements in Albums; production advertising and a Google Play release are still being prepared.",
-  "safety": "GPS accuracy depends on the device and surroundings; coordinates and device time are not certified evidence. The optional precise-GPS mode waits up to 30 seconds for a fix within 15 m and can be cancelled. Stamped exports are resized to at most 2400 pixels on the long edge; originals retain their resolution. Back up your albums before uninstalling. Street maps are provided on a best-effort basis, without satellite imagery or bulk offline downloads.",
-  "data": "Original photos, stamped copies, coordinates, capture time, optional compass bearing, project names, place labels and notes are stored in private app storage. Language and stamp preferences are stored locally. GeoStamp does not automatically upload photographs or album records to a developer-operated server and has no app account.\n\nMap tiles are cached locally. A saved photo can include a map thumbnail. Export, Android sharing and backup write copies to the destination or app you select. ZIP backups include original photographs, locations and project names, including empty projects; they are not encrypted by GeoStamp. A chosen cloud document provider or sharing app may transfer your selected files under its own practices.",
-  "permissions": "Camera access is used to take photographs. Optional foreground location access supplies GPS coordinates while Camera is open; there is no background location tracking. Selected imports and backup files are accessed through Android document pickers. Exported stamped photos are written through Android MediaStore.\n\nInternet and network-state access support OpenStreetMap maps, optional device geocoding and Google advertising/consent services. OpenStreetMap receives ordinary connection information and tile requests identifying the area being viewed. Optional address lookup sends coordinates to the device geocoding service; availability and provider practices depend on the device.\n\nGoogle Mobile Ads Next-Gen and User Messaging Platform are active for test advertising in Albums. Test identifiers do not generate revenue and do not guarantee that no network or device information is processed. Google services may process connection/device information, identifiers, interactions and diagnostics according to SDK behavior and your choices. Advertising privacy options are available in Settings when the provider makes a form available. No ads are placed in the camera view.",
-  "retention": "Delete a photo in Albums to remove its original, stamped copy and attached map from private storage. Clear Android app storage or uninstall to remove private albums, preferences and map cache; automatic Android backup is disabled. Exported photographs, PDFs and ZIP backups remain at their chosen destinations until you delete them there. Restore adds missing photos and keeps existing IDs. The backup size limit is 2 GB unpacked and 150 MB per file. Map and advertising providers control their own service records and retention.",
-  "ads_notice": "Google test advertising is active in Albums, with UMP consent handling. No production ad identifiers or advertising revenue in development version 0.3.2.",
-  "data_safety_note": "Not finalized for a production release. Review Google advertising/consent SDK traffic, map requests, optional geocoding and user-directed file exports in the exact signed artifact. Reconcile provider practices, consent messages, the privacy policy and all active Play releases; do not declare that test ads or local photo storage imply no external data processing.",
-  "checks": [
-    "Capture and import photos with and without location permission or EXIF metadata. Verify originals and frozen capture coordinates/time.",
-    "Choose or create projects from Camera, after saving and while editing. Check project filtering and selected-photo PDF export.",
-    "Test automatic and manually added maps online, with cached tiles and without connectivity. Capture must still save when a map is unavailable.",
-    "Edit stamp text, style and project; remove a map and verify that the original is unchanged.",
-    "Back up and restore albums, including duplicates and empty projects. Verify the saved ZIP before changing phones.",
-    "Check English, Romanian and Spanish, large text, camera orientation, denied permissions and GPS wait cancellation on physical devices."
-  ],
-  "gaps": [
-    "Complete representative physical-device camera, GPS, memory and document-provider testing.",
-    "Configure production AdMob identifiers and consent, publish the final in-app privacy link and verify all SDK and Play declarations.",
-    "Prepare release signing, final store graphics and authentic screenshots for the Google Play upload.",
-    "Review map-provider capacity before broad distribution; the public tile service has no availability guarantee."
-  ],
-  "screenshots": [
-    {
-      "file": "screenshot-project-picker.png",
-      "alt": "GeoStamp Camera project selector above the camera preview, with existing projects and a New project option",
-      "caption": "Actual Android emulator screenshot, development version 0.3.2. Project names and camera scene are test data."
-    }
-  ]
-},
+  {
+    "slug": "spinora",
+    "name": "Spinora",
+    "title": "Spinora",
+    "repo": "spinora",
+    "package": "ro.traian.spinora",
+    "version": "0.1.0 (1)",
+    "language": "English by default. Choose English, Română or Español in Settings → Language. Existing saved wheel text stays as you wrote it.",
+    "status": "In testing",
+    "category": "Tools",
+    "publishing_assets": false,
+    "policy_date": "2026-09-12",
+    "short": "Create colorful decision wheels, spin your options and save the results.",
+    "description": "A little spin. A clear decision. Spinora helps you choose between everyday options with a customizable decision wheel. Create wheels with 2–50 equally likely options, save them on your device and spin whenever you need a choice.\n\nStart with a template for meals, yes or no, colors, weekend plans, numbers or a break. Customize slice and text colors, bold, italic and underline styles, or add an image from your gallery. Reorder options, paste a list, duplicate a wheel and choose from four themes and three result sounds.\n\nSet a spin duration from 3 to 10 seconds. Keep the latest 200 results in local history, spin again or remove the selected option while keeping at least two options on the wheel. The interface adapts to phones and tablets.\n\nThe app opens in English and also supports Romanian and Spanish. Wheels work offline without an account. Optional Google demo ads can be enabled in Settings; they are off by default and do not generate revenue. Commercial advertising is not configured.\n\nSpinora is currently a development version under testing. Google Play availability, final branding and release materials are still being prepared. Published by Praxis Science Lab.",
+    "data": "Wheel names, option text and styling, settings, language and the latest 200 results are stored in app-private storage on your device. Selected gallery images are copied into the app’s private documents directory. There is no Praxis Science Lab account, cloud synchronization or application backend, and the app does not upload your wheels or images to Praxis Science Lab.\n\nOptional Google demo advertising can connect to Google when enabled. A demo identifier does not mean no information is processed by the advertising service.",
+    "permissions": "You select individual images through the platform gallery picker. Internet access supports optional test ads and vibration supports optional haptic feedback. This version includes google_mobile_ads 9.1.0 with Google sample application and banner identifiers. The SDK and its dependencies may process network and device information, identifiers, advertising interactions and diagnostics according to Google’s policies.\n\nThe test-ad switch is off by default. When enabled, the app initializes the advertising SDK and requests non-personalized demo banners on the main navigation screens. It does not display banners on the wheel or result screen. No production ad identifiers or live monetization are configured. A production consent flow is not yet implemented; non-personalized requests are not a substitute for that flow. Advertising behavior and disclosures must be reviewed before a commercial release.",
+    "retention": "Delete individual wheels or clear result history in the app. Clear app storage in Android Settings or uninstall to remove all private wheels, results, imported image copies and settings. Imported image copies may remain in private storage after removing an image or abandoning an edit; clearing app storage or uninstalling removes them. Original gallery images are not deleted by these actions. Android app backup is disabled.\n\nPraxis Science Lab has no server copy to restore. Clearing local storage does not delete information held by Google; Google controls retention for its services.",
+    "safety": "Use Spinora for everyday choices and activities. Every option has an equal chance. Long labels are shortened on the wheel and shown in full in the editor and result. A development build is available for local testing; there is no public Google Play installation link yet.",
+    "ads_notice": "Optional Google demo banners, disabled by default. No commercial advertising or production consent configuration yet.",
+    "data_safety_note": "Not finalized for Google Play. Local wheels and images stay on the device, but optional Google advertising may process network, device and advertising information. Review the exact signed artifact, SDK disclosures and production consent flow before submitting Data safety answers.",
+    "checks": [
+      "Create a wheel with 2–50 options, edit colors and text styles, reorder options and save it.",
+      "Spin a wheel and check that the selected result matches the pointer; try Spin again and Remove this option.",
+      "Import a gallery image and check it in the wheel, editor and result. Check sounds and vibration on a physical device.",
+      "Switch English, Romanian and Spanish in Settings and restart; verify saved wheels and preferences remain.",
+      "Test offline operation, history clearing and phone/tablet layouts.",
+      "If enabling Test ads, check that only demo banners appear, that a failed request leaves the app usable and that the wheel screen remains free of ads."
+    ],
+    "evidence": [
+      "pubspec.yaml",
+      "lib/main.dart",
+      "lib/editor.dart",
+      "lib/models.dart",
+      "lib/store.dart",
+      "lib/ads.dart",
+      "android/app/src/main/AndroidManifest.xml",
+      "output/VERIFICARE.md"
+    ],
+    "gaps": [
+      "Confirm the final name and permanent package identifier; prepare an upload-key-signed release AAB.",
+      "Complete physical-device testing of gallery selection, audio, vibration, accessibility and advertising. Automated tests and emulator startup do not cover all these features.",
+      "Configure production AdMob identifiers and the appropriate consent flow, then reconcile the privacy policy and Play declarations before enabling commercial ads.",
+      "Add the public privacy-policy link inside the app; the current app displays local privacy information.",
+      "Prepare final launcher/store artwork and authentic device screenshots from the release build. The website interface previews are not Play Store screenshot assets.",
+      "Complete the testing and account requirements shown in the actual Play Console account."
+    ],
+    "previews": [
+      {
+        "file": "preview-home.png",
+        "width": 390,
+        "height": 844,
+        "alt": "Spinora interface preview with saved decision wheels and navigation for My wheels, Explore, History and Settings.",
+        "caption": "My wheels · saved choices, ready for another spin."
+      },
+      {
+        "file": "preview-wheel.png",
+        "width": 390,
+        "height": 844,
+        "alt": "Spinora interface preview showing a six-option food wheel and the Spin the wheel button.",
+        "caption": "Decision wheel · colorful options and a clear result."
+      }
+    ]
+  },
+  {
+    "slug": "earmate",
+    "name": "EarMate",
+    "title": "EarMate",
+    "repo": "earmate",
+    "package": "app.physlab.earmate",
+    "version": "1.0.3 (4)",
+    "language": "English by default; Romanian and Spanish available in Settings",
+    "status": "In testing",
+    "category": "Music & Audio",
+    "policy_date": "2026-09-12",
+    "publishing_assets": false,
+    "short": "Local soundscapes, a five-band EQ and tools for compatible BLE devices.",
+    "description": "Create a comfortable listening soundscape with white, pink or brown noise, rain and waves. Shape EarMate sounds with a five-band equalizer, use built-in presets or save your own, and customize the Home cards.\n\nFor compatible Bluetooth Low Energy devices, EarMate can read the standard battery service and estimate proximity from signal strength. With location permission, it can record the phone position when a BLE connection is unexpectedly lost while the app is running. These features depend on the device: not every pair of headphones exposes a BLE battery service, and powered-off headphones cannot be located.\n\nPair headphones for audio in Android settings. The equalizer affects EarMate soundscapes, not other apps. Playback pauses when the app leaves the foreground or loses audio focus. English is the default; Romanian and Spanish are available. No user account is required. Published by Praxis Science Lab.",
+    "data": "Preferences, language, custom equalizer presets, the selected BLE device identifier and name, up to 400 battery samples, and an optional last-seen phone location and time are stored in app-private storage. Audio is synthesized locally; the app does not record the microphone. These records are not uploaded to a Praxis Science Lab backend.\n\nThe current build disables advertising requests by default. It includes the Google Mobile Ads and UMP libraries for later configuration. A development build explicitly enabling test ads contacts Google only after the UMP flow permits ad requests; Google may process device identifiers, IP-derived approximate location, ad interactions and diagnostics under its policies. Test identifiers do not guarantee that no information is processed.",
+    "permissions": "Nearby Devices/Bluetooth permissions are used to discover and connect to BLE peripherals. Location permission is requested by an explicit location/radar action, or when needed for scanning on older Android versions. If permission has been granted, an unexpected BLE disconnection can save the phone position while the app is running. There is no background GPS tracking of the headphones.\n\nOpening a map sends your IP address and the requested map area to OpenStreetMap tile servers. Opening external Maps passes the selected coordinates to the chosen maps app, which follows its own policy. Opening the public privacy page uses your browser and GitHub Pages. No microphone, contacts or camera permission is requested.\n\nIf a build enables Google consent messages and test advertising, the Google services receive the information needed to obtain consent and serve permitted ads. Required privacy options are available from Settings. Real advertising is not activated in this test release.",
+    "retention": "Use Clear all data in Settings to stop playback, disconnect BLE and remove local presets, battery history, saved location, device selection and preferences. Clearing Android app storage or uninstalling removes the private app records. Android cloud backup is disabled; device transfer behavior may depend on Android and the manufacturer. Data or logs held by map, advertising, browser or support providers are controlled by those providers and are not deleted by clearing EarMate data.",
+    "safety": "Start with low phone and app volume. EQ applies only to EarMate audio. Radar distances are rough RSSI estimates and the map shows the phone position at disconnection, not a live headphone location. This is not a medical, hearing-test or calibrated measurement app.",
+    "ads_notice": "Google Mobile Ads SDK included; ad requests disabled by default. Test-only activation is gated by Google UMP. No live advertising account configured.",
+    "data_safety_note": "Not ready for automatic submission: inspect the final signed artifact and all enabled configurations. The default test build does not request ads, but map requests disclose an IP address and map area to OpenStreetMap. If advertising is enabled, review Google Mobile Ads disclosures, consent and applicable device-ID, location, interaction and diagnostic categories. Local storage alone is not off-device collection.",
+    "checks": [
+      "Pair headphones for audio in Android settings and listen to all five soundscapes at low volume.",
+      "Verify Pause/Play, EQ presets and stopping when headphones disconnect or the app leaves the foreground.",
+      "Grant Nearby Devices access, scan and check battery reporting on a compatible BLE peripheral.",
+      "Test radar signal loss and the saved phone location; verify the feature does not claim to find powered-off headphones.",
+      "Save a preset, hide/reorder cards, change language and restart. Check the public privacy page."
+    ],
+    "evidence": [
+      "pubspec.yaml",
+      "lib/core/audio/soundscape_controller.dart",
+      "lib/core/ble/ble_service.dart",
+      "lib/core/ads/ad_consent.dart",
+      "android/app/src/main/kotlin/app/physlab/earmate/MainActivity.kt",
+      "audit/AUDIT-RO.md"
+    ],
+    "gaps": [
+      "Listening, routing and Bluetooth compatibility must still be checked with real headphones.",
+      "Configure an AdMob account and published consent messages before any live advertising; keep disabled until verified.",
+      "Complete the applicable Play Console forms and testing/review process using the final upload-signed AAB."
+    ]
+  },
+  {
+    "slug": "droplet",
+    "name": "Droplet — Speaker Care",
+    "title": "Droplet — Speaker Care",
+    "repo": "droplet-speaker",
+    "package": "app.praxis.droplet_speaker",
+    "version": "0.1.0 (1)",
+    "language": "English by default; Romanian and Spanish available in Settings",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-12",
+    "publishing_assets": false,
+    "short": "Timed speaker tones, adjustable frequency and a quick sound comparison.",
+    "description": "Try timed sound sessions designed to explore whether speaker vibrations help dislodge residual water near the speaker opening. Choose a gentle 30-second cycle, 60-second pulses or a 90-second frequency sweep. A manual mode offers 80–300 Hz tones for 30 seconds.\n\nFollow progress on a countdown, stop at any time and compare the sound with a short five-second tone. Completed sessions and your own better-or-unchanged assessment are saved locally. The app does not detect moisture or objectively measure improvement.\n\nPlayback uses the built-in speaker, checks for external audio devices and stops when the app leaves the foreground or loses audio focus. English, Romanian and Spanish are available. No account is required.\n\nWater-removal effectiveness has not been validated on physical phones and is not guaranteed. Droplet does not repair damaged speakers, remove internal moisture or boost the phone beyond its normal volume. Advertising is planned; it is disabled in the current development build.",
+    "safety": "Follow the phone manufacturer’s guidance after liquid exposure. If immersed, turn the phone off and allow it to dry as instructed before using sound. Keep the speaker opening unobstructed, disconnect headphones and external audio devices, and use moderate volume away from your ears. Do not intentionally wet a device for testing. Stop if the sound is uncomfortable or distorted.",
+    "data": "Language preferences, up to 50 completed sessions and optional better-or-unchanged feedback are stored locally. Sound is generated on the device. There is no microphone recording, account, cloud history or automatic upload of session records.",
+    "permissions": "The app checks Android audio output devices and audio focus for playback. It does not request microphone, location or storage access. Internet and network-state permissions and Google Mobile Ads/UMP libraries are included for planned advertising. Ad requests and consent initialization are disabled in this build. A future advertising release requires an updated privacy notice and configuration before distribution.",
+    "retention": "Use Clear history in History to delete saved sessions. Clear Android app storage or uninstall Droplet to remove local preferences and history. Automatic Android app backup is disabled.",
+    "ads_notice": "Planned advertising; disabled in version 0.1.0. Demo identifiers only. Banner placement is in History, outside sound sessions.",
+    "data_safety_note": "Not finalized for a monetized release: Google advertising libraries are included but disabled in this build. Inspect startup traffic and the exact signed release, then reconcile SDK behavior, consent, privacy notice and Play declarations before enabling advertising.",
+    "checks": [
+      "Confirm playback uses the built-in speaker and external headphones, USB audio and Bluetooth routes prevent or stop a session.",
+      "Check Stop, leaving the app, interruptions, countdown completion and manual frequency limits.",
+      "Compare at moderate volume on a dry device; do not intentionally expose a phone to liquid.",
+      "Verify English, Romanian and Spanish, large text and narrow screens.",
+      "Check that only completed care sessions enter history, comparison returns to feedback, and Clear history removes records."
+    ],
+    "gaps": [
+      "Validate acoustic behavior and external audio routes on representative physical phones. Water-removal efficacy is not established.",
+      "Configure production AdMob and consent, update the privacy notice and complete SDK Data safety review before activating ads.",
+      "Prepare final store artwork, authentic screenshots and an upload-signed release AAB.",
+      "Complete the applicable Play Console testing, declarations and review for the final artifact."
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-home.png",
+        "alt": "Droplet home screen with a gentle 30-second cycle and Start button",
+        "caption": "Actual Android emulator capture, development version 0.1.0."
+      }
+    ]
+  },
+  {
+    "slug": "prism-player",
+    "name": "Prism Player",
+    "title": "Prism Player",
+    "repo": "prism-player",
+    "package": "app.praxis.prism",
+    "version": "0.1.0 (1)",
+    "language": "English by default; Romanian and Spanish available in Style → Language",
+    "status": "In testing",
+    "category": "Music & Audio",
+    "policy_date": "2026-09-12",
+    "publishing_assets": false,
+    "short": "Offline music, colorful themes, playlists, equalizer and a sleep timer.",
+    "description": "Bring your own music to Prism Player, a colorful offline audio player for Android 9 and later. Choose local audio files or scan the music saved on your phone, then browse songs, artists, albums, genres and folders. Search your library and sort tracks by title, addition time or duration.\n\nCreate and reorder playlists, save favorites and browse recently added or most-played tracks. Manage the playback queue, shuffle, repeat, seek and adjust playback speed. Music can continue in the background with Android media controls.\n\nShape Prism playback with the equalizer bands available on your device and bass adjustment where supported. Set a sleep timer to pause at the chosen time or after the current song finishes. Choose four color palettes, light or dark appearance and three geometric artwork styles; embedded album covers are also supported.\n\nEnglish, Romanian and Spanish are available. Your audio files stay on your device and no account is required. Music is not supplied with the app. Advertising is planned, but disabled in this development build; offline playback does not require watching an ad.",
+    "safety": "Use comfortable listening levels and reduce volume if you hear distortion. The equalizer affects Prism playback only; band count and bass support depend on the device. Removing a library entry or playlist does not delete the source audio file.",
+    "data": "The app reads audio files selected through the Android document picker or made available by an optional music-library permission. Track locations and metadata, playlists, favorites, play counts, language and appearance preferences are stored locally. Embedded album artwork is read locally. Audio files and library records are not uploaded by Prism. There is no account, microphone recording or cloud music library.",
+    "permissions": "Optional audio-library access is used for scanning: READ_MEDIA_AUDIO on Android 13 and later, or READ_EXTERNAL_STORAGE on earlier supported versions. The document picker can grant access to selected files without a library-wide permission. Media playback uses a foreground service, audio focus and a wake lock to support background listening and system controls. No microphone, location or all-files-management permission is requested. Internet and network-state permissions and Google Mobile Ads/UMP libraries are included for planned advertising, which is disabled in this build.",
+    "retention": "Remove library entries and playlists in the app to remove those local records while keeping the source audio files. Clear Android app storage or uninstall Prism to remove its library records, preferences and cached artwork; audio files stored elsewhere on the device remain. Library data is excluded from Android backup and device transfer.",
+    "ads_notice": "Advertising planned; disabled in version 0.1.0. Only demo identifiers are configured. Intended banner placement: Style, while playback is paused.",
+    "data_safety_note": "Not finalized for production advertising. Google advertising libraries are included but disabled. Before activating ads, verify the exact signed artifact, SDK startup and data practices, consent configuration, privacy notice and all relevant Play declarations.",
+    "checks": [
+      "Import local MP3 files and test the music scan with permission allowed and denied. Verify access after restarting the app.",
+      "Test background playback, system media controls, interruptions and headphone/Bluetooth disconnection on real devices.",
+      "Check search, playlists, favorite persistence, queue reordering and non-destructive entry removal.",
+      "Test equalizer availability, playback speed, shuffle, repeat and both sleep-timer modes.",
+      "Check English, Romanian and Spanish, large text, narrow screens and large libraries."
+    ],
+    "gaps": [
+      "Complete representative physical-device, Bluetooth, large-library and document-provider testing.",
+      "Configure production AdMob and consent, and update privacy and Data safety information before enabling ads.",
+      "Prepare final store artwork, screenshots and a release AAB signed with the upload key.",
+      "Complete the applicable Google Play testing, declarations and review for the final artifact."
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-style-ro.png",
+        "alt": "Prism Player appearance settings in Romanian with violet, coral, turquoise and gold palettes",
+        "caption": "Actual development-app capture in Romanian, version 0.1.0, Android emulator."
+      }
+    ]
+  },
+  {
+    "slug": "geostamp-camera",
+    "name": "GeoStamp Camera",
+    "title": "GeoStamp Camera",
+    "repo": "geostamp-camera",
+    "package": "app.praxis.geostamp",
+    "version": "0.3.2 (5)",
+    "language": "English by default; Romanian and Spanish available from the language button. Quick Help is available in all three languages.",
+    "status": "In testing",
+    "category": "Photography",
+    "policy_date": "2026-09-12",
+    "publishing_assets": false,
+    "short": "GPS photo stamps, project albums, street maps and local PDF exports.",
+    "description": "Give each photo a place and a purpose with GeoStamp Camera for Android 10 and later. Capture photos with coordinates, date, time, a project name and your own notes. Keep the original alongside a separately stamped copy. Import existing images using their own GPS and capture-date metadata when available.\n\nChoose the active project directly in Camera. After capture or import, pick an existing project or create a new one on the spot. Edit a saved stamp to change its project, note, colors, text size or placement while preserving the original capture coordinates and time.\n\nExplore geotagged photos on OpenStreetMap street maps. Add a map thumbnail to a saved photo, or enable the visible automatic camera map: it is included when already loaded, without making the shutter wait for internet. New map areas require a connection.\n\nFilter project albums, select photos for PDF export, share stamped copies and back up or restore albums with a ZIP file saved to a location you choose. GPS accuracy is shown in metres, with an optional wait for a more precise fix. Quick Help explains the main workflows.\n\nEnglish, Romanian and Spanish are available. No app account is required. The current development build uses Google test advertisements in Albums; production advertising and a Google Play release are still being prepared.",
+    "safety": "GPS accuracy depends on the device and surroundings; coordinates and device time are not certified evidence. The optional precise-GPS mode waits up to 30 seconds for a fix within 15 m and can be cancelled. Stamped exports are resized to at most 2400 pixels on the long edge; originals retain their resolution. Back up your albums before uninstalling. Street maps are provided on a best-effort basis, without satellite imagery or bulk offline downloads.",
+    "data": "Original photos, stamped copies, coordinates, capture time, optional compass bearing, project names, place labels and notes are stored in private app storage. Language and stamp preferences are stored locally. GeoStamp does not automatically upload photographs or album records to a developer-operated server and has no app account.\n\nMap tiles are cached locally. A saved photo can include a map thumbnail. Export, Android sharing and backup write copies to the destination or app you select. ZIP backups include original photographs, locations and project names, including empty projects; they are not encrypted by GeoStamp. A chosen cloud document provider or sharing app may transfer your selected files under its own practices.",
+    "permissions": "Camera access is used to take photographs. Optional foreground location access supplies GPS coordinates while Camera is open; there is no background location tracking. Selected imports and backup files are accessed through Android document pickers. Exported stamped photos are written through Android MediaStore.\n\nInternet and network-state access support OpenStreetMap maps, optional device geocoding and Google advertising/consent services. OpenStreetMap receives ordinary connection information and tile requests identifying the area being viewed. Optional address lookup sends coordinates to the device geocoding service; availability and provider practices depend on the device.\n\nGoogle Mobile Ads Next-Gen and User Messaging Platform are active for test advertising in Albums. Test identifiers do not generate revenue and do not guarantee that no network or device information is processed. Google services may process connection/device information, identifiers, interactions and diagnostics according to SDK behavior and your choices. Advertising privacy options are available in Settings when the provider makes a form available. No ads are placed in the camera view.",
+    "retention": "Delete a photo in Albums to remove its original, stamped copy and attached map from private storage. Clear Android app storage or uninstall to remove private albums, preferences and map cache; automatic Android backup is disabled. Exported photographs, PDFs and ZIP backups remain at their chosen destinations until you delete them there. Restore adds missing photos and keeps existing IDs. The backup size limit is 2 GB unpacked and 150 MB per file. Map and advertising providers control their own service records and retention.",
+    "ads_notice": "Google test advertising is active in Albums, with UMP consent handling. No production ad identifiers or advertising revenue in development version 0.3.2.",
+    "data_safety_note": "Not finalized for a production release. Review Google advertising/consent SDK traffic, map requests, optional geocoding and user-directed file exports in the exact signed artifact. Reconcile provider practices, consent messages, the privacy policy and all active Play releases; do not declare that test ads or local photo storage imply no external data processing.",
+    "checks": [
+      "Capture and import photos with and without location permission or EXIF metadata. Verify originals and frozen capture coordinates/time.",
+      "Choose or create projects from Camera, after saving and while editing. Check project filtering and selected-photo PDF export.",
+      "Test automatic and manually added maps online, with cached tiles and without connectivity. Capture must still save when a map is unavailable.",
+      "Edit stamp text, style and project; remove a map and verify that the original is unchanged.",
+      "Back up and restore albums, including duplicates and empty projects. Verify the saved ZIP before changing phones.",
+      "Check English, Romanian and Spanish, large text, camera orientation, denied permissions and GPS wait cancellation on physical devices."
+    ],
+    "gaps": [
+      "Complete representative physical-device camera, GPS, memory and document-provider testing.",
+      "Configure production AdMob identifiers and consent, publish the final in-app privacy link and verify all SDK and Play declarations.",
+      "Prepare release signing, final store graphics and authentic screenshots for the Google Play upload.",
+      "Review map-provider capacity before broad distribution; the public tile service has no availability guarantee."
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-project-picker.png",
+        "alt": "GeoStamp Camera project selector above the camera preview, with existing projects and a New project option",
+        "caption": "Actual Android emulator screenshot, development version 0.3.2. Project names and camera scene are test data."
+      }
+    ]
+  },
   {
     "slug": "mosaic",
     "name": "Mosaic",
@@ -400,6 +560,60 @@
         "height": 1920,
         "alt": "Mosaic text and stickers",
         "caption": "Actual Android editor screenshot, version 0.5.0. Landscape illustrations are original test images."
+      }
+    ]
+  },
+  {
+    "slug": "tempolab",
+    "name": "TempoLab",
+    "title": "TempoLab: Music Practice",
+    "repo": "tempolab",
+    "package": "app.praxis.tempolab",
+    "version": "1.0.0 (9)",
+    "language": "English by default; Romanian and Spanish available in Tools.",
+    "status": "Preparing for testing",
+    "category": "Music & Audio",
+    "policy_date": "2026-09-12",
+    "publishing_assets": true,
+    "short": "Change tempo and pitch, loop sections and separate voice offline.",
+    "description": "Practice music at your own pace with TempoLab.\n\nOpen a local audio file and adjust tempo from 50% to 200% without changing pitch, or transpose up to 12 semitones. Repeat an A–B section and set exact boundaries with minute, second and millisecond wheels.\n\nSave named sections for each recording. Use progressive practice to increase the tempo after a chosen number of repetitions. Keep playback going in the background or with the screen off.\n\nShape your sound with a five-band equalizer and level control. Export the whole recording or a selected section as 16-bit WAV with the current tempo, pitch and equalizer settings.\n\nSeparate voice and instrumental from a 0.5–20 second section, entirely on your device, using Spleeter. Compare the results and save WAV files. Separation quality depends on the recording and may include artifacts. Keep the app open while processing.\n\nEnglish, Romanian and Spanish. No account required. Audio processing works offline. Import supports mono/stereo files up to 30 minutes / 512 MB decoded audio; format support depends on Android codecs. Android 10+ on ARM64 devices.\n\nPraxis Science Lab — traiananghel@gmail.com",
+    "safety": "Native ARM64 required for voice separation. Sections are limited to 0.5–20 seconds; audible artifacts may remain. Keep the app open during processing. Import up to 30 minutes / 512 MB decoded audio.",
+    "data": "Audio, sections, fingerprints, settings and separated tracks remain locally in private storage. No audio is uploaded to the developer. No account is required.",
+    "permissions": "Uses the Android document picker. Internet is available for the prepared Google Ads integration; commercial ads and SDK initialization are disabled in the signed 1.0.0 build. A manual Google test ad is available only in debug. Playback uses a foreground media service and wake lock.",
+    "retention": "Import replaces current decoded audio; successful separation replaces previous stems. Clearing app storage or uninstalling removes private data. Exports remain in their selected destination; Android private-data backup is disabled.",
+    "ads_notice": "Commercial ads disabled; test preview in debug only. Real identifiers and UMP configuration required before monetization.",
+    "data_safety_note": "See the exact release configuration. Enabling advertising requires updating privacy and Data safety declarations.",
+    "checks": [
+      "Import local audio, adjust tempo/pitch and save a WAV.",
+      "Repeat A–B and start progressive practice.",
+      "Check background playback and cancellation of separation when leaving.",
+      "Verify EN/RO/ES, small screens and landscape."
+    ],
+    "gaps": [
+      "Owner must configure AdMob identifiers and UMP before monetization.",
+      "Complete Play Console declarations, account testing and pre-launch review."
+    ],
+    "screenshots": [
+      {
+        "file": "main.png",
+        "width": 1080,
+        "height": 1920,
+        "alt": "Main player",
+        "caption": "Actual TempoLab 1.0.0 screenshot using the built-in demo."
+      },
+      {
+        "file": "practice.png",
+        "width": 1080,
+        "height": 1920,
+        "alt": "Practice tools",
+        "caption": "Actual TempoLab 1.0.0 screenshot using the built-in demo."
+      },
+      {
+        "file": "equalizer.png",
+        "width": 1080,
+        "height": 1920,
+        "alt": "Five-band equalizer",
+        "caption": "Actual TempoLab 1.0.0 screenshot using the built-in demo."
       }
     ]
   }

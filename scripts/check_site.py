@@ -29,7 +29,8 @@ class Page(HTMLParser):
 pages={}
 for file in [ROOT/'index.html', *sorted((ROOT/'apps').rglob('*.html')), ROOT/'privacy/index.html', ROOT/'publishing/index.html']:
     page=Page();page.feed(file.read_text(encoding='utf-8'));pages[file.resolve()]=page
-    assert page.lang=='en' and page.h1==1, f'Language or main heading: {file}'
+    expected_lang = file.stem if file.parent.name=='privacy' and file.stem in {'ro','es'} else 'en'
+    assert page.lang==expected_lang and page.h1==1, f'Language or main heading: {file}'
     assert len(page.ids)==len(set(page.ids)), f'Duplicate IDs: {file}'
 for file,page in pages.items():
     for link in page.links:
@@ -76,4 +77,4 @@ for foreground,background in [('#15233b','#ffffff'),('#536076','#ffffff'),('#173
     assert ratio>=4.5, f'Text contrast below 4.5: {foreground}/{background}'
     print(f'Contrast {foreground}/{background}: {ratio:.2f}:1')
 assert (ROOT/'.nojekyll').exists()
-print(f'PASS: {len(pages)} English pages, local links/anchors/assets, store field limits and available feature graphics, SVGs, responsive/focus/reduced-motion CSS and text contrast.')
+print(f'PASS: {len(pages)} pages, local links/anchors/assets, store field limits and available feature graphics, SVGs, responsive/focus/reduced-motion CSS and text contrast.')
