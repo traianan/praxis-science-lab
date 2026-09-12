@@ -304,5 +304,47 @@
       "caption": "Actual development-app capture in Romanian, version 0.1.0, Android emulator."
     }
   ]
+},
+{
+  "slug": "geostamp-camera",
+  "name": "GeoStamp Camera",
+  "title": "GeoStamp Camera",
+  "repo": "geostamp-camera",
+  "package": "app.praxis.geostamp",
+  "version": "0.3.2 (5)",
+  "language": "English by default; Romanian and Spanish available from the language button. Quick Help is available in all three languages.",
+  "status": "In testing",
+  "category": "Photography",
+  "policy_date": "2026-09-12",
+  "publishing_assets": false,
+  "short": "GPS photo stamps, project albums, street maps and local PDF exports.",
+  "description": "Give each photo a place and a purpose with GeoStamp Camera for Android 10 and later. Capture photos with coordinates, date, time, a project name and your own notes. Keep the original alongside a separately stamped copy. Import existing images using their own GPS and capture-date metadata when available.\n\nChoose the active project directly in Camera. After capture or import, pick an existing project or create a new one on the spot. Edit a saved stamp to change its project, note, colors, text size or placement while preserving the original capture coordinates and time.\n\nExplore geotagged photos on OpenStreetMap street maps. Add a map thumbnail to a saved photo, or enable the visible automatic camera map: it is included when already loaded, without making the shutter wait for internet. New map areas require a connection.\n\nFilter project albums, select photos for PDF export, share stamped copies and back up or restore albums with a ZIP file saved to a location you choose. GPS accuracy is shown in metres, with an optional wait for a more precise fix. Quick Help explains the main workflows.\n\nEnglish, Romanian and Spanish are available. No app account is required. The current development build uses Google test advertisements in Albums; production advertising and a Google Play release are still being prepared.",
+  "safety": "GPS accuracy depends on the device and surroundings; coordinates and device time are not certified evidence. The optional precise-GPS mode waits up to 30 seconds for a fix within 15 m and can be cancelled. Stamped exports are resized to at most 2400 pixels on the long edge; originals retain their resolution. Back up your albums before uninstalling. Street maps are provided on a best-effort basis, without satellite imagery or bulk offline downloads.",
+  "data": "Original photos, stamped copies, coordinates, capture time, optional compass bearing, project names, place labels and notes are stored in private app storage. Language and stamp preferences are stored locally. GeoStamp does not automatically upload photographs or album records to a developer-operated server and has no app account.\n\nMap tiles are cached locally. A saved photo can include a map thumbnail. Export, Android sharing and backup write copies to the destination or app you select. ZIP backups include original photographs, locations and project names, including empty projects; they are not encrypted by GeoStamp. A chosen cloud document provider or sharing app may transfer your selected files under its own practices.",
+  "permissions": "Camera access is used to take photographs. Optional foreground location access supplies GPS coordinates while Camera is open; there is no background location tracking. Selected imports and backup files are accessed through Android document pickers. Exported stamped photos are written through Android MediaStore.\n\nInternet and network-state access support OpenStreetMap maps, optional device geocoding and Google advertising/consent services. OpenStreetMap receives ordinary connection information and tile requests identifying the area being viewed. Optional address lookup sends coordinates to the device geocoding service; availability and provider practices depend on the device.\n\nGoogle Mobile Ads Next-Gen and User Messaging Platform are active for test advertising in Albums. Test identifiers do not generate revenue and do not guarantee that no network or device information is processed. Google services may process connection/device information, identifiers, interactions and diagnostics according to SDK behavior and your choices. Advertising privacy options are available in Settings when the provider makes a form available. No ads are placed in the camera view.",
+  "retention": "Delete a photo in Albums to remove its original, stamped copy and attached map from private storage. Clear Android app storage or uninstall to remove private albums, preferences and map cache; automatic Android backup is disabled. Exported photographs, PDFs and ZIP backups remain at their chosen destinations until you delete them there. Restore adds missing photos and keeps existing IDs. The backup size limit is 2 GB unpacked and 150 MB per file. Map and advertising providers control their own service records and retention.",
+  "ads_notice": "Google test advertising is active in Albums, with UMP consent handling. No production ad identifiers or advertising revenue in development version 0.3.2.",
+  "data_safety_note": "Not finalized for a production release. Review Google advertising/consent SDK traffic, map requests, optional geocoding and user-directed file exports in the exact signed artifact. Reconcile provider practices, consent messages, the privacy policy and all active Play releases; do not declare that test ads or local photo storage imply no external data processing.",
+  "checks": [
+    "Capture and import photos with and without location permission or EXIF metadata. Verify originals and frozen capture coordinates/time.",
+    "Choose or create projects from Camera, after saving and while editing. Check project filtering and selected-photo PDF export.",
+    "Test automatic and manually added maps online, with cached tiles and without connectivity. Capture must still save when a map is unavailable.",
+    "Edit stamp text, style and project; remove a map and verify that the original is unchanged.",
+    "Back up and restore albums, including duplicates and empty projects. Verify the saved ZIP before changing phones.",
+    "Check English, Romanian and Spanish, large text, camera orientation, denied permissions and GPS wait cancellation on physical devices."
+  ],
+  "gaps": [
+    "Complete representative physical-device camera, GPS, memory and document-provider testing.",
+    "Configure production AdMob identifiers and consent, publish the final in-app privacy link and verify all SDK and Play declarations.",
+    "Prepare release signing, final store graphics and authentic screenshots for the Google Play upload.",
+    "Review map-provider capacity before broad distribution; the public tile service has no availability guarantee."
+  ],
+  "screenshots": [
+    {
+      "file": "screenshot-project-picker.png",
+      "alt": "GeoStamp Camera project selector above the camera preview, with existing projects and a New project option",
+      "caption": "Actual Android emulator screenshot, development version 0.3.2. Project names and camera scene are test data."
+    }
+  ]
 }
 ]

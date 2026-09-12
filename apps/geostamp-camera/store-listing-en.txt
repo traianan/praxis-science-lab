@@ -1,0 +1,21 @@
+GeoStamp Camera
+
+Short description
+GPS photo stamps, project albums, street maps and local PDF exports.
+
+Full description
+Give each photo a place and a purpose with GeoStamp Camera for Android 10 and later. Capture photos with coordinates, date, time, a project name and your own notes. Keep the original alongside a separately stamped copy. Import existing images using their own GPS and capture-date metadata when available.
+
+Choose the active project directly in Camera. After capture or import, pick an existing project or create a new one on the spot. Edit a saved stamp to change its project, note, colors, text size or placement while preserving the original capture coordinates and time.
+
+Explore geotagged photos on OpenStreetMap street maps. Add a map thumbnail to a saved photo, or enable the visible automatic camera map: it is included when already loaded, without making the shutter wait for internet. New map areas require a connection.
+
+Filter project albums, select photos for PDF export, share stamped copies and back up or restore albums with a ZIP file saved to a location you choose. GPS accuracy is shown in metres, with an optional wait for a more precise fix. Quick Help explains the main workflows.
+
+English, Romanian and Spanish are available. No app account is required. The current development build uses Google test advertisements in Albums; production advertising and a Google Play release are still being prepared.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/geostamp-camera/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/geostamp-camera/privacy/
+Suggested category: Photography

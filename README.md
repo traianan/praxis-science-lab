@@ -4,6 +4,8 @@ Public documentation, legal policies, and support portal for apps developed by P
 
 Website: https://traianan.github.io/praxis-science-lab/
 
+GeoStamp Camera is listed at `apps/geostamp-camera/` with development version 0.3.2, GPS photo stamps, project selection/creation, street maps, PDF, backup/restore and EN/RO/ES help. It has privacy, support and publishing-preparation pages and an authentic emulator screenshot labeled as test data. Status: In testing; no public APK or Google Play installation link. Regenerate with `python scripts/build_documents.py --app geostamp-camera`.
+
 ## Current scope
 
 An English homepage and app-specific information, privacy, support and Google Play preparation pages for eight Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
