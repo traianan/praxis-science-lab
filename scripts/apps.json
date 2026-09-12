@@ -181,5 +181,46 @@
       "caption": "Decision wheel · colorful options and a clear result."
     }
   ]
+},
+{
+  "slug": "earmate",
+  "name": "EarMate",
+  "title": "EarMate",
+  "repo": "earmate",
+  "package": "app.physlab.earmate",
+  "version": "1.0.2 (3)",
+  "language": "English by default; Romanian and Spanish available in Settings",
+  "status": "In testing",
+  "category": "Music & Audio",
+  "policy_date": "2026-09-12",
+  "publishing_assets": false,
+  "short": "Local soundscapes, a five-band EQ and tools for compatible BLE devices.",
+  "description": "Create a comfortable listening soundscape with white, pink or brown noise, rain and waves. Shape EarMate sounds with a five-band equalizer, use built-in presets or save your own, and customize the Home cards.\n\nFor compatible Bluetooth Low Energy devices, EarMate can read the standard battery service and estimate proximity from signal strength. With location permission, it can record the phone position when a BLE connection is unexpectedly lost while the app is running. These features depend on the device: not every pair of headphones exposes a BLE battery service, and powered-off headphones cannot be located.\n\nPair headphones for audio in Android settings. The equalizer affects EarMate soundscapes, not other apps. Playback pauses when the app leaves the foreground or loses audio focus. English is the default; Romanian and Spanish are available. No user account is required. Published by Praxis Science Lab.",
+  "data": "Preferences, language, custom equalizer presets, the selected BLE device identifier and name, up to 400 battery samples, and an optional last-seen phone location and time are stored in app-private storage. Audio is synthesized locally; the app does not record the microphone. These records are not uploaded to a Praxis Science Lab backend.\n\nThe current build disables advertising requests by default. It includes the Google Mobile Ads and UMP libraries for later configuration. A development build explicitly enabling test ads contacts Google only after the UMP flow permits ad requests; Google may process device identifiers, IP-derived approximate location, ad interactions and diagnostics under its policies. Test identifiers do not guarantee that no information is processed.",
+  "permissions": "Nearby Devices/Bluetooth permissions are used to discover and connect to BLE peripherals. Location permission is requested by an explicit location/radar action, or when needed for scanning on older Android versions. If permission has been granted, an unexpected BLE disconnection can save the phone position while the app is running. There is no background GPS tracking of the headphones.\n\nOpening a map sends your IP address and the requested map area to OpenStreetMap tile servers. Opening external Maps passes the selected coordinates to the chosen maps app, which follows its own policy. Opening the public privacy page uses your browser and GitHub Pages. No microphone, contacts or camera permission is requested.\n\nIf a build enables Google consent messages and test advertising, the Google services receive the information needed to obtain consent and serve permitted ads. Required privacy options are available from Settings. Real advertising is not activated in this test release.",
+  "retention": "Use Clear all data in Settings to stop playback, disconnect BLE and remove local presets, battery history, saved location, device selection and preferences. Clearing Android app storage or uninstalling removes the private app records. Android cloud backup is disabled; device transfer behavior may depend on Android and the manufacturer. Data or logs held by map, advertising, browser or support providers are controlled by those providers and are not deleted by clearing EarMate data.",
+  "safety": "Start with low phone and app volume. EQ applies only to EarMate audio. Radar distances are rough RSSI estimates and the map shows the phone position at disconnection, not a live headphone location. This is not a medical, hearing-test or calibrated measurement app.",
+  "ads_notice": "Google Mobile Ads SDK included; ad requests disabled by default. Test-only activation is gated by Google UMP. No live advertising account configured.",
+  "data_safety_note": "Not ready for automatic submission: inspect the final signed artifact and all enabled configurations. The default test build does not request ads, but map requests disclose an IP address and map area to OpenStreetMap. If advertising is enabled, review Google Mobile Ads disclosures, consent and applicable device-ID, location, interaction and diagnostic categories. Local storage alone is not off-device collection.",
+  "checks": [
+    "Pair headphones for audio in Android settings and listen to all five soundscapes at low volume.",
+    "Verify Pause/Play, EQ presets and stopping when headphones disconnect or the app leaves the foreground.",
+    "Grant Nearby Devices access, scan and check battery reporting on a compatible BLE peripheral.",
+    "Test radar signal loss and the saved phone location; verify the feature does not claim to find powered-off headphones.",
+    "Save a preset, hide/reorder cards, change language and restart. Check the public privacy page."
+  ],
+  "evidence": [
+    "pubspec.yaml",
+    "lib/core/audio/soundscape_controller.dart",
+    "lib/core/ble/ble_service.dart",
+    "lib/core/ads/ad_consent.dart",
+    "android/app/src/main/kotlin/app/physlab/earmate/MainActivity.kt",
+    "audit/AUDIT-RO.md"
+  ],
+  "gaps": [
+    "Listening, routing and Bluetooth compatibility must still be checked with real headphones.",
+    "Configure an AdMob account and published consent messages before any live advertising; keep disabled until verified.",
+    "Complete the applicable Play Console forms and testing/review process using the final upload-signed AAB."
+  ]
 }
 ]

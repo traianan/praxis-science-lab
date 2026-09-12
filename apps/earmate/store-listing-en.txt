@@ -1,0 +1,17 @@
+EarMate
+
+Short description
+Local soundscapes, a five-band EQ and tools for compatible BLE devices.
+
+Full description
+Create a comfortable listening soundscape with white, pink or brown noise, rain and waves. Shape EarMate sounds with a five-band equalizer, use built-in presets or save your own, and customize the Home cards.
+
+For compatible Bluetooth Low Energy devices, EarMate can read the standard battery service and estimate proximity from signal strength. With location permission, it can record the phone position when a BLE connection is unexpectedly lost while the app is running. These features depend on the device: not every pair of headphones exposes a BLE battery service, and powered-off headphones cannot be located.
+
+Pair headphones for audio in Android settings. The equalizer affects EarMate soundscapes, not other apps. Playback pauses when the app leaves the foreground or loses audio focus. English is the default; Romanian and Spanish are available. No user account is required. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/earmate/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/earmate/privacy/
+Suggested category: Music & Audio
