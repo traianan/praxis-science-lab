@@ -46,6 +46,10 @@ for file,page in pages.items():
 apps=json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
 for app in apps:
     assert len(app['title'])<=30 and len(app['short'])<=80 and len(app['description'])<=4000
+    for preview in app.get('previews', []):
+        from PIL import Image
+        with Image.open(ROOT/'apps'/app['slug']/'media'/preview['file']) as im:
+            assert im.size == (preview['width'], preview['height'])
     if app.get('download'):
         folder=ROOT/'apps'/app['slug']; download=app['download']
         assert hashlib.sha256((folder/download['path']).read_bytes()).hexdigest().upper()==download['sha256']

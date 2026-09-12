@@ -31,3 +31,11 @@ Added a seventh app with product, privacy, support and publishing pages, authent
 ## Compact Android app grid — 11 September 2026
 
 The seven Android apps now reuse the web-project card grid: two columns above 700px, one column below. Redundant platform and repeated navigation rows were removed; linked titles and availability badges remain. Static integrity checks pass for all 31 pages. Browser inspection at 1440px/light confirms identical 568px Android/web card widths; 390px/dark uses a single 346px column with no horizontal overflow. Only the homepage is regenerated for this change.
+
+
+## Spinora section — 12 September 2026
+
+- Generated only Spinora pages and shared app indexes using `--app spinora`; existing app pages were unchanged.
+- Static checker passes for 35 English HTML pages, local links/anchors, assets, store field lengths, contrast and preview image dimensions.
+- Spinora has no public APK download, no Play install button and an explicit In testing status.
+- Browser preview could not attach through the available browser tool in this session; no new browser layout or interaction QA is claimed. The section uses the existing shared CSS and page templates.

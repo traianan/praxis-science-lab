@@ -118,5 +118,68 @@
       {"file": "screenshot-02-equalizer.png", "alt": "The enabled 10-band equalizer and its selected Vocal curve.", "caption": "Equalizer · ten bands, presets and saved adjustments."},
       {"file": "screenshot-03-profiles.png", "alt": "Audio profiles for the selected speaker output with optional automatic application.", "caption": "Profiles · saved settings for each output category."}
     ]
-  }
+  },
+{
+  "slug": "spinora",
+  "name": "Spinora",
+  "title": "Spinora",
+  "repo": "spinora",
+  "package": "ro.traian.spinora",
+  "version": "0.1.0 (1)",
+  "language": "English by default. Choose English, Română or Español in Settings → Language. Existing saved wheel text stays as you wrote it.",
+  "status": "In testing",
+  "category": "Tools",
+  "publishing_assets": false,
+  "policy_date": "2026-09-12",
+  "short": "Create colorful decision wheels, spin your options and save the results.",
+  "description": "A little spin. A clear decision. Spinora helps you choose between everyday options with a customizable decision wheel. Create wheels with 2–50 equally likely options, save them on your device and spin whenever you need a choice.\n\nStart with a template for meals, yes or no, colors, weekend plans, numbers or a break. Customize slice and text colors, bold, italic and underline styles, or add an image from your gallery. Reorder options, paste a list, duplicate a wheel and choose from four themes and three result sounds.\n\nSet a spin duration from 3 to 10 seconds. Keep the latest 200 results in local history, spin again or remove the selected option while keeping at least two options on the wheel. The interface adapts to phones and tablets.\n\nThe app opens in English and also supports Romanian and Spanish. Wheels work offline without an account. Optional Google demo ads can be enabled in Settings; they are off by default and do not generate revenue. Commercial advertising is not configured.\n\nSpinora is currently a development version under testing. Google Play availability, final branding and release materials are still being prepared. Published by Praxis Science Lab.",
+  "data": "Wheel names, option text and styling, settings, language and the latest 200 results are stored in app-private storage on your device. Selected gallery images are copied into the app’s private documents directory. There is no Praxis Science Lab account, cloud synchronization or application backend, and the app does not upload your wheels or images to Praxis Science Lab.\n\nOptional Google demo advertising can connect to Google when enabled. A demo identifier does not mean no information is processed by the advertising service.",
+  "permissions": "You select individual images through the platform gallery picker. Internet access supports optional test ads and vibration supports optional haptic feedback. This version includes google_mobile_ads 9.1.0 with Google sample application and banner identifiers. The SDK and its dependencies may process network and device information, identifiers, advertising interactions and diagnostics according to Google’s policies.\n\nThe test-ad switch is off by default. When enabled, the app initializes the advertising SDK and requests non-personalized demo banners on the main navigation screens. It does not display banners on the wheel or result screen. No production ad identifiers or live monetization are configured. A production consent flow is not yet implemented; non-personalized requests are not a substitute for that flow. Advertising behavior and disclosures must be reviewed before a commercial release.",
+  "retention": "Delete individual wheels or clear result history in the app. Clear app storage in Android Settings or uninstall to remove all private wheels, results, imported image copies and settings. Imported image copies may remain in private storage after removing an image or abandoning an edit; clearing app storage or uninstalling removes them. Original gallery images are not deleted by these actions. Android app backup is disabled.\n\nPraxis Science Lab has no server copy to restore. Clearing local storage does not delete information held by Google; Google controls retention for its services.",
+  "safety": "Use Spinora for everyday choices and activities. Every option has an equal chance. Long labels are shortened on the wheel and shown in full in the editor and result. A development build is available for local testing; there is no public Google Play installation link yet.",
+  "ads_notice": "Optional Google demo banners, disabled by default. No commercial advertising or production consent configuration yet.",
+  "data_safety_note": "Not finalized for Google Play. Local wheels and images stay on the device, but optional Google advertising may process network, device and advertising information. Review the exact signed artifact, SDK disclosures and production consent flow before submitting Data safety answers.",
+  "checks": [
+    "Create a wheel with 2–50 options, edit colors and text styles, reorder options and save it.",
+    "Spin a wheel and check that the selected result matches the pointer; try Spin again and Remove this option.",
+    "Import a gallery image and check it in the wheel, editor and result. Check sounds and vibration on a physical device.",
+    "Switch English, Romanian and Spanish in Settings and restart; verify saved wheels and preferences remain.",
+    "Test offline operation, history clearing and phone/tablet layouts.",
+    "If enabling Test ads, check that only demo banners appear, that a failed request leaves the app usable and that the wheel screen remains free of ads."
+  ],
+  "evidence": [
+    "pubspec.yaml",
+    "lib/main.dart",
+    "lib/editor.dart",
+    "lib/models.dart",
+    "lib/store.dart",
+    "lib/ads.dart",
+    "android/app/src/main/AndroidManifest.xml",
+    "output/VERIFICARE.md"
+  ],
+  "gaps": [
+    "Confirm the final name and permanent package identifier; prepare an upload-key-signed release AAB.",
+    "Complete physical-device testing of gallery selection, audio, vibration, accessibility and advertising. Automated tests and emulator startup do not cover all these features.",
+    "Configure production AdMob identifiers and the appropriate consent flow, then reconcile the privacy policy and Play declarations before enabling commercial ads.",
+    "Add the public privacy-policy link inside the app; the current app displays local privacy information.",
+    "Prepare final launcher/store artwork and authentic device screenshots from the release build. The website interface previews are not Play Store screenshot assets.",
+    "Complete the testing and account requirements shown in the actual Play Console account."
+  ],
+  "previews": [
+    {
+      "file": "preview-home.png",
+      "width": 390,
+      "height": 844,
+      "alt": "Spinora interface preview with saved decision wheels and navigation for My wheels, Explore, History and Settings.",
+      "caption": "My wheels · saved choices, ready for another spin."
+    },
+    {
+      "file": "preview-wheel.png",
+      "width": 390,
+      "height": 844,
+      "alt": "Spinora interface preview showing a six-option food wheel and the Spin the wheel button.",
+      "caption": "Decision wheel · colorful options and a clear result."
+    }
+  ]
+}
 ]

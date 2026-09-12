@@ -1,0 +1,21 @@
+Spinora
+
+Short description
+Create colorful decision wheels, spin your options and save the results.
+
+Full description
+A little spin. A clear decision. Spinora helps you choose between everyday options with a customizable decision wheel. Create wheels with 2–50 equally likely options, save them on your device and spin whenever you need a choice.
+
+Start with a template for meals, yes or no, colors, weekend plans, numbers or a break. Customize slice and text colors, bold, italic and underline styles, or add an image from your gallery. Reorder options, paste a list, duplicate a wheel and choose from four themes and three result sounds.
+
+Set a spin duration from 3 to 10 seconds. Keep the latest 200 results in local history, spin again or remove the selected option while keeping at least two options on the wheel. The interface adapts to phones and tablets.
+
+The app opens in English and also supports Romanian and Spanish. Wheels work offline without an account. Optional Google demo ads can be enabled in Settings; they are off by default and do not generate revenue. Commercial advertising is not configured.
+
+Spinora is currently a development version under testing. Google Play availability, final branding and release materials are still being prepared. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/spinora/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/spinora/privacy/
+Suggested category: Tools
