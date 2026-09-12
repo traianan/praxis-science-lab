@@ -263,5 +263,46 @@
       "caption": "Actual Android emulator capture, development version 0.1.0."
     }
   ]
+},
+{
+  "slug": "prism-player",
+  "name": "Prism Player",
+  "title": "Prism Player",
+  "repo": "prism-player",
+  "package": "app.praxis.prism",
+  "version": "0.1.0 (1)",
+  "language": "English by default; Romanian and Spanish available in Style → Language",
+  "status": "In testing",
+  "category": "Music & Audio",
+  "policy_date": "2026-09-12",
+  "publishing_assets": false,
+  "short": "Offline music, colorful themes, playlists, equalizer and a sleep timer.",
+  "description": "Bring your own music to Prism Player, a colorful offline audio player for Android 9 and later. Choose local audio files or scan the music saved on your phone, then browse songs, artists, albums, genres and folders. Search your library and sort tracks by title, addition time or duration.\n\nCreate and reorder playlists, save favorites and browse recently added or most-played tracks. Manage the playback queue, shuffle, repeat, seek and adjust playback speed. Music can continue in the background with Android media controls.\n\nShape Prism playback with the equalizer bands available on your device and bass adjustment where supported. Set a sleep timer to pause at the chosen time or after the current song finishes. Choose four color palettes, light or dark appearance and three geometric artwork styles; embedded album covers are also supported.\n\nEnglish, Romanian and Spanish are available. Your audio files stay on your device and no account is required. Music is not supplied with the app. Advertising is planned, but disabled in this development build; offline playback does not require watching an ad.",
+  "safety": "Use comfortable listening levels and reduce volume if you hear distortion. The equalizer affects Prism playback only; band count and bass support depend on the device. Removing a library entry or playlist does not delete the source audio file.",
+  "data": "The app reads audio files selected through the Android document picker or made available by an optional music-library permission. Track locations and metadata, playlists, favorites, play counts, language and appearance preferences are stored locally. Embedded album artwork is read locally. Audio files and library records are not uploaded by Prism. There is no account, microphone recording or cloud music library.",
+  "permissions": "Optional audio-library access is used for scanning: READ_MEDIA_AUDIO on Android 13 and later, or READ_EXTERNAL_STORAGE on earlier supported versions. The document picker can grant access to selected files without a library-wide permission. Media playback uses a foreground service, audio focus and a wake lock to support background listening and system controls. No microphone, location or all-files-management permission is requested. Internet and network-state permissions and Google Mobile Ads/UMP libraries are included for planned advertising, which is disabled in this build.",
+  "retention": "Remove library entries and playlists in the app to remove those local records while keeping the source audio files. Clear Android app storage or uninstall Prism to remove its library records, preferences and cached artwork; audio files stored elsewhere on the device remain. Library data is excluded from Android backup and device transfer.",
+  "ads_notice": "Advertising planned; disabled in version 0.1.0. Only demo identifiers are configured. Intended banner placement: Style, while playback is paused.",
+  "data_safety_note": "Not finalized for production advertising. Google advertising libraries are included but disabled. Before activating ads, verify the exact signed artifact, SDK startup and data practices, consent configuration, privacy notice and all relevant Play declarations.",
+  "checks": [
+    "Import local MP3 files and test the music scan with permission allowed and denied. Verify access after restarting the app.",
+    "Test background playback, system media controls, interruptions and headphone/Bluetooth disconnection on real devices.",
+    "Check search, playlists, favorite persistence, queue reordering and non-destructive entry removal.",
+    "Test equalizer availability, playback speed, shuffle, repeat and both sleep-timer modes.",
+    "Check English, Romanian and Spanish, large text, narrow screens and large libraries."
+  ],
+  "gaps": [
+    "Complete representative physical-device, Bluetooth, large-library and document-provider testing.",
+    "Configure production AdMob and consent, and update privacy and Data safety information before enabling ads.",
+    "Prepare final store artwork, screenshots and a release AAB signed with the upload key.",
+    "Complete the applicable Google Play testing, declarations and review for the final artifact."
+  ],
+  "screenshots": [
+    {
+      "file": "screenshot-style-ro.png",
+      "alt": "Prism Player appearance settings in Romanian with violet, coral, turquoise and gold palettes",
+      "caption": "Actual development-app capture in Romanian, version 0.1.0, Android emulator."
+    }
+  ]
 }
 ]

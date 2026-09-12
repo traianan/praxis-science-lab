@@ -1,0 +1,19 @@
+Prism Player
+
+Short description
+Offline music, colorful themes, playlists, equalizer and a sleep timer.
+
+Full description
+Bring your own music to Prism Player, a colorful offline audio player for Android 9 and later. Choose local audio files or scan the music saved on your phone, then browse songs, artists, albums, genres and folders. Search your library and sort tracks by title, addition time or duration.
+
+Create and reorder playlists, save favorites and browse recently added or most-played tracks. Manage the playback queue, shuffle, repeat, seek and adjust playback speed. Music can continue in the background with Android media controls.
+
+Shape Prism playback with the equalizer bands available on your device and bass adjustment where supported. Set a sleep timer to pause at the chosen time or after the current song finishes. Choose four color palettes, light or dark appearance and three geometric artwork styles; embedded album covers are also supported.
+
+English, Romanian and Spanish are available. Your audio files stay on your device and no account is required. Music is not supplied with the app. Advertising is planned, but disabled in this development build; offline playback does not require watching an ad.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/prism-player/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/prism-player/privacy/
+Suggested category: Music & Audio
