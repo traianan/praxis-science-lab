@@ -772,10 +772,6 @@
       "alt": "TerraLab GPS Tools compass illustration in cyan and green",
       "caption": "TerraLab visual identity. The phone screenshots below show the actual development app."
     },
-    "card_image": {
-      "file": "terralab-cover.svg",
-      "alt": "TerraLab GPS Tools compass illustration"
-    },
     "screenshots": [
       {
         "file": "screenshot-tools.png",
