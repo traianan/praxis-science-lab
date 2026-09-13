@@ -706,6 +706,29 @@
       "Complete representative device testing and final store artwork.",
       "If commercial ads are enabled, configure production identifiers, applicable consent and matching disclosures.",
       "Complete release-specific Play Console declarations and testing."
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-overview.png",
+        "width": 1080,
+        "height": 2400,
+        "alt": "System telemetry radar with Android version and CPU core count",
+        "caption": "Actual phone screenshot, CyberSpec 0.1.0, English interface. Separate AdMob TEST edition with Google sample advertising; the offline edition has no ads."
+      },
+      {
+        "file": "screenshot-sensors.png",
+        "width": 1080,
+        "height": 2400,
+        "alt": "Live accelerometer X, Y and Z readings and plotted motion",
+        "caption": "Actual phone screenshot, CyberSpec 0.1.0, English interface. Separate AdMob TEST edition with Google sample advertising; the offline edition has no ads."
+      },
+      {
+        "file": "screenshot-level.png",
+        "width": 1080,
+        "height": 2400,
+        "alt": "Digital bubble level showing pitch, roll and relative-zero controls",
+        "caption": "Actual phone screenshot, CyberSpec 0.1.0, English interface. Separate AdMob TEST edition with Google sample advertising; the offline edition has no ads."
+      }
     ]
   }
 ]
