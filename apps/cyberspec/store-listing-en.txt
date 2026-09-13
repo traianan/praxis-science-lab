@@ -1,0 +1,25 @@
+CyberSpec: Sensor Analyzer
+
+Short description
+Explore live sensors, Wi-Fi signals, battery health and sound spectra.
+
+Full description
+Turn your Android device into a pocket diagnostics lab with a dark, neon dashboard. CyberSpec reads measurements directly from Android, with no account or developer-operated backend.
+
+Explore accelerometer, gyroscope and magnetometer readings with live X/Y/Z plots. Freeze a trace, inspect sensor details and use the digital bubble level with relative zero.
+
+Monitor battery temperature, voltage, current and health, alongside RAM, storage and Android thermal status. Availability depends on the device.
+
+Inspect Wi-Fi signal strength, link speed, band and channel. Compare nearby networks and use audible signal-finder feedback while moving around. Scanning follows Android permissions and scan limits.
+
+Start the microphone manually to view a waveform, dBFS level and FFT frequency spectrum. An adjustable calibration offset provides an approximate sound-pressure estimate.
+
+Create and export local JSON diagnostic reports through the Android file picker. English is the default; Romanian and Spanish are included.
+
+Version 0.1.0 is in testing. The offline edition contains no advertising SDK or Internet permission. A separate AdMob TEST edition demonstrates Google sample banners and interstitials; ads require Internet while diagnostic tools remain local. Commercial advertising is not configured.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/cyberspec/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/cyberspec/privacy/
+Suggested category: Tools

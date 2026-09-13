@@ -672,5 +672,40 @@
         "caption": "Actual Android capture, version 0.12.0, TEST_ADS=false. Phone display configured to 1080 × 2160 for capture."
       }
     ]
+  },
+  {
+    "slug": "cyberspec",
+    "name": "CyberSpec",
+    "title": "CyberSpec: Sensor Analyzer",
+    "repo": "cyberspec",
+    "package": "ro.praxissciencelab.cyberspec",
+    "version": "0.1.0 (1)",
+    "language": "English by default; Romanian and Spanish available from the language selector. The choice is remembered.",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-13",
+    "publishing_assets": false,
+    "short": "Explore live sensors, Wi-Fi signals, battery health and sound spectra.",
+    "description": "Turn your Android device into a pocket diagnostics lab with a dark, neon dashboard. CyberSpec reads measurements directly from Android, with no account or developer-operated backend.\n\nExplore accelerometer, gyroscope and magnetometer readings with live X/Y/Z plots. Freeze a trace, inspect sensor details and use the digital bubble level with relative zero.\n\nMonitor battery temperature, voltage, current and health, alongside RAM, storage and Android thermal status. Availability depends on the device.\n\nInspect Wi-Fi signal strength, link speed, band and channel. Compare nearby networks and use audible signal-finder feedback while moving around. Scanning follows Android permissions and scan limits.\n\nStart the microphone manually to view a waveform, dBFS level and FFT frequency spectrum. An adjustable calibration offset provides an approximate sound-pressure estimate.\n\nCreate and export local JSON diagnostic reports through the Android file picker. English is the default; Romanian and Spanish are included.\n\nVersion 0.1.0 is in testing. The offline edition contains no advertising SDK or Internet permission. A separate AdMob TEST edition demonstrates Google sample banners and interstitials; ads require Internet while diagnostic tools remain local. Commercial advertising is not configured.",
+    "safety": "Readings depend on available sensors and Android APIs. CPU temperature is not universally exposed. Sound-pressure estimates are not certified measurements and do not include A/C weighting. Wi-Fi scanning may require Location to be enabled and is limited by Android. No Google Play installation link is available yet.",
+    "data": "Sensor, battery, memory and Wi-Fi information is processed on the device. The app does not read GPS coordinates. Microphone samples are processed in memory; raw audio is not saved as a recording. There is no app account or developer-operated cloud service.\n\nLanguage preference and calibration offset stay in private app storage. JSON reports are exported only on request to the destination selected in the Android file picker. Reports exclude SSIDs and the network list, but include device diagnostics and sensor samples; review them before sharing.",
+    "permissions": "The offline edition (ro.praxissciencelab.cyberspec) excludes Internet permission and Google advertising SDKs. Wi-Fi access and Location permission support nearby-network scanning. Microphone permission is requested for acoustic analysis. Sensor and microphone capture stop when the app goes into the background; microphone capture does not restart automatically.\n\nThe separate AdMob TEST edition (ro.praxissciencelab.cyberspec.admobtest) includes Google advertising SDKs and Internet access. It requests Google sample ads automatically, with a banner above navigation and an interstitial after a report when available. Test ads do not generate revenue, but Google may process connection information, identifiers, interactions and diagnostics. Google privacy policy: https://policies.google.com/privacy . This development edition is not intended for public release. Production advertising identifiers and the applicable consent configuration remain unconfigured.\n\nA document provider or app you select to save or share a report handles that file under its own practices.",
+    "retention": "Live readings and audio buffers are held in memory. Clearing app storage or uninstalling removes private preferences and calibration. Exported reports remain in their selected destination until deleted there. Google controls retention for information processed by its advertising services in the separate test edition.",
+    "ads_notice": "Offline edition: no ads or Internet permission. Separate development edition: Google sample ads only; no commercial monetization configured.",
+    "data_safety_note": "Prepare declarations for the exact uploaded edition. Local diagnostic processing and the separate Google Ads test configuration have different network and SDK behavior. No production submission is prepared by this page.",
+    "checks": [
+      "Check available sensors, XYZ traces, freeze/resume and level calibration.",
+      "Inspect battery, RAM and storage; confirm unavailable values are labeled.",
+      "Test Wi-Fi permissions, scanning and audible signal-finder feedback.",
+      "Start and stop acoustic analysis; confirm capture stops in the background.",
+      "Export a JSON report and check that network names are excluded.",
+      "Check EN/RO/ES, remembered language and small-screen layouts."
+    ],
+    "gaps": [
+      "Prepare production signing and a verified release artifact.",
+      "Complete representative device testing and final store artwork.",
+      "If commercial ads are enabled, configure production identifiers, applicable consent and matching disclosures.",
+      "Complete release-specific Play Console declarations and testing."
+    ]
   }
 ]

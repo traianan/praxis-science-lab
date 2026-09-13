@@ -12,6 +12,7 @@ GROUPS = {
     'scientific-calculator': 'Science & learning',
     'medical-terminology-flashcards': 'Science & learning',
     'xlab-tools': 'Science & learning',
+    'cyberspec': 'Science & learning',
 }
 def render_card(app):
     e = escape
