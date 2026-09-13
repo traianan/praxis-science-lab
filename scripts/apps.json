@@ -731,5 +731,73 @@
       }
     ],
     "gallery_first": true
+  },
+  {
+    "slug": "terralab",
+    "name": "TerraLab GPS Tools",
+    "title": "TerraLab GPS Tools",
+    "repo": "terralab",
+    "package": "app.praxis.terralab",
+    "version": "0.2.0 (3)",
+    "language": "English by default. Romanian and Spanish are available in Settings; the choice is remembered.",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-13",
+    "publishing_assets": false,
+    "short": "GPS, compass, satellites, weather and offline maps for your next journey.",
+    "description": "Your Android field toolkit, with a dark instrument-panel interface and direct access to location and device sensors.\n\nRead speed, coordinates, accuracy and GPS altitude. Explore a digital compass, bubble level, GNSS skyplot and satellite signal bars. Pressure readings are available on devices with a barometer. Sunrise and sunset are calculated locally.\n\nRecord tracks with pause and resume, including screen-off recording through an Android notification. Save waypoints, review track statistics and import or export GPX files. Your routes remain on the device unless you export them.\n\nLoad a forecast from MET Norway for coordinates you choose. View temperature, wind, humidity, pressure, precipitation intervals and hourly or multi-day outlooks. The last forecast remains readable offline with its location and retrieval time. A new forecast requires internet.\n\nDownload Mapsforge country packages or import a .map file, then select it for fully offline map rendering. The current download menu includes Romania, Spain, Bulgaria, Hungary, Moldova and Monaco, with a 1 GiB limit per package. Use the map for points, tracks and approximate distance or area measurements. Online OpenStreetMap is optional.\n\nAn offline Help guide explains the instruments, satellites and available features. English, Romanian and Spanish are included.\n\nVersion 0.2.0 is a development build with Google sample banner and interstitial ads. Commercial advertising and a Google Play release are not configured.",
+    "safety": "Satellite fixes depend on reception; detecting satellites does not mean they are used in a fix. GPS altitude uses the WGS84 ellipsoid. Weather is a model forecast, not a phone measurement. Offline maps show only their package coverage and are updated manually. No turn-by-turn routing, air-quality forecast, UV forecast or KML import is included. Measurements are approximate. Android 10 or later is required.",
+    "data": "Location and sensor readings are processed on the device. Tracks, waypoints, settings, downloaded maps and the last weather forecast are stored locally. There is no app account or developer-operated backend.\n\nGPX import and export use the Android document picker. Exported files can contain exact positions and timestamps; you choose their destination. Files imported as Mapsforge packages are validated before activation.",
+    "permissions": "Location permission supports positioning, GNSS and track recording. Recording is started explicitly and can continue with the screen off through a foreground service and visible notification. No always-on background-location permission is requested for ordinary use.\n\nLoading weather explicitly sends the chosen coordinates rounded to 0.01 degrees and the connection IP to MET Norway (api.met.no). Responses are cached; requests respect provider cache and retry limits. There is no periodic weather polling in the background.\n\nEnabling the online map contacts tile.openstreetmap.org and reveals the viewed map area and IP address. Offline package downloads contact the Mapsforge Hochschule Esslingen mirror with the selected package and IP, not GPS coordinates. Android DownloadManager can continue a requested transfer in the background. Installed packages render without internet.\n\nThe development build includes Google Mobile Ads and requests Google sample ads. Google may process connection information, identifiers, interactions and diagnostics. Test ads do not generate revenue. The app does not explicitly pass GPS tracks to its advertising controller. Production advertising IDs and the applicable consent configuration remain unconfigured. Google privacy policy: https://policies.google.com/privacy .",
+    "retention": "Delete tracks and offline packages in the app. Clearing app storage or uninstalling removes private tracks, waypoints, settings, maps and cached weather; Android backup is disabled. GPX exports remain at their chosen destination until deleted there. Providers control the retention of their connection logs and SDK data.",
+    "ads_notice": "Google sample ads in the development build only. Commercial monetization and production consent configuration are not enabled.",
+    "data_safety_note": "Review the exact release artifact and all providers before making Play Console declarations. Local track storage does not imply no network data handling: weather, online maps, requested package downloads and Google sample advertising have separate data flows.",
+    "checks": [
+      "Check GPS permission, fix age, accuracy and the distinction between seen and used satellites.",
+      "Record, pause, resume and stop a track; verify screen-off recording and GPX export.",
+      "Load a forecast and reopen it offline; confirm its location and retrieval time.",
+      "Download or import a valid .map package; select it with Online map off and verify airplane-mode rendering.",
+      "Check package cancellation/deletion, unavailable sensors, EN/RO/ES and Help."
+    ],
+    "gaps": [
+      "Prepare production signing and a verified store release.",
+      "Complete representative outdoor GPS recording and device testing.",
+      "Review weather-provider scaling and caching before broad distribution.",
+      "Configure production advertising and applicable consent before monetization.",
+      "Complete release-specific Play Console declarations, graphics and review."
+    ],
+    "gallery_first": true,
+    "hero": {
+      "file": "terralab-cover.svg",
+      "alt": "TerraLab GPS Tools compass illustration in cyan and green",
+      "caption": "TerraLab visual identity. The phone screenshots below show the actual development app."
+    },
+    "card_image": {
+      "file": "terralab-cover.svg",
+      "alt": "TerraLab GPS Tools compass illustration"
+    },
+    "screenshots": [
+      {
+        "file": "screenshot-tools.png",
+        "width": 1080,
+        "height": 2400,
+        "alt": "TerraLab instrument menu with compass, level, satellites and altitude tools",
+        "caption": "Actual Android screenshot, version 0.2.0. English interface with Google test advertising."
+      },
+      {
+        "file": "screenshot-offline.png",
+        "width": 1080,
+        "height": 2400,
+        "alt": "TerraLab offline package manager with installed maps",
+        "caption": "Actual Android screenshot, version 0.2.0. Offline country packages are stored on the device."
+      },
+      {
+        "file": "screenshot-help.png",
+        "width": 1080,
+        "height": 2400,
+        "alt": "TerraLab offline Help explaining satellite reception and position fixes",
+        "caption": "Actual Android screenshot, version 0.2.0. Help is available in English, Romanian and Spanish."
+      }
+    ]
   }
 ]

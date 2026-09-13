@@ -18,7 +18,11 @@ def render_card(app):
     e = escape
     slug = app['slug']
     group = GROUPS.get(slug, 'Everyday tools')
-    icon = next((f'apps/{slug}/media/{name}' for name in ['app-icon.png', 'icon.png']
+    icon = next((f'apps/{slug}/media/{name}' for name in ['app-icon.png', 'icon.png', 'app-icon.svg']
                  if (ROOT / f'apps/{slug}/media/{name}').exists()), None)
     visual = f'<img src="{icon}" alt="" width="56" height="56" loading="lazy">' if icon else f'<span class="app-monogram" aria-hidden="true">{e(app["name"][:2].upper())}</span>'
-    return f'''<li class="portfolio-card" data-category="{e(group)}"><div class="card-top">{visual}<span class="card-category">{e(group)}</span></div><h3><a href="apps/{slug}/">{e(app['name'])} <span aria-hidden="true">↗</span></a></h3><p>{e(app['short'])}</p><span class="status">{e(app['status'])}</span></li>'''
+    preview = ''
+    if app.get('card_image'):
+        cover = app['card_image']
+        preview = f'<img class="card-preview" src="apps/{e(slug)}/media/{e(cover["file"])}" alt="{e(cover["alt"])}" width="1200" height="600" loading="lazy">'
+    return f'''<li class="portfolio-card" data-category="{e(group)}"><div class="card-top">{visual}<span class="card-category">{e(group)}</span></div>{preview}<h3><a href="apps/{slug}/">{e(app['name'])} <span aria-hidden="true">↗</span></a></h3><p>{e(app['short'])}</p><span class="status">{e(app['status'])}</span></li>'''

@@ -41,6 +41,7 @@ def page(route, title, subtitle, body):
     output = ROOT/route/'index.html'
     output.parent.mkdir(parents=True, exist_ok=True)
     css_version = '20260911-clear-audio' if route.startswith('apps/clear-audio') else '20260908-nav'
+    if route.startswith('apps/terralab'): css_version = '20260913-terralab'
     output.write_text(f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1739d6"><meta name="description" content="{e(subtitle, quote=True)}">
@@ -81,7 +82,11 @@ for a in APPS:
     if a.get('gallery_first') and gallery:
         gallery = gallery.replace('<h2>Inside the app</h2>', '<h2 id="screenshots">Screenshots</h2>').replace('loading="lazy"', 'loading="eager"')
         intro += '<p><a class="text-link" href="#screenshots">Screenshots ↓</a></p>'
-    content = gallery + desc if a.get('gallery_first') else desc + gallery
+    feature = ''
+    if a.get('hero'):
+        hero = a['hero']
+        feature = f'<figure class="app-feature"><img src="media/{e(hero["file"], quote=True)}" alt="{e(hero["alt"], quote=True)}" width="1200" height="600"><figcaption>{e(hero["caption"])}</figcaption></figure>'
+    content = feature + (gallery + desc if a.get('gallery_first') else desc + gallery)
     page(route,a['name'],a['short'],intro+download+content+f'<h2>Language</h2><p>{e(a["language"])}</p><h2>Using the app</h2><p>{e(a["safety"])}</p>'+contact)
     privacy=f'<p>Effective date: {a.get("policy_date", DATE)}. This notice describes Android version {e(a["version"])} and the configuration documented below.</p>'+contact
     privacy+=f'<h2>Information handled by the app</h2>{paragraphs(a["data"])}<h2>Permissions, services and sharing</h2>{paragraphs(a["permissions"])}<h2>Retention and deletion</h2>{paragraphs(a["retention"])}'

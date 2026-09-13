@@ -1,0 +1,25 @@
+TerraLab GPS Tools
+
+Short description
+GPS, compass, satellites, weather and offline maps for your next journey.
+
+Full description
+Your Android field toolkit, with a dark instrument-panel interface and direct access to location and device sensors.
+
+Read speed, coordinates, accuracy and GPS altitude. Explore a digital compass, bubble level, GNSS skyplot and satellite signal bars. Pressure readings are available on devices with a barometer. Sunrise and sunset are calculated locally.
+
+Record tracks with pause and resume, including screen-off recording through an Android notification. Save waypoints, review track statistics and import or export GPX files. Your routes remain on the device unless you export them.
+
+Load a forecast from MET Norway for coordinates you choose. View temperature, wind, humidity, pressure, precipitation intervals and hourly or multi-day outlooks. The last forecast remains readable offline with its location and retrieval time. A new forecast requires internet.
+
+Download Mapsforge country packages or import a .map file, then select it for fully offline map rendering. The current download menu includes Romania, Spain, Bulgaria, Hungary, Moldova and Monaco, with a 1 GiB limit per package. Use the map for points, tracks and approximate distance or area measurements. Online OpenStreetMap is optional.
+
+An offline Help guide explains the instruments, satellites and available features. English, Romanian and Spanish are included.
+
+Version 0.2.0 is a development build with Google sample banner and interstitial ads. Commercial advertising and a Google Play release are not configured.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/terralab/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/terralab/privacy/
+Suggested category: Tools

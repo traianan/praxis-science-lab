@@ -54,3 +54,5 @@
 .app-gallery figure{margin:0;min-width:0}.app-gallery img{width:100%;border-radius:12px;border:1px solid var(--line);background:#0f0f16}
 .app-gallery figcaption{color:var(--muted);font-size:14px;line-height:1.6;margin-top:12px}
 @media(max-width:600px){.app-download{padding:20px}.app-gallery{grid-template-columns:1fr;gap:26px}.app-gallery figure{width:100%;max-width:320px;justify-self:center}.app-download .button{width:100%;gap:10px}}
+
+.app-feature{margin:24px 0 32px}.app-feature img{display:block;width:100%;height:auto;border-radius:18px}.app-feature figcaption{font-size:14px;color:var(--muted);margin-top:10px}
