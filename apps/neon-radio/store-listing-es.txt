@@ -1,0 +1,23 @@
+Neon Radio
+
+SHORT DESCRIPTION
+Radio por internet con dial retro, favoritos, ecualizador y grabación local.
+
+FULL DESCRIPTION
+Escucha radio por internet con una interfaz inspirada en los radiocasetes retro.
+
+Busca emisoras por país, género o nombre, explora el mapa y guarda Favoritos y cinco memorias. Añade la URL directa HTTP/HTTPS de un stream que no esté en el directorio.
+
+Reproducción en segundo plano, widget Android y modo conducción con botones grandes. La reconexión automática intenta recuperar el stream; Detener cancela los reintentos.
+
+Ecualizador de cinco bandas con ajuste Classic y amplificación opcional. Dial virtual, casete animado y medidor VU basado en el audio. Reduce las animaciones y usa el tamaño de texto de Android.
+
+Temporizador de sueño, grabación local WAV y exportación con Android, respetando los derechos y condiciones de la emisora. Límite por grabación: 30 minutos o 512 MiB. Transfiere Favoritos y memorias mediante un archivo JSON, sin cuenta.
+
+Inglés predeterminado; también rumano y español.
+
+Las emisoras en directo requieren internet. Las frecuencias son virtuales, no recepción con un chip FM. La disponibilidad, los metadatos y las variantes de bitrate dependen de la emisora. Los streams pueden incluir sus propios anuncios. No incluye Chromecast, alarma despertador ni reconocimiento automático de canciones.
+
+La versión de prueba tiene desactivados los anuncios comerciales. Android Auto está en pruebas y aún no se ha verificado en la pantalla de un coche.
+
+Praxis Science Lab — traiananghel@gmail.com

@@ -1,0 +1,23 @@
+Neon Radio
+
+SHORT DESCRIPTION
+Radio online cu cadran retro, favorite, egalizator și înregistrări locale.
+
+FULL DESCRIPTION
+Ascultă radio online într-o interfață inspirată de radiocasetofoanele retro.
+
+Caută posturi după țară, gen sau nume, explorează harta lumii și salvează Favorite și cinci presetări. Adaugă adresa directă HTTP/HTTPS a unui stream care lipsește din director.
+
+Redare în fundal, widget Android și mod Drive cu butoane mari. Reconectarea automată încearcă să reia streamul după întreruperi; Stop anulează încercările.
+
+Egalizator pe cinci benzi cu presetare Classic și amplificare opțională. Cadran virtual, casetă animată și VU-metru bazat pe semnalul audio. Poți reduce animațiile și folosi dimensiunea textului din Android.
+
+Timer de somn, înregistrare locală WAV și export prin Android, cu respectarea drepturilor și condițiilor postului. Limita unei înregistrări: 30 de minute sau 512 MiB. Transferă Favoritele și presetările printr-un fișier JSON, fără cont.
+
+EN este limba implicită; RO și ES sunt disponibile.
+
+Streamurile live necesită internet. Frecvențele sunt virtuale, nu recepție prin cip FM. Disponibilitatea, metadatele și variantele de bitrate depind de post. Posturile pot include propriile reclame. Chromecast, alarma de trezire și recunoașterea automată a pieselor nu sunt incluse.
+
+Versiunea de testare are reclamele comerciale dezactivate. Integrarea Android Auto este în testare și nu a fost verificată pe ecranul unei mașini.
+
+Praxis Science Lab — traiananghel@gmail.com
