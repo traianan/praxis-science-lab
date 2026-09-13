@@ -1,4 +1,5 @@
 """Build the public English app documentation from reviewed source inventories."""
+from portfolio_cards import render_card
 from pathlib import Path
 from html import escape as e
 import json
@@ -61,7 +62,7 @@ cards=[]
 for a in APPS:
     slug=a['slug']; route=f'apps/{slug}'; url=BASE+route+'/'
     media=ROOT/route/'media'; media.mkdir(parents=True,exist_ok=True)
-    cards.append(f'''<li><h3><a href="{route}/">{e(a['name'])} <span aria-hidden="true">↗</span></a></h3><p>{e(a['short'])}</p><span class="status">{e(a['status'])}</span></li>''')
+    cards.append(render_card(a))
     if args.home_only or (args.app and slug != args.app):
         continue
     intro = f'<p><span class="status">{e(a["status"])}</span> Not yet available on Google Play.</p>'

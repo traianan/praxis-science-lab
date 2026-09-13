@@ -24,7 +24,7 @@ class Page(HTMLParser):
         if tag=='script':
             src=urlsplit(a.get('src',''))
             assert not src.scheme and not src.netloc
-            assert Path(src.path).name in {'copyright.js','theme.js'}, 'Unexpected script added'
+            assert Path(src.path).name in {'copyright.js','theme.js','portfolio.js'}, 'Unexpected script added'
 
 pages={}
 for file in [ROOT/'index.html', *sorted((ROOT/'apps').rglob('*.html')), ROOT/'privacy/index.html', ROOT/'publishing/index.html']:

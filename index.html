@@ -17,8 +17,10 @@
   <meta property="og:title" content="Praxis Science Lab">
   <meta property="og:description" content="Curiosity, put into practice. Apps, public documentation and support.">
   <meta property="og:url" content="https://traianan.github.io/praxis-science-lab/">
+  <link rel="stylesheet" href="assets/portfolio.css?v=20260913">
+  <script src="assets/portfolio.js?v=20260913" defer></script>
 </head>
-<body>
+<body class="portfolio-home">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell">
     <header class="site-header">
@@ -45,51 +47,56 @@
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="tiny-square" aria-hidden="true"></span> INDEPENDENT APPS. OPEN CURIOSITY.</p>
-          <h1 id="hero-title">Curiosity.<br>Put into <em>practice.</em></h1>
-          <p class="hero-description">Thoughtful apps for learning and exploration.<br class="desktop-break"> Built by Praxis Science Lab.</p>
-          <a class="button" href="#apps">Explore our apps <span aria-hidden="true">↗</span></a>
+      <section class="studio-hero" aria-labelledby="hero-title">
+        <div class="studio-copy">
+          <p class="eyebrow">INDEPENDENT SOFTWARE STUDIO · BY TRAIAN ANGHEL</p>
+          <h1 id="hero-title">A little curiosity.<br>A world of <em>possibilities.</em></h1>
+          <p class="studio-lead">Apps to explore science, shape your sound and make something of your own. Welcome to Praxis Science Lab.</p>
+          <div class="hero-actions"><a class="button" href="#apps">Find your next app <span aria-hidden="true">↗</span></a><a class="secondary-link" href="#projects">Explore the web labs →</a></div>
+          <div class="studio-facts"><div><strong>15</strong><span>Android projects</span></div><div><strong>8</strong><span>Web experiences</span></div><div><strong>One</strong><span>curious mind</span></div></div>
         </div>
-        <div class="brand-panel" aria-hidden="true">
-          <div class="panel-top"><span>PRAXIS SCIENCE LAB</span><span>01 / ∞</span></div>
-          <img class="hero-symbol" src="assets/logo-symbol.svg" width="240" height="240" alt="">
-          <div class="panel-bottom"><span>SCIENCE IN PRACTICE</span><span class="panel-dot"></span></div>
-        </div>
+        <a class="radio-showcase" href="apps/neon-radio/" aria-label="Explore Neon Radio, currently in testing">
+          <div class="showcase-top"><span>ON THE LAB BENCH</span><span class="live-pill">In testing</span></div>
+          <div class="showcase-orbit" aria-hidden="true"></div>
+          <img class="radio-phone" src="apps/neon-radio/media/screenshot-1.png" alt="Neon Radio’s retro tuner, live station display and VU meters" width="1080" height="2160" fetchpriority="high">
+          <div class="showcase-bottom"><div><span>80s soul. Worldwide sound.</span><h2>Neon Radio</h2></div><span class="showcase-arrow" aria-hidden="true">↗</span></div>
+        </a>
       </section>
+      <div class="discipline-strip" aria-label="Areas of exploration"><span>Science & learning</span><span>Sound & music</span><span>Photo & creativity</span><span>Everyday tools</span></div>
 
       <section id="apps" class="apps section" aria-labelledby="apps-title">
         <div class="section-heading">
-          <div><p class="eyebrow">THE WORK</p><h2 id="apps-title">Our Android apps.</h2></div>
-          <p>Small tools. Room to learn.</p>
+          <div><p class="eyebrow">MADE IN THE LAB</p><h2 id="apps-title">Find something that sparks.</h2></div>
+          <p>Explore the collection. Each project has its own story.</p>
         </div>
+<div class="collection-tools" hidden><div class="filter-buttons" role="group" aria-label="Filter apps by category"><button type="button" data-filter="All" aria-pressed="true">All apps</button><button type="button" data-filter="Science & learning" aria-pressed="false">Science</button><button type="button" data-filter="Sound & music" aria-pressed="false">Sound & music</button><button type="button" data-filter="Photo & creativity" aria-pressed="false">Photo & creativity</button><button type="button" data-filter="Everyday tools" aria-pressed="false">Everyday tools</button></div><label class="app-search"><span class="sr-only">Search apps</span><input type="search" placeholder="Search the lab…" autocomplete="off"></label></div>
+<p class="collection-count" aria-live="polite" hidden></p>
 <!-- ANDROID_APPS_START -->
 <ul class="projects-grid android-apps-grid">
-<li><h3><a href="apps/scientific-calculator/">Scientific Calculator <span aria-hidden="true">↗</span></a></h3><p>Scientific calculations, RPN, number bases, constants and unit conversions.</p><span class="status">Preparing for testing</span></li>
-<li><h3><a href="apps/atomic-clock/">Atomic Clock <span aria-hidden="true">↗</span></a></h3><p>Check network time, compare time zones and use a stopwatch or countdown.</p><span class="status">In development</span></li>
-<li><h3><a href="apps/frequency-generator/">Frequency Sound Generator <span aria-hidden="true">↗</span></a></h3><p>Generate tones, explore waveforms, run frequency sweeps and export WAV files.</p><span class="status">In development</span></li>
-<li><h3><a href="apps/audiolab/">AudioLab <span aria-hidden="true">↗</span></a></h3><p>Explore audio locally with spectrum tools, signal generation and file analysis.</p><span class="status">In development</span></li>
-<li><h3><a href="apps/medical-terminology-flashcards/">Medical Terminology Flashcards <span aria-hidden="true">↗</span></a></h3><p>Study medical word parts with flashcards, quizzes and offline practice.</p><span class="status">In development</span></li>
-<li><h3><a href="apps/xlab-tools/">XLab Tools <span aria-hidden="true">↗</span></a></h3><p>A screen ruler, digital level, tone generator and sound analysis in one app.</p><span class="status">In development</span></li>
-<li><h3><a href="apps/clear-audio/">Clear Audio <span aria-hidden="true">↗</span></a></h3><p>Shape your sound with clear voice, a 10-band equalizer and local audio playback.</p><span class="status">Development APK available</span></li>
-<li><h3><a href="apps/spinora/">Spinora <span aria-hidden="true">↗</span></a></h3><p>Create colorful decision wheels, spin your options and save the results.</p><span class="status">In testing</span></li>
-<li><h3><a href="apps/earmate/">EarMate <span aria-hidden="true">↗</span></a></h3><p>Local soundscapes, a five-band EQ and tools for compatible BLE devices.</p><span class="status">In testing</span></li>
-<li><h3><a href="apps/droplet/">Droplet — Speaker Care <span aria-hidden="true">↗</span></a></h3><p>Timed speaker tones, adjustable frequency and a quick sound comparison.</p><span class="status">In testing</span></li>
-<li><h3><a href="apps/prism-player/">Prism Player <span aria-hidden="true">↗</span></a></h3><p>Offline music, colorful themes, playlists, equalizer and a sleep timer.</p><span class="status">In testing</span></li>
-<li><h3><a href="apps/geostamp-camera/">GeoStamp Camera <span aria-hidden="true">↗</span></a></h3><p>GPS photo stamps, project albums, street maps and local PDF exports.</p><span class="status">In testing</span></li>
-<li><h3><a href="apps/mosaic/">Mosaic <span aria-hidden="true">↗</span></a></h3><p>Create photo collages with frames, stickers and individual photo adjustments.</p><span class="status">In testing</span></li>
-<li><h3><a href="apps/tempolab/">TempoLab <span aria-hidden="true">↗</span></a></h3><p>Practice music with tempo, pitch, A–B loops, equalizer and offline voice separation.</p><span class="status">Preparing for testing</span></li>
-<li><h3><a href="apps/neon-radio/">Neon Radio <span aria-hidden="true">↗</span></a></h3><p>Internet radio with a retro dial, favorites, equalizer and local recordings.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Science &amp; learning"><div class="card-top"><img src="apps/scientific-calculator/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Science &amp; learning</span></div><h3><a href="apps/scientific-calculator/">Scientific Calculator <span aria-hidden="true">↗</span></a></h3><p>Scientific calculations, RPN, number bases, constants and unit conversions.</p><span class="status">Preparing for testing</span></li>
+<li class="portfolio-card" data-category="Everyday tools"><div class="card-top"><img src="apps/atomic-clock/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Everyday tools</span></div><h3><a href="apps/atomic-clock/">Atomic Clock <span aria-hidden="true">↗</span></a></h3><p>Check network time, compare time zones and use a stopwatch or countdown.</p><span class="status">In development</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><img src="apps/frequency-generator/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/frequency-generator/">Frequency Sound Generator <span aria-hidden="true">↗</span></a></h3><p>Generate tones, explore waveforms, run frequency sweeps and export WAV files.</p><span class="status">In development</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><img src="apps/audiolab/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/audiolab/">AudioLab <span aria-hidden="true">↗</span></a></h3><p>Explore audio locally with spectrum tools, signal generation and file analysis.</p><span class="status">In development</span></li>
+<li class="portfolio-card" data-category="Science &amp; learning"><div class="card-top"><img src="apps/medical-terminology-flashcards/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Science &amp; learning</span></div><h3><a href="apps/medical-terminology-flashcards/">Medical Terminology Flashcards <span aria-hidden="true">↗</span></a></h3><p>Study medical word parts with flashcards, quizzes and offline practice.</p><span class="status">In development</span></li>
+<li class="portfolio-card" data-category="Science &amp; learning"><div class="card-top"><span class="app-monogram" aria-hidden="true">XL</span><span class="card-category">Science &amp; learning</span></div><h3><a href="apps/xlab-tools/">XLab Tools <span aria-hidden="true">↗</span></a></h3><p>A screen ruler, digital level, tone generator and sound analysis in one app.</p><span class="status">In development</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><span class="app-monogram" aria-hidden="true">CL</span><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/clear-audio/">Clear Audio <span aria-hidden="true">↗</span></a></h3><p>Shape your sound with clear voice, a 10-band equalizer and local audio playback.</p><span class="status">Development APK available</span></li>
+<li class="portfolio-card" data-category="Everyday tools"><div class="card-top"><span class="app-monogram" aria-hidden="true">SP</span><span class="card-category">Everyday tools</span></div><h3><a href="apps/spinora/">Spinora <span aria-hidden="true">↗</span></a></h3><p>Create colorful decision wheels, spin your options and save the results.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><span class="app-monogram" aria-hidden="true">EA</span><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/earmate/">EarMate <span aria-hidden="true">↗</span></a></h3><p>Local soundscapes, a five-band EQ and tools for compatible BLE devices.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><span class="app-monogram" aria-hidden="true">DR</span><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/droplet/">Droplet — Speaker Care <span aria-hidden="true">↗</span></a></h3><p>Timed speaker tones, adjustable frequency and a quick sound comparison.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><span class="app-monogram" aria-hidden="true">PR</span><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/prism-player/">Prism Player <span aria-hidden="true">↗</span></a></h3><p>Offline music, colorful themes, playlists, equalizer and a sleep timer.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Photo &amp; creativity"><div class="card-top"><span class="app-monogram" aria-hidden="true">GE</span><span class="card-category">Photo &amp; creativity</span></div><h3><a href="apps/geostamp-camera/">GeoStamp Camera <span aria-hidden="true">↗</span></a></h3><p>GPS photo stamps, project albums, street maps and local PDF exports.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Photo &amp; creativity"><div class="card-top"><img src="apps/mosaic/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Photo &amp; creativity</span></div><h3><a href="apps/mosaic/">Mosaic <span aria-hidden="true">↗</span></a></h3><p>Create photo collages with frames, stickers and individual photo adjustments.</p><span class="status">In testing</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><img src="apps/tempolab/media/icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/tempolab/">TempoLab <span aria-hidden="true">↗</span></a></h3><p>Change tempo and pitch, loop sections and separate voice offline.</p><span class="status">Preparing for testing</span></li>
+<li class="portfolio-card" data-category="Sound &amp; music"><div class="card-top"><img src="apps/neon-radio/media/app-icon.png" alt="" width="56" height="56" loading="lazy"><span class="card-category">Sound &amp; music</span></div><h3><a href="apps/neon-radio/">Neon Radio <span aria-hidden="true">↗</span></a></h3><p>Internet radio with a retro dial, favorites, equalizer and local recordings.</p><span class="status">In testing</span></li>
 </ul>
 <!-- ANDROID_APPS_END -->
       </section>
 
       <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="section-heading">
-          <div><p class="eyebrow">MORE TO EXPLORE</p><h2 id="projects-title">Explore more projects</h2></div>
+          <div><p class="eyebrow">MORE TO EXPLORE</p><h2 id="projects-title">The lab goes beyond mobile.</h2></div>
         </div>
-        <p class="projects-intro">Discover other websites and tools developed by Traian Anghel.</p>
+        <p class="projects-intro">Interactive simulations, useful calculators and new ways to see the world. Explore these independent web projects.</p>
         <ul class="projects-grid">
           <li><h3><a href="https://physlab.app/">Physics Interactive Lab <span aria-hidden="true">↗</span></a></h3><p>Explore high school physics through interactive simulations.</p></li>
           <li><h3><a href="https://stemhub.tools/">STEM Hub <span aria-hidden="true">↗</span></a></h3><p>Work through mathematics, physics and chemistry with calculators and study guides.</p></li>
