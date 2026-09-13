@@ -78,7 +78,11 @@ for a in APPS:
         gallery = '<h2>Inside the app</h2><p>Actual screenshots from version '+e(a['version'])+'.</p><div class="app-gallery">'+''.join(f'<figure><img src="media/{e(shot["file"], quote=True)}" alt="{e(shot["alt"], quote=True)}" width="{int(shot.get("width",320))}" height="{int(shot.get("height",640))}" loading="lazy"><figcaption>{e(shot["caption"])}</figcaption></figure>' for shot in a['screenshots'])+'</div>'
     if a.get('previews'):
         gallery += '<h2>Interface preview</h2><p>Rendered from the development app interface, version '+e(a['version'])+'. These previews are not Google Play screenshots.</p><div class="app-gallery">'+''.join(f'<figure><img src="media/{e(shot["file"], quote=True)}" alt="{e(shot["alt"], quote=True)}" width="{int(shot["width"])}" height="{int(shot["height"])}" loading="lazy"><figcaption>{e(shot["caption"])}</figcaption></figure>' for shot in a['previews'])+'</div>'
-    page(route,a['name'],a['short'],intro+download+desc+gallery+f'<h2>Language</h2><p>{e(a["language"])}</p><h2>Using the app</h2><p>{e(a["safety"])}</p>'+contact)
+    if a.get('gallery_first') and gallery:
+        gallery = gallery.replace('<h2>Inside the app</h2>', '<h2 id="screenshots">Screenshots</h2>').replace('loading="lazy"', 'loading="eager"')
+        intro += '<p><a class="text-link" href="#screenshots">Screenshots ↓</a></p>'
+    content = gallery + desc if a.get('gallery_first') else desc + gallery
+    page(route,a['name'],a['short'],intro+download+content+f'<h2>Language</h2><p>{e(a["language"])}</p><h2>Using the app</h2><p>{e(a["safety"])}</p>'+contact)
     privacy=f'<p>Effective date: {a.get("policy_date", DATE)}. This notice describes Android version {e(a["version"])} and the configuration documented below.</p>'+contact
     privacy+=f'<h2>Information handled by the app</h2>{paragraphs(a["data"])}<h2>Permissions, services and sharing</h2>{paragraphs(a["permissions"])}<h2>Retention and deletion</h2>{paragraphs(a["retention"])}'
     privacy+='<h2>Security</h2><p>Private app files use Android application storage protections. No additional database-encryption guarantee is made. Keep your device protected and control access to files you export. There is no Praxis Science Lab account to delete for this app.</p>'
