@@ -39,3 +39,9 @@ The seven Android apps now reuse the web-project card grid: two columns above 70
 - Static checker passes for 35 English HTML pages, local links/anchors, assets, store field lengths, contrast and preview image dimensions.
 - Spinora has no public APK download, no Play install button and an explicit In testing status.
 - Browser preview could not attach through the available browser tool in this session; no new browser layout or interaction QA is claimed. The section uses the existing shared CSS and page templates.
+
+## 2026-09-15 — Graph, Pulse, Nova and Scholar
+- Static integrity check: 91 pages, all local links/anchors/assets valid.
+- Browser QA: all four new apps tested at 1440px and 390px widths; search returns the intended card, Science/Sound categorization is correct, overview/privacy navigation works, no horizontal overflow or JavaScript errors observed.
+- Existing compact card layout and theme controls retained. Homepage total updated from the app inventory.
+- New media consists only of app icons derived from the corresponding projects. No private phone captures, APKs, credentials or internal shared documents added.

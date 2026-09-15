@@ -1,0 +1,21 @@
+Praxis Pulse
+
+Short description
+Local music, expressive visualizers and a 10-band Pro equalizer.
+
+Full description
+A local music player with an original visual identity and detailed sound controls.
+
+Browse songs, albums, artists and folders. Build playlists, manage favorites and reorder the queue. Listen in the background with media-notification and headset controls, playback speed and a sleep timer.
+
+Explore Aurora visuals and a live audio oscilloscope. Pro adds Orbit, Tape and Analog VU styles, a software 10-band equalizer, preamp, balance, stereo width, mono and presets.
+
+Local playback is free. Pro is designed as a permanent, one-time purchase that also removes app advertisements. A discreet banner is limited to the Style screen while playback is paused. There is no subscription.
+
+Version 0.1.0 is in testing. Development advertising uses Google sample IDs only; commercial purchases are not configured.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/praxis-pulse/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/praxis-pulse/privacy/
+Suggested category: Music & Audio

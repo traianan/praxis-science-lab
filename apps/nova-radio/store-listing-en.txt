@@ -1,0 +1,21 @@
+Nova Radio
+
+Short description
+Worldwide internet radio, a globe interface, favorites and recordings.
+
+Full description
+Explore internet radio through a modern globe-inspired interface, colorful station cards and three free themes.
+
+Search the Radio Browser directory by country, genre or language. Save favorites, use five presets, add a direct stream URL and import or export your library.
+
+Listen in the background with media controls and station metadata. Adjust the available Android equalizer, set a sleep timer, or record a stream locally as WAV. A Drive view and home-screen widget offer quick access.
+
+All features and themes are free. A planned one-time purchase removes the app banner; it does not remove advertisements broadcast by radio stations. App banners are limited to Discover and Library while playback and recording are stopped. No subscription.
+
+Version 0.1.0 is in testing. Google sample advertising is used in development, and commercial purchasing is not configured.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/nova-radio/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/nova-radio/privacy/
+Suggested category: Music & Audio

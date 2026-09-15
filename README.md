@@ -54,3 +54,10 @@ Mosaic is listed at `apps/mosaic/`, version 0.5.0, with original-preserving impo
 CyberSpec is listed at `apps/cyberspec/`, version 0.1.0, with local sensor, battery, Wi-Fi and acoustic diagnostics, JSON export and EN/RO/ES. The offline edition excludes Internet permission and advertising SDKs; a separate development edition uses Google sample ads. Three owner-authorized phone screenshots show the overview, live accelerometer and digital level. Network names and diagnostic report files are not published. Status: In testing. No APK or Play installation link is published. Regenerate with `python scripts/build_documents.py --app cyberspec`.
 
 TerraLab GPS Tools is listed at `apps/terralab/`, version 0.2.0, In testing. GPS instruments, MET Norway forecasts, Mapsforge offline packages, GPX and EN/RO/ES are described with privacy and support pages. The homepage card uses the same compact layout as the other apps. Original vector branding and three actual device captures appear on the app page before the feature description. The selected captures contain no personal GPS coordinates or tracks. No APK or Play installation link is published. Regenerate with `python scripts/build_documents.py --app terralab`.
+
+## Four new projects — 15 September 2026
+Praxis Graph, Praxis Pulse, Nova Radio and Praxis Scholar are listed as **In testing**, each with an app overview, privacy policy, support page and publishing-preparation text. The homepage uses their actual app icons and the existing category filters. The Android project count is generated from the inventory (21 projects).
+
+Graph is ad-free with a planned one-time Pro unlock. Pulse offers free playback and a planned one-time Pro unlock. Nova keeps all features free with planned one-time app-ad removal. Scholar is free with Guide-only advertising and no purchases. Commercial products are not configured; no new APK download or Google Play installation link is published.
+
+Regenerate selectively with `python scripts/build_documents.py --app praxis-graph` (or `praxis-pulse`, `nova-radio`, `praxis-scholar`).

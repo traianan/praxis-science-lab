@@ -1,0 +1,21 @@
+Praxis Scholar
+
+Short description
+Scientific calculations, fractions and statistics with familiar key workflows.
+
+Full description
+An offline scientific calculator for study, with an original interface and a two-line expression and result display.
+
+Use SHIFT functions, cursor editing, insert mode, replay, Ans and independent memory. Calculate with powers, roots, logarithms, trigonometric and hyperbolic functions, permutations and combinations.
+
+Work with simple and mixed fractions, percentages, degree-minute-second values, engineering notation and rectangular/polar coordinate conversions. Choose degrees, radians or grads and fixed, scientific or automatic result formatting.
+
+SD mode supports values and frequencies, editing and deletion, sums, mean, population standard deviation and sample standard deviation.
+
+All features are free. Monetization is limited to a discreet banner in Guide, separate from the calculator keypad and display. There is no Pro tier, paid unlock or subscription. Version 0.1.0 is in testing and uses Google sample ads only.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/praxis-scholar/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/praxis-scholar/privacy/
+Suggested category: Education

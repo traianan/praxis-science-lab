@@ -1,0 +1,21 @@
+Praxis Graph
+
+Short description
+Offline graphs, equations, matrices and numerical calculus.
+
+Full description
+An offline scientific and engineering calculator for exploring mathematics on Android.
+
+Use the free calculator for algebraic or RPN input, number bases, constants, unit conversions, memory and local history.
+
+The Pro toolkit plots two functions with pan, zoom and point inspection. Find approximate roots, intersections and extrema; solve scalar equations and nonlinear systems with up to three unknowns.
+
+Work with matrices up to 8 by 8, vectors and complex expressions. Explore descriptive statistics, linear regression, numerical derivatives and adaptive numerical integration.
+
+No advertisements or subscription. The basic calculator is free; Pro is designed as a permanent, one-time unlock. Version 0.1.0 is in testing, and commercial purchasing is not available yet.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/praxis-graph/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/praxis-graph/privacy/
+Suggested category: Education

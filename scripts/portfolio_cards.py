@@ -3,6 +3,8 @@ from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 GROUPS = {
+    'praxis-graph': 'Science & learning', 'praxis-scholar': 'Science & learning',
+    'praxis-pulse': 'Sound & music', 'nova-radio': 'Sound & music',
     'neon-radio': 'Sound & music', 'audiolab': 'Sound & music',
     'frequency-generator': 'Sound & music', 'clear-audio': 'Sound & music',
     'earmate': 'Sound & music', 'droplet': 'Sound & music',

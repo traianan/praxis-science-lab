@@ -795,5 +795,134 @@
         "caption": "Actual Android screenshot, version 0.2.0. Help is available in English, Romanian and Spanish."
       }
     ]
+  },
+  {
+    "slug": "praxis-graph",
+    "name": "Praxis Graph",
+    "title": "Praxis Graph",
+    "repo": "praxis-graph",
+    "package": "app.praxis.graph",
+    "version": "0.1.0 (1)",
+    "language": "English and Romanian. Detailed mathematical-engine messages may appear in English.",
+    "status": "In testing",
+    "category": "Education",
+    "policy_date": "2026-09-15",
+    "publishing_assets": false,
+    "short": "Offline graphs, equations, matrices and numerical calculus.",
+    "description": "An offline scientific and engineering calculator for exploring mathematics on Android.\n\nUse the free calculator for algebraic or RPN input, number bases, constants, unit conversions, memory and local history.\n\nThe Pro toolkit plots two functions with pan, zoom and point inspection. Find approximate roots, intersections and extrema; solve scalar equations and nonlinear systems with up to three unknowns.\n\nWork with matrices up to 8 by 8, vectors and complex expressions. Explore descriptive statistics, linear regression, numerical derivatives and adaptive numerical integration.\n\nNo advertisements or subscription. The basic calculator is free; Pro is designed as a permanent, one-time unlock. Version 0.1.0 is in testing, and commercial purchasing is not available yet.",
+    "safety": "Numerical methods return approximations and may fail to converge. Plot sampling can miss discontinuities or rapidly varying behavior. Integration does not support improper integrals. Android 8 or later; portrait interface.",
+    "data": "Calculations, expressions, history and Pro workspace data are processed and saved on the device. No developer-operated account or calculation server is required.",
+    "permissions": "Google Play Billing is integrated for a planned one-time purchase. Google handles the payment flow; the app verifies and caches purchase information for access restoration. The developer does not receive payment-card details. Production purchase configuration is not active in version 0.1.0. No advertising SDK, UMP integration or advertising identifiers are included. Calculations do not require media, microphone or location permission.",
+    "retention": "Clearing app storage or uninstalling removes private calculation data and settings. Google controls retention of purchase records. A verified purchase can be restored through Google Play once commercial purchasing is configured.",
+    "ads_notice": "No advertisements. Free basic calculator with a planned one-time Pro unlock; no subscription.",
+    "data_safety_note": "Review the exact uploaded artifact, provider behavior and active build variants. The development configuration is not a completed Google Play Data safety declaration.",
+    "checks": [
+      "Check expression evaluation and ALG/RPN input.",
+      "Plot two functions and inspect roots, intersections and extrema.",
+      "Check matrix, vector, complex, statistics and numerical-calculus tools.",
+      "Check invalid domains, non-convergence and offline behavior."
+    ],
+    "gaps": [
+      "Configure the Pro product and validate real purchases, pending transactions and restoration.",
+      "Configure production signing, store artwork and release-specific Play Console declarations.",
+      "Complete Google Play testing and review before announcing store availability."
+    ]
+  },
+  {
+    "slug": "praxis-pulse",
+    "name": "Praxis Pulse",
+    "title": "Praxis Pulse",
+    "repo": "praxis-pulse",
+    "package": "app.praxis.pulse",
+    "version": "0.1.0 (1)",
+    "language": "English, Romanian and Spanish.",
+    "status": "In testing",
+    "category": "Music & Audio",
+    "policy_date": "2026-09-15",
+    "publishing_assets": false,
+    "short": "Local music, expressive visualizers and a 10-band Pro equalizer.",
+    "description": "A local music player with an original visual identity and detailed sound controls.\n\nBrowse songs, albums, artists and folders. Build playlists, manage favorites and reorder the queue. Listen in the background with media-notification and headset controls, playback speed and a sleep timer.\n\nExplore Aurora visuals and a live audio oscilloscope. Pro adds Orbit, Tape and Analog VU styles, a software 10-band equalizer, preamp, balance, stereo width, mono and presets.\n\nLocal playback is free. Pro is designed as a permanent, one-time purchase that also removes app advertisements. A discreet banner is limited to the Style screen while playback is paused. There is no subscription.\n\nVersion 0.1.0 is in testing. Development advertising uses Google sample IDs only; commercial purchases are not configured.",
+    "safety": "Android 9 or later. Codec support depends on Media3 and the device. DSP processes audio inside this player; it is not a system-wide equalizer. Bit-perfect Hi-Res output, vocal separation and automatic headphone correction are not included.",
+    "data": "Audio files and embedded cover art are read locally. The library, queue, playlists, favorites, playback position and sound settings stay on the device. The oscilloscope uses decoded playback audio, not the microphone. There is no app account or developer-operated audio upload service.",
+    "permissions": "Media access supports local-library scanning. The Android document picker supports files you select. A foreground playback service and notification allow background listening. Removing a library entry does not delete its original file. Google Play Billing is integrated for a planned one-time purchase. Google handles the payment flow; the app verifies and caches purchase information for access restoration. The developer does not receive payment-card details. Production purchase configuration is not active in version 0.1.0.\n\nGoogle services may process connection information, device identifiers, interactions and diagnostics according to their own policies: https://policies.google.com/privacy . Sample ads do not generate revenue, but can still involve network and device data. Applicable consent and privacy options are handled through Google UMP before requesting ads. Ads are disabled in the internal Pro evaluation edition and are enabled only in test-ad builds; eligible banners appear in Style while playback is paused.",
+    "retention": "Clearing app storage or uninstalling removes private library indexes, playlists and preferences. Original music files remain in their storage locations. Google controls retention of its advertising and purchase data.",
+    "ads_notice": "Free playback with a planned one-time Pro unlock. Google sample banner only in eligible development builds; no subscription.",
+    "data_safety_note": "Review the exact uploaded artifact, provider behavior and active build variants. The development configuration is not a completed Google Play Data safety declaration.",
+    "checks": [
+      "Import local music and check playback, queue and playlists.",
+      "Check background audio, headset disconnection and timer.",
+      "Inspect visual styles and Pro DSP controls.",
+      "Verify ads disappear before playback resumes."
+    ],
+    "gaps": [
+      "Configure Pro and advertising products, consent messages and real purchase testing.",
+      "Configure production signing, store artwork and release-specific Play Console declarations.",
+      "Complete Google Play testing and review before announcing store availability."
+    ]
+  },
+  {
+    "slug": "nova-radio",
+    "name": "Nova Radio",
+    "title": "Nova Radio",
+    "repo": "nova-radio",
+    "package": "app.praxis.nova",
+    "version": "0.1.0 (1)",
+    "language": "English, Romanian and Spanish.",
+    "status": "In testing",
+    "category": "Music & Audio",
+    "policy_date": "2026-09-15",
+    "publishing_assets": false,
+    "short": "Worldwide internet radio, a globe interface, favorites and recordings.",
+    "description": "Explore internet radio through a modern globe-inspired interface, colorful station cards and three free themes.\n\nSearch the Radio Browser directory by country, genre or language. Save favorites, use five presets, add a direct stream URL and import or export your library.\n\nListen in the background with media controls and station metadata. Adjust the available Android equalizer, set a sleep timer, or record a stream locally as WAV. A Drive view and home-screen widget offer quick access.\n\nAll features and themes are free. A planned one-time purchase removes the app banner; it does not remove advertisements broadcast by radio stations. App banners are limited to Discover and Library while playback and recording are stopped. No subscription.\n\nVersion 0.1.0 is in testing. Google sample advertising is used in development, and commercial purchasing is not configured.",
+    "safety": "An internet radio app, not an FM receiver. Stations control stream availability and content. WAV recordings consume storage space. Equalizer capabilities vary by device. Android Auto integration still requires validation on representative head units; no certification is claimed.",
+    "data": "Favorites, presets, history, settings and recordings are stored locally. Import and export use the Android document picker. No microphone is used for stream recording. There is no app account or developer-operated recording upload service.",
+    "permissions": "Internet access is required for the station directory and audio streams. Radio Browser receives directory/search requests and connection information; station servers receive stream requests and the connection IP. Some station URLs use unencrypted HTTP. Foreground playback and notification support screen-off listening.\n\nGoogle services may process connection information, device identifiers, interactions and diagnostics according to their own policies: https://policies.google.com/privacy . Sample ads do not generate revenue, but can still involve network and device data. Applicable consent and privacy options are handled through Google UMP before requesting ads. Banners are eligible only while playback, buffering and recording are stopped. Google Play Billing is integrated for a planned one-time purchase. Google handles the payment flow; the app verifies and caches purchase information for access restoration. The developer does not receive payment-card details. Production purchase configuration is not active in version 0.1.0.",
+    "retention": "Deleting recordings or library entries removes the corresponding local items. Clearing app storage or uninstalling removes private data. Exported recordings and backups remain at the chosen destination until deleted there. Directory, station and Google providers control retention of their own service data.",
+    "ads_notice": "All functions free. Google sample banners in development; planned one-time removal of app ads, excluding station broadcasts.",
+    "data_safety_note": "Review the exact uploaded artifact, provider behavior and active build variants. The development configuration is not a completed Google Play Data safety declaration.",
+    "checks": [
+      "Search the directory, save a favorite and assign a preset.",
+      "Check stream playback, background controls and reconnection.",
+      "Record, play and export a WAV file.",
+      "Check themes, timer, widget and stopped-only ad placement."
+    ],
+    "gaps": [
+      "Configure the ad-removal product and production advertising; validate purchases and restoration.",
+      "Validate Android Auto on a supported head unit.",
+      "Configure production signing, store artwork and release-specific Play Console declarations.",
+      "Complete Google Play testing and review before announcing store availability."
+    ]
+  },
+  {
+    "slug": "praxis-scholar",
+    "name": "Praxis Scholar",
+    "title": "Praxis Scholar",
+    "repo": "praxis-scholar",
+    "package": "app.praxis.scholar",
+    "version": "0.1.0 (1)",
+    "language": "Romanian interface and offline guide. Standard mathematical function labels are retained.",
+    "status": "In testing",
+    "category": "Education",
+    "policy_date": "2026-09-15",
+    "publishing_assets": false,
+    "short": "Scientific calculations, fractions and statistics with familiar key workflows.",
+    "description": "An offline scientific calculator for study, with an original interface and a two-line expression and result display.\n\nUse SHIFT functions, cursor editing, insert mode, replay, Ans and independent memory. Calculate with powers, roots, logarithms, trigonometric and hyperbolic functions, permutations and combinations.\n\nWork with simple and mixed fractions, percentages, degree-minute-second values, engineering notation and rectangular/polar coordinate conversions. Choose degrees, radians or grads and fixed, scientific or automatic result formatting.\n\nSD mode supports values and frequencies, editing and deletion, sums, mean, population standard deviation and sample standard deviation.\n\nAll features are free. Monetization is limited to a discreet banner in Guide, separate from the calculator keypad and display. There is no Pro tier, paid unlock or subscription. Version 0.1.0 is in testing and uses Google sample ads only.",
+    "safety": "Android 9 or later. Independently implemented with original branding and graphics. Functional reference: fx-220 PLUS, second edition. Not a CASIO product or affiliate, and not certified as an identical firmware emulator. Numerical results are approximate; exhaustive last-digit parity with a physical calculator is not established.",
+    "data": "Expressions and statistics are processed on the device. Memory, settings and statistical data are saved locally. No app account, microphone, location, contact access or developer-operated calculation service is required.",
+    "permissions": "Internet access is used by the native advertising integration. Calculation content is not sent to a calculation server. Google services may process connection information, device identifiers, interactions and diagnostics according to their own policies: https://policies.google.com/privacy . Sample ads do not generate revenue, but can still involve network and device data. Applicable consent and privacy options are handled through Google UMP before requesting ads. A banner can be displayed only while Guide is open in the foreground. Leaving Guide removes it. Refusing personalized advertising does not restrict calculator functions. No payment SDK is included.",
+    "retention": "Clearing app storage or uninstalling removes private settings, memory and statistical data. Google controls retention of information processed by its advertising services.",
+    "ads_notice": "Ads only: Google sample banner in Guide. All functions free; no Pro, purchases or subscription.",
+    "data_safety_note": "Review the exact uploaded artifact, provider behavior and active build variants. The development configuration is not a completed Google Play Data safety declaration.",
+    "checks": [
+      "Check fractions, trigonometry, memory and coordinate conversions.",
+      "Enter and edit statistical data and frequencies.",
+      "Check replay, SHIFT, error recovery and display formats.",
+      "Check portrait/landscape and Guide-only advertising."
+    ],
+    "gaps": [
+      "Configure production advertising, applicable consent and public release disclosures.",
+      "Configure production signing, store artwork and release-specific Play Console declarations.",
+      "Complete Google Play testing and review before announcing store availability."
+    ]
   }
 ]

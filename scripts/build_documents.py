@@ -140,6 +140,7 @@ else:
     end=home.index('\n      </section>',start)
 grid=start_marker+'\n<ul class="projects-grid android-apps-grid">\n'+'\n'.join(cards)+'\n</ul>\n'+end_marker
 home=home[:start]+grid+home[end:]
+home=re.sub(r'<strong>\d+</strong><span>Android projects</span>', f'<strong>{len(APPS)}</strong><span>Android projects</span>', home)
 home=home.replace('Our first app.','Our Android apps.')
 home=home.replace('Each app will have its own privacy policy, legal information and support resources here when it is released.','Find a dedicated privacy policy, support page and release-preparation materials for each Android app.')
 home=home.replace('App-specific pages are coming with our releases.','<a href="publishing/">Open the Google Play publishing kit</a>')
