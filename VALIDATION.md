@@ -45,3 +45,12 @@ The seven Android apps now reuse the web-project card grid: two columns above 70
 - Browser QA: all four new apps tested at 1440px and 390px widths; search returns the intended card, Science/Sound categorization is correct, overview/privacy navigation works, no horizontal overflow or JavaScript errors observed.
 - Existing compact card layout and theme controls retained. Homepage total updated from the app inventory.
 - New media consists only of app icons derived from the corresponding projects. No private phone captures, APKs, credentials or internal shared documents added.
+
+## 2026-09-16 — Spectrum Lab and Subscription Planner
+- Static integrity: 99 pages; all local links, anchors and assets passed.
+- Existing browser checks passed at 1440, 390 and 320 px: filters, search, themes,
+  no horizontal overflow or JavaScript errors; cards also present without JS.
+- Both new entries individually tested at 390 and 1440 px: search returns one card,
+  original icon loads, link opens the correct title, no horizontal overflow.
+- New pages use the existing templates and accurately state In testing.
+- Browser test card totals now use the inventory instead of stale fixed counts.

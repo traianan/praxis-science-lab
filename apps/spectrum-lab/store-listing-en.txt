@@ -1,0 +1,17 @@
+Spectrum Lab
+
+Short description
+Explore live audio spectra, spectrograms and local measurement sessions.
+
+Full description
+See sound as a live frequency spectrum and scrolling spectrogram. Inspect the dominant frequency, digital RMS level, minimum and maximum levels, and clipping.
+
+Save local sessions with numerical measurements and export your data as CSV or JSON. Advanced tools include spectrum comparisons, notes, octave and third-octave bands, PDF reports, screen-off monitoring and local threshold alerts.
+
+Spectrum Lab is the evaluation edition of Praxis Spectrum, with advanced tools enabled and no advertising or purchases. The separate Standard edition is designed for free use with advertising and an optional Pro subscription; commercial purchasing is not configured. Neither edition is available on Google Play yet.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/spectrum-lab/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/spectrum-lab/privacy/
+Suggested category: Tools

@@ -61,3 +61,11 @@ Praxis Graph, Praxis Pulse, Nova Radio and Praxis Scholar are listed as **In tes
 Graph is ad-free with a planned one-time Pro unlock. Pulse offers free playback and a planned one-time Pro unlock. Nova keeps all features free with planned one-time app-ad removal. Scholar is free with Guide-only advertising and no purchases. Commercial products are not configured; no new APK download or Google Play installation link is published.
 
 Regenerate selectively with `python scripts/build_documents.py --app praxis-graph` (or `praxis-pulse`, `nova-radio`, `praxis-scholar`).
+
+## Spectrum Lab and Subscription Planner — 16 September 2026
+The catalog now contains 23 Android projects. Spectrum Lab (0.1.0) is the
+Pro evaluation edition of Praxis Spectrum; Subscription Planner is version 0.2.1.
+Both have English overview, privacy, support and publishing-preparation pages,
+original Android icons exported as SVG, and In testing status. No APK or Play
+installation link is published for these two apps. Regenerate selectively using
+scripts/build_documents.py with --app spectrum-lab or --app subscription-planner.

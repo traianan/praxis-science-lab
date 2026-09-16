@@ -1,0 +1,19 @@
+Subscription Planner
+
+Short description
+Track subscriptions, mark payments and plan upcoming recurring costs.
+
+Full description
+Keep recurring payments in one place. Add subscriptions manually with an amount, currency, billing cycle and payment date. Organise them using predefined or custom categories and spending groups.
+
+See unpaid amounts due in the next 7 and 30 days, including today. Mark a payment after paying, review payment history and undo a mistaken mark. Local reminders help you follow payment dates and trial endings.
+
+Export CSV or create and restore a JSON backup. Pro tools include a 12-month calendar and projections, monthly budgets, savings scenarios, scheduled price changes, additional reminders and PDF reports. Currencies remain separate, with no external exchange-rate service.
+
+The Standard edition is designed for free use with advertising and an optional Pro subscription. The Lab edition enables Pro tools for evaluation. Version 0.2.1 is in testing; advertising uses Google test IDs and commercial purchases are not configured.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/subscription-planner/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/subscription-planner/privacy/
+Suggested category: Finance

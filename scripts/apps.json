@@ -924,5 +924,69 @@
       "Configure production signing, store artwork and release-specific Play Console declarations.",
       "Complete Google Play testing and review before announcing store availability."
     ]
+  },
+  {
+    "status": "In testing",
+    "policy_date": "2026-09-16",
+    "publishing_assets": false,
+    "language": "English, Romanian and Spanish.",
+    "data_safety_note": "Review the exact release artifact, advertising and billing configuration before completing Google Play declarations. Development testing is not a completed Data safety declaration.",
+    "gaps": [
+      "Configure production signing and prepare final store artwork and screenshots.",
+      "Configure commercial products and validate consent, purchases and restoration for the Standard edition.",
+      "Complete release-specific declarations and Google Play testing before announcing store availability."
+    ],
+    "slug": "spectrum-lab",
+    "name": "Spectrum Lab",
+    "title": "Spectrum Lab",
+    "repo": "praxis-spectrum",
+    "package": "ro.praxissciencelab.spectrum.lab",
+    "version": "0.1.0 (1)",
+    "category": "Tools",
+    "short": "Explore live audio spectra, spectrograms and local measurement sessions.",
+    "description": "See sound as a live frequency spectrum and scrolling spectrogram. Inspect the dominant frequency, digital RMS level, minimum and maximum levels, and clipping.\n\nSave local sessions with numerical measurements and export your data as CSV or JSON. Advanced tools include spectrum comparisons, notes, octave and third-octave bands, PDF reports, screen-off monitoring and local threshold alerts.\n\nSpectrum Lab is the evaluation edition of Praxis Spectrum, with advanced tools enabled and no advertising or purchases. The separate Standard edition is designed for free use with advertising and an optional Pro subscription; commercial purchasing is not configured. Neither edition is available on Google Play yet.",
+    "safety": "Android 8 or later. This is not a certified sound level meter. Digital dBFS readings are not acoustic dB SPL. An optional calibration offset is only an estimate; microphone hardware and phone processing affect results. No A/C weighting is provided. Foreground sessions stop when the app is no longer visible; background monitoring must be started explicitly. Android battery restrictions can interrupt monitoring.",
+    "data": "Microphone samples are analysed on the device. The app stores session names, notes, settings and numerical measurements in private local storage, not raw audio recordings. There is no app account or developer-operated audio upload service.",
+    "permissions": "Microphone permission enables sound analysis. A microphone foreground service and notifications support explicitly started screen-off monitoring and local alerts. The Lab edition does not request ads or offer purchases.\n\nThe separate Standard development edition integrates Google test advertising, consent and Play Billing. Google services may process connection and device information under their own policies: https://policies.google.com/privacy . Local audio processing does not mean that the advertising edition has no network traffic. Commercial subscription verification is not configured.",
+    "retention": "Deleting a session removes its local measurements. Clearing app storage or uninstalling removes private sessions and preferences. Files exported to another location remain there until you delete them. Export important measurements before uninstalling.",
+    "ads_notice": "Lab: no ads or purchases. Separate Standard edition: test advertising and a planned Pro subscription.",
+    "checks": [
+      "Grant microphone access and inspect live spectrum and spectrogram.",
+      "Save a session, reopen it and export numerical data.",
+      "Compare sessions and check PDF reports in Lab.",
+      "Start screen-off monitoring explicitly, check alerts and stop the service."
+    ]
+  },
+  {
+    "status": "In testing",
+    "policy_date": "2026-09-16",
+    "publishing_assets": false,
+    "language": "English by default on a new installation. Romanian and Spanish are also available; updates preserve an explicitly saved language.",
+    "data_safety_note": "Review the exact release artifact, advertising and billing configuration before completing Google Play declarations. Development testing is not a completed Data safety declaration.",
+    "gaps": [
+      "Configure production signing and prepare final store artwork and screenshots.",
+      "Configure commercial products and validate consent, purchases and restoration for the Standard edition.",
+      "Complete release-specific declarations and Google Play testing before announcing store availability."
+    ],
+    "slug": "subscription-planner",
+    "name": "Subscription Planner",
+    "title": "Subscription Planner",
+    "repo": "subcontrol",
+    "package": "ro.praxissciencelab.subcontrol",
+    "version": "0.2.1 (3)",
+    "category": "Finance",
+    "short": "Track subscriptions, mark payments and plan upcoming recurring costs.",
+    "description": "Keep recurring payments in one place. Add subscriptions manually with an amount, currency, billing cycle and payment date. Organise them using predefined or custom categories and spending groups.\n\nSee unpaid amounts due in the next 7 and 30 days, including today. Mark a payment after paying, review payment history and undo a mistaken mark. Local reminders help you follow payment dates and trial endings.\n\nExport CSV or create and restore a JSON backup. Pro tools include a 12-month calendar and projections, monthly budgets, savings scenarios, scheduled price changes, additional reminders and PDF reports. Currencies remain separate, with no external exchange-rate service.\n\nThe Standard edition is designed for free use with advertising and an optional Pro subscription. The Lab edition enables Pro tools for evaluation. Version 0.2.1 is in testing; advertising uses Google test IDs and commercial purchases are not configured.",
+    "safety": "Android 8 or later. Records and forecasts are entered and managed manually. Marking a payment does not transfer money or verify a bank transaction. Marking a subscription cancelled only changes its local record; cancel with the provider separately. Notifications may be delayed or stopped by Android battery restrictions. Restoring a backup replaces current records after validation.",
+    "data": "Subscription names, amounts, currencies, categories, spending groups, payment history, budgets, notes and preferences are stored in private local SQLite storage. The app does not connect to your bank, read SMS or email, or upload your financial records to a developer-operated cloud. No app account is required. Android automatic backup is disabled.",
+    "permissions": "Notification permission supports local payment and trial reminders. Scheduling is restored after device restart or time-zone changes. The Android document picker lets you choose backup and export destinations. Manually entered HTTPS links open in your browser.\n\nThe development app integrates Google test advertising, consent and Play Billing. Google services may process connection information, device identifiers, interactions and diagnostics according to https://policies.google.com/privacy . Test ads do not generate revenue but may involve network requests. Commercial purchasing and its subscription-verification service are not configured. The developer does not receive payment-card details.",
+    "retention": "Clearing app storage or uninstalling removes private records and preferences. Exported JSON, CSV and PDF files remain at their chosen destinations until deleted there. Exports are not encrypted by the app; protect them and keep a backup before replacing local data.",
+    "ads_notice": "Standard: test advertising and a planned Pro subscription. Lab: Pro tools for evaluation; no real purchases.",
+    "checks": [
+      "Add a monthly subscription and check the next payment date.",
+      "Mark a payment, inspect updated totals, then verify history and undo.",
+      "Check local reminders and the in-app guide.",
+      "Export a backup, restore it and verify records and language settings."
+    ]
   }
 ]

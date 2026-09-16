@@ -121,3 +121,10 @@ Commercial advertising, the final release AAB, store declarations and wider phys
 Reviewed local development version 0.1.0 (1), package `ro.traian.spinora`: `lib/main.dart`, `editor.dart`, `models.dart`, `store.dart`, `ads.dart`, `pubspec.yaml`, `AndroidManifest.xml` and `output/VERIFICARE.md`. Verified local persistence, 2–50 equal-probability options, three languages, templates, styling, image import, result history and demo-only ad configuration. Gallery/audio/haptics and network ad display still need physical-device testing. The site does not claim production consent, live monetization, a signed store release or Play availability. Imported private image copies persist until app-data clearing/uninstall even if an edit is abandoned.
 
 Website previews are copied unchanged from the app’s Flutter test renders at 390 × 844 and identified as interface previews. They are not listed as store-upload screenshots. No APK, signing key, tester data or local machine report was copied into the public site.
+
+## Spectrum Lab / Subscription Planner — 16 September 2026
+Reviewed project READMEs, version metadata, Android labels and original vector
+icons. Spectrum Lab is distinguished from the separate Praxis Spectrum Standard
+edition. Subscription Planner 0.2.1 includes manual payment marking/undo, history,
+local reminders, backup and English on new installations. Commercial availability
+is not claimed. No personal screenshots, records, binaries or keys were copied.
