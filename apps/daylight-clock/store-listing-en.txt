@@ -1,0 +1,21 @@
+Daylight Clock
+
+Short description
+Personal clock widgets with sunrise, sunset and daylight at a glance.
+
+Full description
+A customizable clock and daylight companion for your Android home screen.
+
+Choose a city from the offline catalog, enter coordinates and a time zone, or request your device location. See sunrise, sunset, civil twilight, day length and the change since yesterday, calculated locally without a solar web service.
+
+Personalize three resizable widget layouts with 12/24-hour time, six fonts, date formats, separate colors, RGB/HEX controls, transparency and two-color gradients. Show the solar arc, a daylight bar or just the clock. Each widget keeps its own place and style.
+
+Choose tap actions for the clock and date, open your phone alarms or calendar, and explore another time in the app preview.
+
+All features are free. The development build may show Google test banners only in Style, after the consent flow. A one-time Remove Ads purchase is prepared but inactive until configured. No subscription. Version 0.3.0 is in testing.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/daylight-clock/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/daylight-clock/privacy/
+Suggested category: Tools

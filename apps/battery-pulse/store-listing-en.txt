@@ -1,0 +1,21 @@
+Battery Pulse
+
+Short description
+Live battery readings, local history, widgets, alerts and clear reports.
+
+Full description
+Understand your battery with an original interface in electric green, cyan, violet and coral.
+
+See live battery readings and the charging state reported by Android. Missing measurements stay unavailable, and estimates explain their source and limitations.
+
+Free includes optional local history with seven-day retention, a 24-hour view, compact and wide widgets, level alerts and data controls. History collection is off by default.
+
+When configured, a permanent Pro purchase adds 7/30-day views, 90-day retention, larger widgets, temperature alerts, weekly and monthly reports, CSV/JSON exports and no ads. No subscription.
+
+English, Romanian and Spanish, with light, dark and system themes. Version 0.10.0 is in testing. Purchases and advertising are disabled in the local evaluation build until their services are configured.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/battery-pulse/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/battery-pulse/privacy/
+Suggested category: Tools

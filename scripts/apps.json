@@ -988,5 +988,87 @@
       "Check local reminders and the in-app guide.",
       "Export a backup, restore it and verify records and language settings."
     ]
+  },
+  {
+    "language": "English, Romanian and Spanish.",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-17",
+    "publishing_assets": false,
+    "data_safety_note": "Review the final uploaded artifact, active SDK configuration and provider behavior before completing Play Console declarations.",
+    "slug": "daylight-clock",
+    "name": "Daylight Clock",
+    "title": "Daylight Clock",
+    "repo": "daylight-clock",
+    "package": "app.praxis.daylight",
+    "version": "0.3.0 (5)",
+    "short": "Personal clock widgets with sunrise, sunset and daylight at a glance.",
+    "description": "A customizable clock and daylight companion for your Android home screen.\n\nChoose a city from the offline catalog, enter coordinates and a time zone, or request your device location. See sunrise, sunset, civil twilight, day length and the change since yesterday, calculated locally without a solar web service.\n\nPersonalize three resizable widget layouts with 12/24-hour time, six fonts, date formats, separate colors, RGB/HEX controls, transparency and two-color gradients. Show the solar arc, a daylight bar or just the clock. Each widget keeps its own place and style.\n\nChoose tap actions for the clock and date, open your phone alarms or calendar, and explore another time in the app preview.\n\nAll features are free. The development build may show Google test banners only in Style, after the consent flow. A one-time Remove Ads purchase is prepared but inactive until configured. No subscription. Version 0.3.0 is in testing.",
+    "safety": "Android 8 or later. Solar times estimate an unobstructed horizon and do not account for terrain, buildings or weather. The Android clock runs independently of the solar illustration, which refreshes approximately every 30 minutes and may be delayed. This is not an exact sunset alarm. Widget sizes depend on the launcher. The saved place does not follow your movement.",
+    "data": "Selected places, coordinates, time zones and widget styles stay in private local storage. Location is requested only when you choose Use device location. There is no background GPS, travel history, app account or solar API. Android automatic backup is disabled.",
+    "permissions": "Optional coarse or precise location permission supports the one-time location request. You can instead use the offline city catalog or manual coordinates, and revoke permission in Android Settings. Restart and time-change events refresh widget scheduling. Alarm and calendar actions open the corresponding phone app.\n\nInternet access supports Google test advertising in Style. Coordinates are not supplied to ads by Daylight Clock. Google services may process IP addresses, approximate location, identifiers, interactions and diagnostics under https://policies.google.com/privacy . UMP handles applicable consent and privacy options; test ads can still involve network and device data. Widgets contain no ads.\n\nGoogle Play Billing is integrated for planned one-time ad removal, but commercial purchases are not configured. Google handles the payment flow; the app verifies purchase information and caches access state. We do not receive payment-card details.",
+    "retention": "Clearing app storage or uninstalling removes private places, styles and cached purchase state. Google controls retention of its advertising and purchase data. Location permission can be changed independently in Android Settings.",
+    "ads_notice": "Free functions; Google test banners in Style. Planned one-time ad removal, currently inactive.",
+    "checks": [
+      "Choose an offline city and check its time zone and daylight times.",
+      "Customize a widget, add it to your launcher and check its independent settings.",
+      "Check the clock and date tap actions and manual solar refresh.",
+      "Check language selection and behavior when location permission is denied."
+    ],
+    "gaps": [
+      "Configure commercial advertising, consent messages and the optional ad-removal product before activation.",
+      "Verify production signing, purchase restoration and final privacy/Data safety disclosures.",
+      "Complete representative-device and Google Play testing before announcing availability."
+    ]
+  },
+  {
+    "language": "English, Romanian and Spanish.",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-17",
+    "publishing_assets": false,
+    "data_safety_note": "Review the final uploaded artifact, active SDK configuration and provider behavior before completing Play Console declarations.",
+    "slug": "battery-pulse",
+    "name": "Battery Pulse",
+    "title": "Battery Pulse",
+    "repo": "battery-pulse",
+    "package": "app.praxis.batterypulse",
+    "version": "0.10.0 (10)",
+    "short": "Live battery readings, local history, widgets, alerts and clear reports.",
+    "description": "Understand your battery with an original interface in electric green, cyan, violet and coral.\n\nSee live battery readings and the charging state reported by Android. Missing measurements stay unavailable, and estimates explain their source and limitations.\n\nFree includes optional local history with seven-day retention, a 24-hour view, compact and wide widgets, level alerts and data controls. History collection is off by default.\n\nWhen configured, a permanent Pro purchase adds 7/30-day views, 90-day retention, larger widgets, temperature alerts, weekly and monthly reports, CSV/JSON exports and no ads. No subscription.\n\nEnglish, Romanian and Spanish, with light, dark and system themes. Version 0.10.0 is in testing. Purchases and advertising are disabled in the local evaluation build until their services are configured.",
+    "safety": "Android 8 or later. Battery Pulse is an information tool, not a hardware diagnosis, battery repair or safety alarm. It does not promise longer battery life or universally measure battery wear. Android can delay collection, widgets and alerts. Graph gaps and insufficient data remain explicit.",
+    "data": "Battery readings, history, reports, preferences and the latest widget reading are processed on your device. History is off by default. Free retains up to seven days and verified Pro up to 90 days. No app account or cloud synchronization is required. Android cloud backup and device transfer are excluded.",
+    "permissions": "Notification permission is requested for alerts. Battery readings do not require location, contacts, microphone or camera access. Export uses the Android document picker; the chosen provider may synchronize your files.\n\nWhen purchases are configured, Google Play handles payment. The verification service receives the purchase token, a random installation identifier and network information such as IP address, and returns a signed access certificate. We do not receive payment-card details. Verified offline access lasts up to seven days.\n\nWhen enabled, Free may show one banner in Settings. Google AdMob and UMP may process IP address, approximate location, identifiers, interactions and diagnostics for advertising, measurement and fraud prevention. Applicable privacy options are available in Settings. Pro stops new ad requests. Battery history is not sent to advertising services by the app. Google privacy: https://policies.google.com/privacy .\n\nVersion 0.10.0 has purchases and advertising disabled pending configuration. Firebase Crashlytics and a separate analytics service are not included. Android and Google Play may collect diagnostics under their own settings.",
+    "retention": "History → Delete history removes stored samples and reports and pauses collection; alert preferences and the latest widget reading remain. Clearing Android app storage removes all app data, including preferences and the local purchase certificate. Exported files remain at the destination you choose. After verified Pro access is lost, a seven-day grace window permits export of earlier retained readings before Free retention resumes. Restoring after clearing data requires an online purchase check. Retention at a future hosted verification gateway must be documented before activation.",
+    "ads_notice": "Evaluation build: purchases and ads inactive. Planned permanent Pro unlock and consent-controlled Settings banner.",
+    "checks": [
+      "Check live battery values and charging state against Android.",
+      "Choose whether to enable local history and inspect gaps and data controls.",
+      "Configure a widget and check its timestamp and manual refresh.",
+      "Review the offline privacy notice and the unconfigured purchase message."
+    ],
+    "gaps": [
+      "Configure and test Play products, verification hosting, advertising and consent before activation.",
+      "Complete final-version energy comparisons and remaining physical-device/widget checks.",
+      "Resolve the native 16 KB review and production signing requirements before release.",
+      "Update the public policy for the active services and complete Play declarations and testing."
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-dashboard.png",
+        "alt": "Battery Pulse dark dashboard with a green battery level indicator",
+        "caption": "Release 0.10.0 on an emulator; battery values are emulator readings.",
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "file": "screenshot-widgets.png",
+        "alt": "Battery Pulse compact and wide widget previews labeled as examples",
+        "caption": "Widget gallery. The example values are explicitly labeled, not personal battery data.",
+        "width": 720,
+        "height": 1280
+      }
+    ],
+    "gallery_first": true
   }
 ]

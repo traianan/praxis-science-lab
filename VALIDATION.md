@@ -54,3 +54,12 @@ The seven Android apps now reuse the web-project card grid: two columns above 70
   original icon loads, link opens the correct title, no horizontal overflow.
 - New pages use the existing templates and accurately state In testing.
 - Browser test card totals now use the inventory instead of stale fixed counts.
+
+
+## 17 September 2026 — Daylight Clock and Battery Pulse
+
+- Catalog: 25 Android apps; both additions marked In testing.
+- `check_site.py`: PASS, 107 HTML pages, links/assets/anchors, listing lengths and existing contrast checks.
+- `check_portfolio.cjs`: PASS at 1440, 390 and 320 px; filters, search, dark theme, overflow and no-JavaScript fallback.
+- New app overview/privacy navigation: PASS at 1440, 390 and 320 px; images load, no horizontal overflow or page errors. Mobile overview screenshots inspected visually.
+- Existing unrelated untracked developer-profile material and debug log excluded from this change. No app binary, signing material or phone screenshot added.
