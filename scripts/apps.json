@@ -1134,5 +1134,36 @@
       "Configure production signing, advertising, consent messages and the one-time product.",
       "Validate final store declarations and Google Play testing before announcing availability."
     ]
+  },
+  {
+    "slug": "gravidraw-test",
+    "name": "GraviDraw Test",
+    "title": "GraviDraw Test",
+    "repo": "PhysicsDrawingPuzzle",
+    "package": "ro.praxissciencelab.gravidraw.eval",
+    "version": "0.2.1-evaluation (3)",
+    "language": "English and Romanian",
+    "status": "In testing",
+    "category": "Puzzle",
+    "policy_date": "2026-09-19",
+    "publishing_assets": false,
+    "short": "Draw ramps and guide falling balls to the receiver in an offline physics puzzle.",
+    "description": "Draw static ramps, then start the simulation and guide balls into the receiver. Undo, erase or clear your drawing and retry while keeping your paths. An optional visual guide helps you explore a solution.\n\nThis offline, single-player evaluation contains 12 draft levels. Progress and the last drawing are stored locally. English and Romanian are available in Settings. Level difficulty is still being evaluated.\n\nGraviDraw Test is not yet available on Google Play. No public APK download is offered here. The evaluation contains no real advertising or purchases.",
+    "safety": "Android 7 or later; the current evaluation build targets arm64 devices. Levels are drafts and may change. Preserve the installed app data to retain your progress.",
+    "data": "Progress, drawings, language and sound preferences are stored locally on the device. No developer account, backend, advertising SDK or analytics SDK is included in this evaluation.",
+    "permissions": "Gameplay works offline. Vibration supports optional haptic feedback. Opening external support or website links uses the chosen browser or email provider and their own privacy terms.",
+    "retention": "Local progress remains until reset through the confirmation dialog in Settings or removal of app data. Clearing app storage or uninstalling can remove progress. This evaluation does not provide account-based cloud restoration.",
+    "ads_notice": "No real advertising or purchases in the evaluation build.",
+    "data_safety_note": "Preparation only. Recheck the final release artifact and any future SDKs before completing Google Play declarations.",
+    "checks": [
+      "Draw a ramp, start a level and retry while retaining the drawing.",
+      "Verify Undo, Eraser, Clear and the optional visual guide.",
+      "Check Settings in English and Romanian and resume saved progress."
+    ],
+    "gaps": [
+      "Human playtesting and difficulty balancing of the 12 draft levels.",
+      "Broader Android device compatibility and longer play sessions.",
+      "Production release preparation and final store declarations."
+    ]
   }
 ]

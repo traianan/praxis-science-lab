@@ -1,0 +1,17 @@
+GraviDraw Test
+
+Short description
+Draw ramps and guide falling balls to the receiver in an offline physics puzzle.
+
+Full description
+Draw static ramps, then start the simulation and guide balls into the receiver. Undo, erase or clear your drawing and retry while keeping your paths. An optional visual guide helps you explore a solution.
+
+This offline, single-player evaluation contains 12 draft levels. Progress and the last drawing are stored locally. English and Romanian are available in Settings. Level difficulty is still being evaluated.
+
+GraviDraw Test is not yet available on Google Play. No public APK download is offered here. The evaluation contains no real advertising or purchases.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/gravidraw-test/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/gravidraw-test/privacy/
+Suggested category: Puzzle
