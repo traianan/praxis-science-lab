@@ -8,7 +8,7 @@ GeoStamp Camera is listed at `apps/geostamp-camera/` with development version 0.
 
 ## Current scope
 
-An English homepage and app-specific information, privacy, support and Google Play preparation pages for 25 Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
+An English homepage and app-specific information, privacy, support and Google Play preparation pages for 27 Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
 
 Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Dark / System group of icon buttons (sun, moon, monitor) highlights the active preference, defaults to System, follows device changes and saves only the theme preference in localStorage. Dark uses a true black background; its internal `black` value is retained for compatibility with saved preferences. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
 
@@ -76,3 +76,7 @@ scripts/build_documents.py with --app spectrum-lab or --app subscription-planner
 The catalog contains 25 Android projects. Daylight Clock (0.3.0) and Battery Pulse (0.10.0) have dedicated overview, privacy, support and release-preparation pages, marked **In testing**. The clock icon is exported from its Android vector; Battery Pulse uses its original icon and two actual release emulator screenshots with example labels retained. No binary or Play installation link is published for these apps.
 
 Regenerate selectively with `python scripts/build_documents.py --app daylight-clock` or `--app battery-pulse`. Source review: the apps' current README, manifest, privacy text and release reports. The published descriptions distinguish active development features from unconfigured commercial services.
+
+
+## Praxis Clean and Frequency Studio — 19 September 2026
+Praxis Clean0.16.3 and Frequency Studio0.2.0 are listed as In testing, with their original Android vector icons and dedicated overview, privacy, support and publishing-preparation pages. No APK or Play installation link is added. Regenerate selectively with --app praxis-clean or --app frequency-studio.

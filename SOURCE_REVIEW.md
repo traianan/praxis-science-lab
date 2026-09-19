@@ -128,3 +128,8 @@ icons. Spectrum Lab is distinguished from the separate Praxis Spectrum Standard
 edition. Subscription Planner 0.2.1 includes manual payment marking/undo, history,
 local reminders, backup and English on new installations. Commercial availability
 is not claimed. No personal screenshots, records, binaries or keys were copied.
+
+## Praxis Clean / Frequency Studio — 19 September 2026
+Praxis Clean0.16.3: reviewed version metadata, README, res/drawable/ic_launcher.xml, docs/lansare/PRIVACY_DRAFT.md and the0.16.3 layout validation. Descriptions distinguish accessible storage from privileged coverage, local trash from reclaimed space, and optional test ads from commercial purchases. No private photo or phone screenshot was copied.
+Frequency Studio0.2.0: reviewed README, pubspec.yaml, Android application ID, res/drawable/studio_icon.xml and docs/PRIVACY-0.2.0.md. It is a separate app from Frequency Sound Generator. Test advertisements and planned one-time ad removal are described explicitly.
+Original Android vector paths were exported to SVG without changing geometry. Provider disclosure checked against https://developers.google.com/admob/android/privacy/play-data-disclosure and https://policies.google.com/privacy . Release declarations remain preparation material. No app binaries, keys, private records or commercial identifiers were added.

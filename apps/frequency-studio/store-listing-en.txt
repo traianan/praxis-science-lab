@@ -1,0 +1,19 @@
+Frequency Studio
+
+Short description
+Synthesize tones, mix oscillators, explore sweeps and export stereo WAV audio.
+
+Full description
+An Android sound-synthesis workspace, separate from Frequency Sound Generator.
+
+Generate sine, square, sawtooth and triangle waves from 1 to 22,000 Hz. Mix up to eight oscillators with individual frequency, waveform, level, pan and mute controls. Explore linear or logarithmic sweeps, binaural signals, five noise colors, DTMF, a metronome, musical notes and synthesized effects.
+
+Save local presets, compare two configurations and export stereo PCM16 WAV at 44.1 kHz. The signal graph shows synthesized audio, not sound measured through a microphone. Playback stops when the app goes into the background, loses audio focus or headphones disconnect.
+
+All synthesis functions and WAV export remain free. The development configuration supports Google test banners in the Library outside playback and export, with a planned one-time Remove Ads purchase. Commercial purchasing is not configured. Version 0.2.0 is in testing; no Google Play installation or public APK download is offered here.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/frequency-studio/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/frequency-studio/privacy/
+Suggested category: Tools

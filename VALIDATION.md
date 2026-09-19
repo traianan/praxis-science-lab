@@ -63,3 +63,7 @@ The seven Android apps now reuse the web-project card grid: two columns above 70
 - `check_portfolio.cjs`: PASS at 1440, 390 and 320 px; filters, search, dark theme, overflow and no-JavaScript fallback.
 - New app overview/privacy navigation: PASS at 1440, 390 and 320 px; images load, no horizontal overflow or page errors. Mobile overview screenshots inspected visually.
 - Existing unrelated untracked developer-profile material and debug log excluded from this change. No app binary, signing material or phone screenshot added.
+
+
+## 19 September 2026 — two catalog additions
+Praxis Clean0.16.3 and Frequency Studio0.2.0 added. Static integrity:115 pages, local links, assets, listing limits and contrast passed. Browser checks passed at1440,390 and320px in light/dark themes and without JavaScript. Focused mobile checks passed search, original icons, card navigation and all overview/privacy/support/publishing pages. Catalog:27 Android apps. No app binaries, signing material or personal screenshots were added.

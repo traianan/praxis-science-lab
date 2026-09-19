@@ -1070,5 +1070,69 @@
       }
     ],
     "gallery_first": true
+  },
+  {
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-19",
+    "publishing_assets": false,
+    "data_safety_note": "Preparation only. Review the final signed artifact, active advertising and purchase configuration, and provider behavior before completing Google Play declarations.",
+    "slug": "praxis-clean",
+    "name": "Praxis Clean",
+    "title": "Praxis Clean",
+    "repo": "praxis-clean",
+    "package": "app.praxis.clean",
+    "version": "0.16.3 (20)",
+    "short": "Review storage, select photos in a grid and manage recoverable local trash.",
+    "description": "A storage and file-review toolkit for Android, currently in testing.\n\nExplore accessible storage, review leftover and unnecessary files, find duplicates, and select multiple photos in a three-, four- or five-column gallery. After moving a selection to local trash, continue with the remaining photos. Review operations and restore eligible files from History.\n\nThe toolkit also includes app management, optional cache assistance, image compression to a new copy, exclusions, scheduled scans and contextual battery reports. Android permissions determine what each tool can access. Scheduled scans do not delete files automatically.\n\nChoose English, Romanian or Spanish from the visible language control. A compact, adaptive home screen and a global navigation menu provide access to the tools.\n\nThe evaluation build offers an optional Google test-ad check in Settings. The planned model combines advertising with a one-time purchase; commercial purchasing is not configured. There is no Google Play release or public APK download on this page.",
+    "safety": "Android 8 or later. Preview and confirm file operations. Moving files to local trash does not free space and is not a backup. Restore needed files before clearing app data or uninstalling. Permanent deletion and Android cache clearing cannot be undone. Access to private app folders, removable storage and privileged operations varies by Android version and device. Battery reports do not promise additional battery life.",
+    "data": "File review processes names, paths, sizes, modification times, content fingerprints, thumbnails and compression locally. The local journal stores operation states, file references and fingerprints for verification and restoration. Photo selections, language and other preferences stay on the device. Installed-app inventory supports file ownership and app management; optional usage access supports exclusions. No developer-operated account is required.",
+    "permissions": "Storage access is requested according to the selected tool. Usage access, Shizuku, root and Accessibility are optional and can be refused or revoked. The app does not root the device. After individual confirmation, cache assistance inspects a recognized Android Settings screen for up to 45 seconds and performs at most one supported Clear cache action; it does not retain screen text or use it for advertising.\n\nThe evaluation build includes Google Mobile Ads and UMP with test identifiers. An optional test in Settings checks applicable consent before requesting ads. Google services may process IP addresses, approximate location, identifiers, interactions and diagnostics. Test advertising can still transmit data. Google privacy: https://policies.google.com/privacy . The app does not intentionally supply file contents, paths, installed-app inventory, usage records or the operation journal to advertising services.\n\nThere is no Billing SDK or separate analytics SDK in this version. User-initiated exports use the chosen document provider, which may synchronize files under its own terms. Default journal exports omit paths and hashes; an optional detailed export includes them. Android automatic app backup is disabled.",
+    "retention": "History offers manual removal of old journal records while preserving recoverable or uncertain operation receipts. Local trash has no automatic expiry. Restore needed files before clearing app storage or uninstalling: losing the private journal can prevent restoration of trash payloads. Clearing app data removes preferences and private records but does not necessarily remove shared-storage trash payloads or exported files. Manage exports at their chosen destination. Google controls retention of advertising-service data.",
+    "ads_notice": "Optional Google test ads in Settings. Planned advertising plus one-time purchase; commercial purchase flow is not configured.",
+    "checks": [
+      "Open the four home shortcuts, language selector and navigation menu.",
+      "Scan an accessible test folder and select several artificial images.",
+      "Move a test selection to local trash, continue selecting, and restore from History.",
+      "Review exclusions and access limitations; verify that scheduled scans require review."
+    ],
+    "gaps": [
+      "Complete production signing, commercial advertising and one-time purchase configuration.",
+      "Complete remaining OEM, privileged-provider and removable-storage validation.",
+      "Review final privacy, Accessibility and Play declarations and complete store testing."
+    ]
+  },
+  {
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Tools",
+    "policy_date": "2026-09-19",
+    "publishing_assets": false,
+    "data_safety_note": "Preparation only. Review the final signed artifact, active advertising and purchase configuration, and provider behavior before completing Google Play declarations.",
+    "slug": "frequency-studio",
+    "name": "Frequency Studio",
+    "title": "Frequency Studio",
+    "repo": "frequency-studio",
+    "package": "app.praxis.frequency_studio",
+    "version": "0.2.0 (2)",
+    "short": "Synthesize tones, mix oscillators, explore sweeps and export stereo WAV audio.",
+    "description": "An Android sound-synthesis workspace, separate from Frequency Sound Generator.\n\nGenerate sine, square, sawtooth and triangle waves from 1 to 22,000 Hz. Mix up to eight oscillators with individual frequency, waveform, level, pan and mute controls. Explore linear or logarithmic sweeps, binaural signals, five noise colors, DTMF, a metronome, musical notes and synthesized effects.\n\nSave local presets, compare two configurations and export stereo PCM16 WAV at 44.1 kHz. The signal graph shows synthesized audio, not sound measured through a microphone. Playback stops when the app goes into the background, loses audio focus or headphones disconnect.\n\nAll synthesis functions and WAV export remain free. The development configuration supports Google test banners in the Library outside playback and export, with a planned one-time Remove Ads purchase. Commercial purchasing is not configured. Version 0.2.0 is in testing; no Google Play installation or public APK download is offered here.",
+    "safety": "Start at low volume. The digital frequency range does not guarantee that your speaker or headphones can reproduce it, and the level control is not a calibrated sound-pressure measurement. Binaural output is an audio experiment, not a medical treatment or hearing test. Playback and export follow the configured timer and finite signal duration; a longer export may contain trailing silence.",
+    "data": "Audio is synthesized and exported locally. Presets, configurations, comparison settings and language are stored on the device. The app does not require its own account, microphone, location or audio-upload service. Exported WAV files are saved to the user-selected destination.",
+    "permissions": "Internet access supports Google Mobile Ads, UMP and the prepared Google Play purchase flow. Development test-ad builds show Library banners only outside playback and export, subject to the implemented consent checks. Google services may process IP addresses, approximate location, identifiers, interactions and diagnostics; test identifiers do not mean no data is transmitted. Google privacy: https://policies.google.com/privacy .\n\nGoogle Play handles the planned one-time Remove Ads purchase; the developer does not receive payment-card details. The app verifies and stores signed purchase information privately for offline access and restoration. Production purchase configuration is not active. Android automatic app backup is disabled. A chosen export provider may synchronize WAV files under its own terms.",
+    "retention": "Clearing app storage or uninstalling removes private presets, settings and cached purchase information. Exported WAV files remain at the selected destination and must be removed there. Once purchases are configured, restoration after reinstalling or on another device requires the same Google Play account and internet. Clearing local data does not refund a purchase or erase records held by Google.",
+    "ads_notice": "Free synthesis and export. Google test banners in Library; planned one-time Remove Ads purchase, not commercially configured.",
+    "checks": [
+      "Start at low volume and test oscillator, mixer, sweep and noise modes.",
+      "Check stereo placement, DTMF and timer behavior.",
+      "Save and restore presets, compare configurations and export a WAV.",
+      "Verify audio stops on backgrounding or loss of audio focus; review language and privacy options."
+    ],
+    "gaps": [
+      "Complete real-device listening and output compatibility checks.",
+      "Configure production signing, advertising, consent messages and the one-time product.",
+      "Validate final store declarations and Google Play testing before announcing availability."
+    ]
   }
 ]

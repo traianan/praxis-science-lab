@@ -1,0 +1,21 @@
+Praxis Clean
+
+Short description
+Review storage, select photos in a grid and manage recoverable local trash.
+
+Full description
+A storage and file-review toolkit for Android, currently in testing.
+
+Explore accessible storage, review leftover and unnecessary files, find duplicates, and select multiple photos in a three-, four- or five-column gallery. After moving a selection to local trash, continue with the remaining photos. Review operations and restore eligible files from History.
+
+The toolkit also includes app management, optional cache assistance, image compression to a new copy, exclusions, scheduled scans and contextual battery reports. Android permissions determine what each tool can access. Scheduled scans do not delete files automatically.
+
+Choose English, Romanian or Spanish from the visible language control. A compact, adaptive home screen and a global navigation menu provide access to the tools.
+
+The evaluation build offers an optional Google test-ad check in Settings. The planned model combines advertising with a one-time purchase; commercial purchasing is not configured. There is no Google Play release or public APK download on this page.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/praxis-clean/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/praxis-clean/privacy/
+Suggested category: Tools
