@@ -1165,5 +1165,68 @@
       "Broader Android device compatibility and longer play sessions.",
       "Production release preparation and final store declarations."
     ]
+  },
+  {
+    "slug": "wheel-mind-trivia",
+    "name": "WheelMind Trivia",
+    "title": "WheelMind Trivia",
+    "repo": "wheel-mind-trivia",
+    "package": "com.wheelmind.trivia",
+    "version": "1.0.0 (1)",
+    "policy_date": "2026-09-27",
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Game / Trivia",
+    "short": "Spin the wheel, collect sigils and explore six trivia categories offline.",
+    "description": "Spin the wheel and put your general knowledge to the test with Mindo, your cheerful trivia companion.\n\nExplore six categories: Science, History, Geography, Arts, Entertainment and Sports. The question bank contains 1,000 question concepts, each available in English, Romanian and Spanish — 3,000 language versions in total.\n\nChoose your challenge:\n• Classic: spin the wheel and collect category sigils.\n• Speed: answer as many questions as you can in 90 seconds.\n• Survival: start with 15 seconds; correct answers add 4 seconds and wrong answers subtract 5.\n• Practice: choose a category and play a round of 10 questions.\n• Daily: take a five-question challenge once a day.\n\nEarn in-game coins, use helpful power-ups and follow your progress in local statistics. Switch between light and dark themes, adjust sound and vibration, and choose reduced motion in Settings.\n\nQuestions and core gameplay work offline. No account is required. Progress is saved on your device, without cloud synchronization.\n\nDeveloped by Traian Anghel. Published by Praxis Science Lab.",
+    "data": "WheelMind Trivia saves language and accessibility preferences, sound settings, scores, game statistics, recently seen questions, coins, lives, daily-challenge state and any Pro entitlement in a local SQLite database. Questions, artwork and audio are bundled with the app. Core gameplay works offline. There is no WheelMind account, cloud synchronization, application backend, analytics service or external crash-reporting service. The game does not upload these local records to Praxis Science Lab.",
+    "permissions": "This notice describes the current testing configuration of version 1.0.0. Store advertising and purchase services are disabled in this configuration. Store-specific libraries are included: the Google build includes Google Mobile Ads/UMP and Google Play Billing; the Huawei build includes Huawei Ads and Huawei IAP. Their presence or declared permissions must not be confused with a guarantee about future releases. The game does not use camera, microphone, contacts or a location sensor.\n\nAdvertising or in-app purchases may be enabled in a later release. Before distributing that configuration, we will update this notice to describe the actual providers, data types, purposes, choices and retention, and implement the applicable consent requirements. Purchases would be handled by the selected store; Praxis Science Lab does not receive payment-card details through this game.",
+    "retention": "Local records remain on your device until removed. Resetting progress inside the app clears gameplay progress but preserves the Pro entitlement and its bonus marker. To remove all private local app records, clear WheelMind Trivia storage in Android Settings or uninstall it. Android cloud backup is disabled in the app manifest; any copies made through device-transfer tools or external backups must be managed separately. There is no Praxis Science Lab server copy of your game progress. Store transaction records, if purchases are enabled in a later version, are governed by the respective store and are not deleted by resetting the game.",
+    "safety": "A general-knowledge game for entertainment and learning. Questions can contain errors; contact support with the language and question text to report a correction. No age rating or store approval is claimed here.",
+    "ads_notice": "Disabled in the current testing configuration; advertising SDKs remain included. Review every active release before completing the Ads declaration.",
+    "data_safety_note": "Not a completed Play Console declaration. Local gameplay records are not uploaded by the game. Advertising and billing are disabled in the reviewed testing configuration, but store SDKs remain included. Review their manifest components and observed network behavior in the final signed artifact. If services are activated, revise this policy and the store-specific Data safety/consent answers before distribution.",
+    "checks": [
+      "Play Classic and collect a category sigil.",
+      "Try Practice, Speed, Survival and the once-daily challenge.",
+      "Switch all three languages and light/dark themes; restart and verify local progress.",
+      "Use airplane mode and verify questions and core gameplay remain available."
+    ],
+    "evidence": [
+      "lib/logic/user/app_controller.dart",
+      "lib/core/database/database.dart",
+      "lib/data/services/store_services.dart",
+      "android/app/src/main/AndroidManifest.xml",
+      "docs/ARTIFACTS.json"
+    ],
+    "gaps": [
+      "Prepare and verify the production-signed Google Play AAB; current APKs are test-signed.",
+      "Complete the intended audience, IARC rating, account verification and required testing in Play Console.",
+      "Review the final configuration of advertising, billing, consent and Data safety before enabling store services.",
+      "Review the question bank editorially and recheck screenshots against the final upload build."
+    ],
+    "publishing_assets": true,
+    "screenshots": [
+      {
+        "file": "screenshot-01-home.png",
+        "alt": "Meet Mindo — actual English Android interface.",
+        "caption": "Meet Mindo",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-02-classic-wheel.png",
+        "alt": "Spin the category wheel — actual English Android interface.",
+        "caption": "Spin the category wheel",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-05-practice.png",
+        "alt": "Practice your science knowledge — actual English Android interface.",
+        "caption": "Practice your science knowledge",
+        "width": 1080,
+        "height": 1920
+      }
+    ]
   }
 ]
