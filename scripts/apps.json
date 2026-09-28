@@ -1172,24 +1172,26 @@
     "title": "WheelMind Trivia",
     "repo": "wheel-mind-trivia",
     "package": "com.wheelmind.trivia",
-    "version": "1.0.0 (1)",
-    "policy_date": "2026-09-27",
+    "version": "1.0.1 (ARM64 APK 2002)",
+    "policy_date": "2026-09-28",
     "language": "English, Romanian and Spanish",
     "status": "In testing",
     "category": "Game / Trivia",
     "short": "Spin the wheel, collect sigils and explore six trivia categories offline.",
-    "description": "Spin the wheel and put your general knowledge to the test with Mindo, your cheerful trivia companion.\n\nExplore six categories: Science, History, Geography, Arts, Entertainment and Sports. The question bank contains 1,000 question concepts, each available in English, Romanian and Spanish — 3,000 language versions in total.\n\nChoose your challenge:\n• Classic: spin the wheel and collect category sigils.\n• Speed: answer as many questions as you can in 90 seconds.\n• Survival: start with 15 seconds; correct answers add 4 seconds and wrong answers subtract 5.\n• Practice: choose a category and play a round of 10 questions.\n• Daily: take a five-question challenge once a day.\n\nEarn in-game coins, use helpful power-ups and follow your progress in local statistics. Switch between light and dark themes, adjust sound and vibration, and choose reduced motion in Settings.\n\nQuestions and core gameplay work offline. No account is required. Progress is saved on your device, without cloud synchronization.\n\nDeveloped by Traian Anghel. Published by Praxis Science Lab.",
-    "data": "WheelMind Trivia saves language and accessibility preferences, sound settings, scores, game statistics, recently seen questions, coins, lives, daily-challenge state and any Pro entitlement in a local SQLite database. Questions, artwork and audio are bundled with the app. Core gameplay works offline. There is no WheelMind account, cloud synchronization, application backend, analytics service or external crash-reporting service. The game does not upload these local records to Praxis Science Lab.",
-    "permissions": "This notice describes the current testing configuration of version 1.0.0. Store advertising and purchase services are disabled in this configuration. Store-specific libraries are included: the Google build includes Google Mobile Ads/UMP and Google Play Billing; the Huawei build includes Huawei Ads and Huawei IAP. Their presence or declared permissions must not be confused with a guarantee about future releases. The game does not use camera, microphone, contacts or a location sensor.\n\nAdvertising or in-app purchases may be enabled in a later release. Before distributing that configuration, we will update this notice to describe the actual providers, data types, purposes, choices and retention, and implement the applicable consent requirements. Purchases would be handled by the selected store; Praxis Science Lab does not receive payment-card details through this game.",
-    "retention": "Local records remain on your device until removed. Resetting progress inside the app clears gameplay progress but preserves the Pro entitlement and its bonus marker. To remove all private local app records, clear WheelMind Trivia storage in Android Settings or uninstall it. Android cloud backup is disabled in the app manifest; any copies made through device-transfer tools or external backups must be managed separately. There is no Praxis Science Lab server copy of your game progress. Store transaction records, if purchases are enabled in a later version, are governed by the respective store and are not deleted by resetting the game.",
+    "description": "Spin the wheel and put your general knowledge to the test with Mindo, your cheerful trivia companion.\n\nExplore six categories: Science, History, Geography, Arts, Entertainment and Sports. The question bank contains 1,000 question concepts, each available in English, Romanian and Spanish — 3,000 language versions in total.\n\nChoose your challenge:\n• Classic: spin the wheel and collect category sigils.\n• Speed: answer as many questions as you can in 90 seconds.\n• Survival: start with 15 seconds; correct answers add 4 seconds and wrong answers subtract 5.\n• Practice: choose a category and play a round of 10 questions.\n• Daily: take a five-question challenge once a day.\n\nEarn in-game coins, use helpful power-ups and follow your progress in local statistics. Switch between light and dark themes, adjust sound and vibration, and choose reduced motion in Settings.\n\nQuestions and core gameplay work offline. No account is required. Progress is saved on your device, without cloud synchronization.\n\nDeveloped by Traian Anghel. Published by Praxis Science Lab.\n\nVersion 1.0.1 adds discreet test banners in Settings only. Gameplay remains available offline and does not require watching ads. Commercial purchases are not configured in this test release.",
+    "data": "Questions, artwork and audio are bundled with the app. Preferences, scores, game statistics, recent questions, coins, lives, daily challenge state and purchase-related status are stored on your device. Core gameplay works offline. There is no developer-operated account, cloud synchronization, gameplay upload, separate analytics or external crash-reporting service. The game does not use camera, microphone, contacts or a location sensor.",
+    "permissions": "Internet and network-state access support test advertising and store services. Banners appear only in Settings. Version 1.0.1 uses test banners only, after applicable advertising choices and when internet is available. Test advertisements do not generate revenue but may still send information to their provider. Refusing ads, no-fill or loss of connectivity does not block normal use. There are no interstitials, app-open ads or mandatory rewarded ads in this configuration.\n\nThe Google variant uses Google Mobile Ads and User Messaging Platform. Depending on consent and configuration, Google may process IP addresses and derived approximate location, device/advertising identifiers, interactions and diagnostic information for advertising, service operation and fraud prevention. The Huawei variant uses Huawei Ads Lite and requests non-personalized test banners after explicit acceptance; Huawei may process device/network identifiers, IP addresses, interactions and diagnostics. Non-personalized advertising does not mean no data processing. Advertising choices are available in Settings.\n\nCommercial products and public verification keys are not configured in this evaluation release. Google Play Billing or Huawei IAP handles the optional one-time non-consumable purchase when configured. Stores process account, payment and transaction information under their policies; the developer does not receive payment-card details. Signed purchase records, including store tokens, are cached privately and checked for entitlement and offline access. Online restoration/revalidation contacts the relevant store. Restoring on a new device requires store access; purchases do not automatically transfer between stores. No subscription is introduced.",
+    "retention": "Local records remain until deleted. Resetting game progress preserves purchase proof and the one-time bonus marker. Clearing app storage or uninstalling removes local records; Android cloud backup is disabled. There is no developer server copy of gameplay. Store transaction and advertising records are subject to their respective providers' retention policies and controls. Clearing local data does not refund purchases or delete provider records.",
     "safety": "A general-knowledge game for entertainment and learning. Questions can contain errors; contact support with the language and question text to report a correction. No age rating or store approval is claimed here.",
-    "ads_notice": "Disabled in the current testing configuration; advertising SDKs remain included. Review every active release before completing the Ads declaration.",
-    "data_safety_note": "Not a completed Play Console declaration. Local gameplay records are not uploaded by the game. Advertising and billing are disabled in the reviewed testing configuration, but store SDKs remain included. Review their manifest components and observed network behavior in the final signed artifact. If services are activated, revise this policy and the store-specific Data safety/consent answers before distribution.",
+    "ads_notice": "Test banners in Settings only. Commercial products are not configured; no revenue is generated by test ads.",
+    "data_safety_note": "Not a completed store declaration. Test advertising may transmit identifiers, IP/approximate location, interactions and diagnostics to the store-specific provider. Core gameplay records remain local. Review consent, intended audience, SDK disclosures and observed behavior for each final signed artifact. Do not declare no data collection merely because test ad IDs are used.",
     "checks": [
       "Play Classic and collect a category sigil.",
       "Try Practice, Speed, Survival and the once-daily challenge.",
       "Switch all three languages and light/dark themes; restart and verify local progress.",
-      "Use airplane mode and verify questions and core gameplay remain available."
+      "Use airplane mode and verify questions and core gameplay remain available.",
+      "Open Settings online and offline; verify absent or failed ads leave no banner space and gameplay remains available.",
+      "Check advertising choices, background/resume and store-specific restore errors. Real store/HMS advertising and payment validation remain pending."
     ],
     "evidence": [
       "lib/logic/user/app_controller.dart",
@@ -1226,6 +1228,98 @@
         "caption": "Practice your science knowledge",
         "width": 1080,
         "height": 1920
+      }
+    ],
+    "screenshots_version": "1.0.0 (before the Settings advertising update)",
+    "install_help": "Requires Android 7.0 or later and an ARM64 device. Download an APK from the app page and open it with Android's installer. Allow installation from your chosen browser only if you trust this development build. Install over a compatible development-signed version to preserve progress. Version 1.0.1 uses APK version code 2002. English, Romanian and Spanish are available in Settings.",
+    "test_downloads": [
+      {
+        "label": "Google variant - 1.0.1 QA - ARM64",
+        "url": "https://github.com/traianan/praxis-science-lab/releases/download/mobile-test-20260928/WheelMind-1.0.1-google-arm64-QA-NOT-FOR-STORE.apk",
+        "size": "23.8 MiB",
+        "sha256": "40FCF49A77A278BCAE16739544050468DD243720AEB42373BCE0C1749FFEF694"
+      },
+      {
+        "label": "Huawei variant - 1.0.1 QA - ARM64",
+        "url": "https://github.com/traianan/praxis-science-lab/releases/download/mobile-test-20260928/WheelMind-1.0.1-huawei-arm64-QA-NOT-FOR-STORE.apk",
+        "size": "22.9 MiB",
+        "sha256": "F6E9B83830C3706CAC7A47A77C9DEF1BA0D443DE7B6ACA601E74FCEECC5B1DA4"
+      }
+    ]
+  },
+  {
+    "slug": "luminapro",
+    "name": "LuminaPro",
+    "title": "LuminaPro",
+    "repo": "lumina-pro",
+    "package": "com.praxissciencelab.luminapro",
+    "version": "1.0.1 (2)",
+    "policy_date": "2026-09-28",
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Tools",
+    "short": "LED torch, screen light, Morse, timers and custom light patterns.",
+    "description": "Use the LED torch or screen light, choose a colored light bulb or reading mode, and set a timer. LuminaPro includes SOS, Morse, strobe and color modes, plus a custom light-pattern editor with JSON import and export.\n\nControl lighting through the app, home-screen widgets, a Quick Settings tile or the active-light notification. Optional gestures work while the app is open. Battery and temperature information and thermal protection help manage lighting sessions.\n\nLED intensity adjustment requires Android 13 or later and compatible hardware; otherwise brightness is fixed. Screen lighting stops in the background. User-started LED sessions can continue with a visible foreground service and stop when the app is removed from Recents.\n\nAll lighting functions remain free and work offline. Version 1.0.1 uses test banners only in Settings while all lighting is stopped. Commercial purchases are not configured. English, Romanian and Spanish, light/dark themes and accessibility options are included.\n\nDeveloped by Traian Anghel. Published by Praxis Science Lab.",
+    "data": "LED control, screen light, battery level and temperature, motion and ambient-light readings, settings, Morse messages and custom light patterns are processed on your device. The app does not capture photographs, video or audio, use location permission, provide its own user account or upload messages and patterns to a developer server. There is no separate analytics or crash-reporting SDK.",
+    "permissions": "Camera permission controls the LED only. Notification permission makes active-light controls visible. A foreground service and, when needed for timing, a wake lock keep user-started LED sessions running in the background. Sensors support optional gestures and brightness adjustment. Internet and network-state access support advertising and store services. Core lighting works offline. Banners are limited to Settings while all lighting is stopped.\n\nVersion 1.0.1 uses test banners only, after applicable advertising choices and when internet is available. Test advertisements do not generate revenue but may still send information to their provider. Refusing ads, no-fill or loss of connectivity does not block normal use. There are no interstitials, app-open ads or mandatory rewarded ads in this configuration.\n\nThe Google variant uses Google Mobile Ads and User Messaging Platform. Depending on consent and configuration, Google may process IP addresses and derived approximate location, device/advertising identifiers, interactions and diagnostic information for advertising, service operation and fraud prevention. The Huawei variant uses Huawei Ads Lite and requests non-personalized test banners after explicit acceptance; Huawei may process device/network identifiers, IP addresses, interactions and diagnostics. Non-personalized advertising does not mean no data processing. Advertising choices are available in Settings.\n\nCommercial products and public verification keys are not configured in this evaluation release. Google Play Billing or Huawei IAP handles the optional one-time non-consumable purchase when configured. Stores process account, payment and transaction information under their policies; the developer does not receive payment-card details. Signed purchase records, including store tokens, are cached privately and checked for entitlement and offline access. Online restoration/revalidation contacts the relevant store. Restoring on a new device requires store access; purchases do not automatically transfer between stores. No subscription is introduced.",
+    "retention": "Settings, patterns and cached signed purchase records remain in private app storage until removed, app storage is cleared or the app is uninstalled. Android automatic backup is disabled. JSON imports and exports use the Android file picker and the destination you select; your selected storage provider may synchronize exported files under its own terms. Exported files remain after uninstalling and must be deleted separately. Removing app data does not refund purchases or erase records retained by stores or advertising providers.",
+    "safety": "Flashing modes may affect people sensitive to flashing light. Stop use if uncomfortable. Do not point bright lights into eyes. LuminaPro is not certified safety equipment or an emergency service. Hardware and Android background restrictions can affect operation.",
+    "ads_notice": "Test banners in Settings with all lighting stopped. Commercial products are not configured; no revenue is generated by test ads.",
+    "data_safety_note": "Not a completed store declaration. Test advertising may transmit identifiers, IP/approximate location, interactions and diagnostics to the store-specific provider. Lighting settings and patterns remain local. Review consent, intended audience, SDK disclosures and observed behavior for each final signed artifact. Do not declare no data collection merely because test ad IDs are used.",
+    "checks": [
+      "Test camera and notification permission acceptance and refusal.",
+      "Test LED, screen, timer and background behavior; check hardware-dependent intensity.",
+      "Test patterns, JSON import/export, widgets and Quick Settings.",
+      "Check Settings banners online/offline with lighting on/off and advertising refusal. Real commercial store/HMS validation remains pending."
+    ],
+    "evidence": [
+      "README.md",
+      "docs/MONETIZATION_UPDATE_20260928.md",
+      "docs/TEST_REPORT.md"
+    ],
+    "gaps": [
+      "Configure real advertising and store products, verify consent and audience declarations.",
+      "Sign with the owner-approved production keys and verify both stores independently.",
+      "Recheck actual ads, purchases, background behavior and final screenshots on representative devices."
+    ],
+    "publishing_assets": true,
+    "screenshots_version": "1.0.0 (before the 1.0.1 monetization update)",
+    "screenshots": [
+      {
+        "file": "screenshot-01-home.png",
+        "caption": "LED torch and lighting controls",
+        "alt": "LED torch and lighting controls - actual Android test interface.",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-02-modes.png",
+        "caption": "Lighting modes",
+        "alt": "Lighting modes - actual Android test interface.",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-06-morse.png",
+        "caption": "Morse light messages",
+        "alt": "Morse light messages - actual Android test interface.",
+        "width": 1080,
+        "height": 1920
+      }
+    ],
+    "install_help": "Requires Android 8.0 or later. Download an APK from the app page and open it with Android's installer. Allow installation from your chosen browser only if you trust this development build. Install over a compatible development-signed version to preserve settings and patterns. Export your custom patterns before any uninstall. Camera permission is used only for the LED, not photography. Version 1.0.1 uses version code 2. Languages are available in Settings.",
+    "test_downloads": [
+      {
+        "label": "Google variant - 1.0.1 QA",
+        "url": "https://github.com/traianan/praxis-science-lab/releases/download/mobile-test-20260928/LuminaPro-google-v1.0.1-QA-NOT-FOR-STORE.apk",
+        "size": "51.9 MiB",
+        "sha256": "BF666AE1180C6D4D5212237305EFACC0F84A6D038330DFF1FD5C081F2A07F3EE"
+      },
+      {
+        "label": "Huawei variant - 1.0.1 QA",
+        "url": "https://github.com/traianan/praxis-science-lab/releases/download/mobile-test-20260928/LuminaPro-huawei-v1.0.1-QA-NOT-FOR-STORE.apk",
+        "size": "51.7 MiB",
+        "sha256": "F97DED1F88AF8DDA70596B46E6A0E595532F410F0BEF3A49629F637C762E83E8"
       }
     ]
   }

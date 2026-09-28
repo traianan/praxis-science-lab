@@ -21,6 +21,8 @@ Questions and core gameplay work offline. No account is required. Progress is sa
 
 Developed by Traian Anghel. Published by Praxis Science Lab.
 
+Version 1.0.1 adds discreet test banners in Settings only. Gameplay remains available offline and does not require watching ads. Commercial purchases are not configured in this test release.
+
 Publisher: Praxis Science Lab
 Support: traiananghel@gmail.com
 Website: https://traianan.github.io/praxis-science-lab/apps/wheel-mind-trivia/

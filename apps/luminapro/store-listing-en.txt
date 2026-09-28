@@ -1,0 +1,21 @@
+LuminaPro
+
+Short description
+LED torch, screen light, Morse, timers and custom light patterns.
+
+Full description
+Use the LED torch or screen light, choose a colored light bulb or reading mode, and set a timer. LuminaPro includes SOS, Morse, strobe and color modes, plus a custom light-pattern editor with JSON import and export.
+
+Control lighting through the app, home-screen widgets, a Quick Settings tile or the active-light notification. Optional gestures work while the app is open. Battery and temperature information and thermal protection help manage lighting sessions.
+
+LED intensity adjustment requires Android 13 or later and compatible hardware; otherwise brightness is fixed. Screen lighting stops in the background. User-started LED sessions can continue with a visible foreground service and stop when the app is removed from Recents.
+
+All lighting functions remain free and work offline. Version 1.0.1 uses test banners only in Settings while all lighting is stopped. Commercial purchases are not configured. English, Romanian and Spanish, light/dark themes and accessibility options are included.
+
+Developed by Traian Anghel. Published by Praxis Science Lab.
+
+Publisher: Praxis Science Lab
+Support: traiananghel@gmail.com
+Website: https://traianan.github.io/praxis-science-lab/apps/luminapro/
+Privacy: https://traianan.github.io/praxis-science-lab/apps/luminapro/privacy/
+Suggested category: Tools

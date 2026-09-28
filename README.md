@@ -8,7 +8,13 @@ GeoStamp Camera is listed at `apps/geostamp-camera/` with development version 0.
 
 ## Current scope
 
-An English homepage and app-specific information, privacy, support and Google Play preparation pages for 28 Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
+An English homepage and app-specific information, privacy, support and Google Play preparation pages for 30 Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
+
+## LuminaPro and WheelMind 1.0.1 - 28 September 2026
+
+Both app pages link to development-signed Google and Huawei APKs hosted in the `mobile-test-20260928` GitHub prerelease, with SHA-256 checksums and installation guidance. LuminaPro now appears in the homepage catalog and has complete overview, privacy, support and publishing-preparation pages. WheelMind requires ARM64 and Android 7+; LuminaPro requires Android 8+. Test advertising is enabled; commercial purchases are not configured. These downloads are not store releases. Existing screenshots are explicitly labeled as version 1.0.0.
+
+Regenerate only these pages with `python scripts/build_documents.py --app luminapro` and `--app wheel-mind-trivia`. Refresh only their public media kits with `python scripts/package_materials.py --app luminapro --app wheel-mind-trivia`. Do not publish internal delivery archives, credentials or signing keys.
 
 Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Dark / System group of icon buttons (sun, moon, monitor) highlights the active preference, defaults to System, follows device changes and saves only the theme preference in localStorage. Dark uses a true black background; its internal `black` value is retained for compatibility with saved preferences. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
 

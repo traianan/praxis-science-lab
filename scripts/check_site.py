@@ -47,6 +47,12 @@ for file,page in pages.items():
 apps=json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
 for app in apps:
     assert len(app['title'])<=30 and len(app['short'])<=80 and len(app['description'])<=4000
+    for download in app.get('test_downloads', []):
+        assert download['url'].startswith('https://github.com/traianan/praxis-science-lab/releases/download/')
+        assert download['url'].endswith('-QA-NOT-FOR-STORE.apk')
+        assert len(download['sha256']) == 64
+        checksums = (ROOT/'apps'/app['slug']/'downloads/SHA256SUMS.txt').read_text()
+        assert download['sha256'] + '  ' + download['url'].rsplit('/', 1)[1] in checksums
     for preview in app.get('previews', []):
         from PIL import Image
         with Image.open(ROOT/'apps'/app['slug']/'media'/preview['file']) as im:
