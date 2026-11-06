@@ -11,6 +11,9 @@ parser.add_argument('--app', action='append', help='Package only the named app; 
 args = parser.parse_args()
 for a in json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8')):
     if args.app and a['slug'] not in args.app: continue
+    if a.get('separate_generator'):
+        print(f'Preserving {a["slug"]} kit; use {a["separate_generator"]}.')
+        continue
     if not a.get('publishing_assets', True): continue
     folder=ROOT/'apps'/a['slug'];url=f'https://traianan.github.io/praxis-science-lab/apps/{a["slug"]}/'
     shots=sorted((folder/'media').glob('screenshot-*.png'))

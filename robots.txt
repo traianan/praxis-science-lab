@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /pfa-studio/
+Disallow: /scripts/
+Disallow: /build/
+Disallow: /publishing/developer-profile/
+
+Sitemap: https://praxissciencelab.app/sitemap.xml

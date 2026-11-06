@@ -7,8 +7,8 @@ import re
 import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'https://traianan.github.io/praxis-science-lab/'
-EMAIL = 'traiananghel@gmail.com'
+BASE = 'https://praxissciencelab.app/'
+EMAIL = 'contact@praxissciencelab.app'
 DATE = '2026-09-08'
 APPS = json.loads((ROOT/'scripts/apps.json').read_text(encoding='utf-8'))
 parser = argparse.ArgumentParser()
@@ -65,6 +65,9 @@ for a in APPS:
     media=ROOT/route/'media'; media.mkdir(parents=True,exist_ok=True)
     cards.append(render_card(a))
     if args.home_only or (args.app and slug != args.app):
+        continue
+    if a.get('separate_generator'):
+        print(f'Preserving {slug} pages; regenerate with {a["separate_generator"]}.')
         continue
     intro = f'<p><span class="status">{e(a["status"])}</span> Not yet available on Google Play.</p>'
     if slug=='medical-terminology-flashcards':
@@ -161,6 +164,10 @@ home=re.sub(r'assets/site\.css\?v=[^"\s]+','assets/site.css?v=20260911-compact-a
 home=home.replace('<p>Curiosity, put into practice.</p>','<a href="privacy/">Website privacy</a>')
 (ROOT/'index.html').write_text(home,encoding='utf-8')
 if args.home_only:
+    from build_catalogs import build as build_catalogs
+    from seo import build as build_seo
+    build_catalogs()
+    build_seo()
     print(f'Updated compact homepage grid for {len(APPS)} Android apps.')
     raise SystemExit(0)
 
@@ -187,4 +194,10 @@ guide='''<p>Reviewed on 8 September 2026. These materials prepare releases; they
 guide+='<h2>App kits</h2><ul>'+''.join(f'<li><a href="../apps/{a["slug"]}/publishing/">{e(a["name"])}</a></li>' for a in APPS)+'</ul>'
 page('publishing','Google Play Publishing Kit','Release preparation for Android apps published by Praxis Science Lab.',guide)
 print(f'Built documentation for {len(APPS)} Android apps, plus website privacy and publishing guide.')
+from build_catalogs import build as build_catalogs
+build_catalogs()
+from business_identity import build as build_identity
+build_identity()
+from seo import build as build_seo
+build_seo()
 

@@ -1,0 +1,22 @@
+AURALIS - Tonuri Pure & Focus
+
+Tonuri pure offline, sesiuni binaurale și un mixer cu patru straturi.
+
+AURALIS reunește tonuri pure și sesiuni de sunet binaural într-o aplicație de audiție offline.
+
+Alege dintre cele 16 sunete din catalog sau reglează un ton pur între 20 și 20.000 Hz, în pași de 0,1 Hz. Modul binaural trimite tonuri diferite către canalele stâng și drept, cu o diferență de 1–40 Hz și o frecvență purtătoare de 100–200 Hz. Folosește căști stereo pentru audiția binaurală; sunetul efectiv al difuzorului și căștilor depinde de dispozitiv.
+
+Creează un mix cu până la patru straturi, reglează fiecare volum, dezactivează sunetul sau elimină straturi și salvează un preset cu nume. Păstrează sunete favorite, redenumește ori șterge preseturi și consultă istoricul local al sesiunilor.
+
+Setează sesiuni de 1–120 de minute, alege creșterea și scăderea treptată a volumului, pune pauză sau oprește și continuă audiția cu ecranul blocat. Aplicația îți amintește să iei o pauză la final. Limita de volum este activă implicit; un volum mai mare în aplicație necesită confirmare. Limita nu măsoară presiunea sonoră la urechi.
+
+Alege engleza, româna sau spaniola și tema întunecată ori luminoasă. Preferințele, favoritele, mixurile și istoricul rămân pe dispozitiv. Versiunea actuală nu are reclame, cumpărături, cont sau server propriu.
+
+Această aplicație oferă sunete pentru relaxare, concentrare și stare de bine. Nu este un dispozitiv medical și nu oferă diagnostic, tratament sau prevenție. Efectele pot varia de la persoană la persoană. Nu utiliza la volum ridicat perioade lungi. Dacă ai afecțiuni auditive, consultă un specialist.
+
+App: https://praxissciencelab.app/apps/auralis/
+Privacy: https://praxissciencelab.app/apps/auralis/privacy/
+Support: https://praxissciencelab.app/apps/auralis/support/
+Support email: contact@praxissciencelab.app
+Package: com.praxissciencelab.auralis
+Version: 0.1.0 (1)

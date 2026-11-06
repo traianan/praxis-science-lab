@@ -1,0 +1,12 @@
+{
+  "projects": [
+    "<li><h3><a href=\"https://physlab.app/\">Physics Interactive Lab <span aria-hidden=\"true\">↗</span></a></h3><p>Explore high school physics through interactive simulations.</p></li>",
+    "<li><h3><a href=\"https://stemhub.tools/\">STEM Hub <span aria-hidden=\"true\">↗</span></a></h3><p>Work through mathematics, physics and chemistry with calculators and study guides.</p></li>",
+    "<li><h3><a href=\"https://wavelab.tools/\">Wave Lab <span aria-hidden=\"true\">↗</span></a></h3><p>Explore light, sound and wave mechanics with calculators and simulations.</p></li>",
+    "<li><h3><a href=\"https://skymotion.tools/\">SkyMotion <span aria-hidden=\"true\">↗</span></a></h3><p>Discover astronomy, motion and geometry tools with explained formulas.</p></li>",
+    "<li><h3><a href=\"https://convr.tools/\">Convr <span aria-hidden=\"true\">↗</span></a></h3><p>Convert everyday units with formulas and reference values.</p></li>",
+    "<li><h3><a href=\"https://displaylab.tools/\">Display Lab <span aria-hidden=\"true\">↗</span></a></h3><p>Prepare social images and check layouts, color contrast and display specifications.</p></li>",
+    "<li><h3><a href=\"https://specieswatch.io/en\">SpeciesWatch <span aria-hidden=\"true\">↗</span></a></h3><p>Explore biodiversity, threatened species and extinction risk.</p></li>",
+    "<li><h3><a href=\"https://getfounderos.app/\">Founder OS <span aria-hidden=\"true\">↗</span></a></h3><p>Research and assess software opportunities before building a product.</p></li>"
+  ]
+}

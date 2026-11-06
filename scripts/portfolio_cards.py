@@ -3,6 +3,9 @@ from html import escape
 
 ROOT = Path(__file__).resolve().parents[1]
 GROUPS = {
+    'questmind': 'Games',
+    'auralis': 'Sound & music',
+    'flowistry': 'Games',
     'wheel-mind-trivia': 'Games',
     'gravidraw-test': 'Games',
     'frequency-studio': 'Sound & music', 'praxis-clean': 'Everyday tools',
@@ -24,7 +27,7 @@ def render_card(app):
     e = escape
     slug = app['slug']
     group = GROUPS.get(slug, 'Everyday tools')
-    icon = next((f'apps/{slug}/media/{name}' for name in ['app-icon.png', 'icon.png', 'app-icon.svg']
+    icon = next((f'apps/{slug}/media/{name}' for name in ['card-icon.webp', 'app-icon.png', 'icon.png', 'app-icon.svg']
                  if (ROOT / f'apps/{slug}/media/{name}').exists()), None)
     visual = f'<img src="{icon}" alt="" width="56" height="56" loading="lazy">' if icon else f'<span class="app-monogram" aria-hidden="true">{e(app["name"][:2].upper())}</span>'
     preview = ''

@@ -1,0 +1,22 @@
+AURALIS - Tonos y Enfoque
+
+Tonos puros sin conexión, sesiones binaurales y mezclador de cuatro capas.
+
+AURALIS reúne tonos puros y sesiones de sonido binaural en una app de escucha sin conexión.
+
+Elige entre los 16 sonidos del catálogo o ajusta un tono puro entre 20 y 20.000 Hz, en pasos de 0,1 Hz. El modo binaural envía tonos distintos a los canales izquierdo y derecho, con una diferencia de 1–40 Hz y una portadora de 100–200 Hz. Usa auriculares estéreo para la escucha binaural; la salida real del altavoz y los auriculares depende del dispositivo.
+
+Crea una mezcla de hasta cuatro capas, ajusta cada volumen, silencia o elimina capas y guarda un preset con nombre. Conserva sonidos favoritos, cambia el nombre o elimina presets y consulta el historial local de sesiones.
+
+Configura sesiones de 1–120 minutos, elige entrada y salida gradual, pausa o detén la reproducción y sigue escuchando con la pantalla bloqueada. La app recuerda descansar al terminar. El límite de volumen está activado inicialmente; un volumen mayor en la app requiere confirmación. Ese límite no mide la presión sonora en tus oídos.
+
+Elige inglés, rumano o español y los temas oscuro o claro. Preferencias, favoritos, mezclas e historial permanecen en el dispositivo. Esta versión no tiene anuncios, compras, cuenta ni servidor propio.
+
+Esta app ofrece sonidos para relajación, enfoque y bienestar general. No es un dispositivo médico y no proporciona diagnóstico, tratamiento ni prevención. Los efectos pueden variar. No uses un volumen alto durante periodos largos. Si tienes problemas auditivos, consulta a un especialista.
+
+App: https://praxissciencelab.app/apps/auralis/
+Privacy: https://praxissciencelab.app/apps/auralis/privacy/
+Support: https://praxissciencelab.app/apps/auralis/support/
+Support email: contact@praxissciencelab.app
+Package: com.praxissciencelab.auralis
+Version: 0.1.0 (1)

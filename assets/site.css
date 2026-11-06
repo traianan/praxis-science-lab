@@ -43,7 +43,7 @@
 .document-links a[aria-current="page"]{background:var(--accent);color:var(--paper);font-weight:700}
 .back-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-bottom:20px;font-weight:600}
 .document-return{margin-top:40px;padding-top:20px;border-top:1px solid var(--line)}
-.projects-intro{color:var(--muted);margin-bottom:24px}.projects-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.projects-grid li{padding:22px 24px;border:1px solid var(--line);border-radius:10px;background:var(--wash)}.projects-grid h3{font-size:18px;line-height:1.4}.projects-grid a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.projects-grid a:hover{text-decoration-thickness:2px}.projects-grid p{color:var(--muted);font-size:15px;margin-top:6px}@media(max-width:700px){.projects-grid{grid-template-columns:1fr}.projects-grid li{padding:18px 20px}}
+.projects-intro{color:var(--muted);margin-bottom:24px}.projects-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.projects-grid li{padding:22px 24px;border:1px solid var(--line);border-radius:10px;background:var(--wash)}.projects-grid :is(h2,h3){font-size:18px;line-height:1.4}.projects-grid a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.projects-grid a:hover{text-decoration-thickness:2px}.projects-grid p{color:var(--muted);font-size:15px;margin-top:6px}@media(max-width:700px){.projects-grid{grid-template-columns:1fr}.projects-grid li{padding:18px 20px}}
 
 /* Direct development downloads and authentic app captures. */
 .android-apps-grid .status{display:inline-block;margin-top:10px;padding:3px 9px;font-size:12px;line-height:1.5;white-space:normal}
@@ -56,3 +56,5 @@
 @media(max-width:600px){.app-download{padding:20px}.app-gallery{grid-template-columns:1fr;gap:26px}.app-gallery figure{width:100%;max-width:320px;justify-self:center}.app-download .button{width:100%;gap:10px}}
 
 .app-feature{margin:24px 0 32px}.app-feature img{display:block;width:100%;height:auto;border-radius:18px}.app-feature figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+
+.business-footer{align-items:flex-start;gap:24px;flex-wrap:wrap}.business-footer address{font-style:normal;line-height:1.7;max-width:600px}.business-footer p{margin:0 0 8px}.business-footer nav{display:flex;flex-wrap:wrap;gap:16px}.business-footer a{overflow-wrap:anywhere}.document address{font-style:normal}.document dt{font-weight:700;margin-top:18px}.document dd{margin:6px 0 18px;overflow-wrap:anywhere}.business-intro{line-height:1.7}

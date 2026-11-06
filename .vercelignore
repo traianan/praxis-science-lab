@@ -1,0 +1,14 @@
+.git/
+.env*
+.local/
+pfa-studio/
+scripts/*
+!scripts/build_public.cjs
+build/
+debug.log
+publishing/developer-profile/
+node_modules/
+*.md
+
+.serena/
+.github/

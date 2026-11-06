@@ -4,6 +4,7 @@
   const count = document.querySelector('.collection-count');
   const cards = [...document.querySelectorAll('.portfolio-card')];
   if (!tools || !search || !count) return;
+  const label = document.querySelector('[data-catalog-label]')?.dataset.catalogLabel || 'apps';
   let category = 'All';
   function update() {
     const query = search.value.trim().toLocaleLowerCase();
@@ -13,7 +14,7 @@
       card.hidden = !match;
       if (match) shown++;
     });
-    count.textContent = shown ? `${shown} of ${cards.length} apps` : 'No apps found. Try another search or category.';
+    count.textContent = shown ? `${shown} of ${cards.length} ${label}` : `No ${label} found. Try another search or category.`;
   }
   tools.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
     category = button.dataset.filter;

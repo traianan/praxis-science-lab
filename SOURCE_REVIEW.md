@@ -1,3 +1,7 @@
+> Historical record: the dated observations below are not a current portfolio audit.
+> Current website validation and remediation: see AUDIT_REMEDIATION_2026-11-06.md.
+> Current scope: 34 Android app entries; public contact: contact@praxissciencelab.app.
+
 # Source inventory — 8 September 2026
 
 Praxis Science Lab · Public support: traiananghel@gmail.com

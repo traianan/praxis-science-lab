@@ -1,14 +1,30 @@
 # Praxis Science Lab
 
+## QuestMind — 20 October 2026
+
+QuestMind 2.2.0 has overview, complete EN/RO/ES help, support, EN/RO/ES privacy and release-preparation pages at `apps/questmind/`. The app is In testing (Android 7+, ages 13+); no public APK or store release is claimed. Regenerate only its pages with `python D:/ProiecteAI/QUESTMIND/QuestMind/tool/sync_public_site.py --site-root D:/ProiecteAI/praxis-science-lab`. The generic builders preserve these separately maintained pages. Owner-approved Vercel production deployment and verification evidence are in the QuestMind project under `audit/website-deploy-202.txt`, `audit/website-live-links-202.json` and `docs/HELP_AND_LINKS_2_0_2.md`.
+
+## AURALIS — 18 October 2026
+
+AURALIS has an overview, support, complete EN/RO/ES privacy policies and a public
+Google Play materials ZIP at `apps/auralis/`. The ZIP contains reviewed draft text
+and authentic Android screenshots, not application binaries or signing keys.
+The app is marked In testing; no store availability is claimed. Source content
+is maintained in `D:/ProiecteAI/AURALIS/auralis_project/data/`. Regenerate its pages
+and kit using `python D:/ProiecteAI/AURALIS/auralis_project/tool/sync_public_site.py
+--site-root D:/ProiecteAI/praxis-science-lab`. Generic document/material generators
+preserve these separately maintained AURALIS pages. Deployment evidence is in
+the AURALIS project under `qa/reports/site-deployment.json`.
+
 Public documentation, legal policies, and support portal for apps developed by Praxis Science Lab.
 
-Website: https://traianan.github.io/praxis-science-lab/
+Website: https://praxissciencelab.app/
 
 GeoStamp Camera is listed at `apps/geostamp-camera/` with development version 0.3.2, GPS photo stamps, project selection/creation, street maps, PDF, backup/restore and EN/RO/ES help. It has privacy, support and publishing-preparation pages and an authentic emulator screenshot labeled as test data. Status: In testing; no public APK or Google Play installation link. Regenerate with `python scripts/build_documents.py --app geostamp-camera`.
 
 ## Current scope
 
-An English homepage and app-specific information, privacy, support and Google Play preparation pages for 30 Android apps. Scientific Calculator is first in the release order. Public support: traiananghel@gmail.com. No app is represented as already available on Google Play.
+An English homepage and app-specific information, privacy, support and Google Play preparation pages for 34 Android apps. Scientific Calculator is first in the release order. Public support: contact@praxissciencelab.app. No app is represented as already available on Google Play.
 
 ## LuminaPro and WheelMind 1.0.1 - 28 September 2026
 
@@ -16,13 +32,13 @@ Both app pages link to development-signed Google and Huawei APKs hosted in the `
 
 Regenerate only these pages with `python scripts/build_documents.py --app luminapro` and `--app wheel-mind-trivia`. Refresh only their public media kits with `python scripts/package_materials.py --app luminapro --app wheel-mind-trivia`. Do not publish internal delivery archives, credentials or signing keys.
 
-Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Dark / System group of icon buttons (sun, moon, monitor) highlights the active preference, defaults to System, follows device changes and saves only the theme preference in localStorage. Dark uses a true black background; its internal `black` value is retained for compatibility with saved preferences. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. GitHub Pages provides hosting and has its own infrastructure practices.
+Plain HTML and CSS with a small local script that updates the copyright year on page load: `2026` in the founding year, then `2026–current year`. A Light / Dark / System group of icon buttons (sun, moon, monitor) highlights the active preference, defaults to System, follows device changes and saves only the theme preference in localStorage. Dark uses a true black background; its internal `black` value is retained for compatibility with saved preferences. If storage is blocked, selection still works for the current page; without JavaScript the device theme is followed. No external fonts, analytics, cookies or runtime dependencies added by this site. Vercel hosts the main domain; legacy GitHub Pages redirects have separate infrastructure practices.
 
 ## Publishing
 
-GitHub Pages publishes `main` from the repository root. `.nojekyll` keeps the site as static files. All local asset links are relative so the site works at the project URL, including its `/praxis-science-lab/` prefix. No package installation or build command is required.
+Vercel builds the public artifact with `node scripts/build_public.cjs` and serves only `build/public`. The build excludes the private PFA project, credentials, databases, source scripts and internal documents. GitHub Pages uses `.github/workflows/legacy-pages.yml` to publish only the output of `python scripts/build_redirects.py`. Known HTML URLs have immediate meta-refresh redirects and canonical links; a fixed-origin script preserves paths, queries and fragments, including unknown routes via 404. Do not publish the repository root. Run the integrity checks before publishing. Production deployment and the legacy redirect workflow must both be verified after publishing.
 
-To preview locally, run `python -m http.server 8000` from this directory. Run `python scripts/check_site.py` for static integrity checks. Browser layout/interaction testing is not claimed by that check.
+To preview locally, run `node scripts/build_public.cjs`, then `python -m http.server 8000 --directory build/public`. Run `python scripts/check_site.py` for static integrity checks. Browser layout/interaction testing is not claimed by that check.
 
 ## App documentation
 
@@ -86,3 +102,13 @@ Regenerate selectively with `python scripts/build_documents.py --app daylight-cl
 
 ## Praxis Clean and Frequency Studio — 19 September 2026
 Praxis Clean0.16.3 and Frequency Studio0.2.0 are listed as In testing, with their original Android vector icons and dedicated overview, privacy, support and publishing-preparation pages. No APK or Play installation link is added. Regenerate selectively with --app praxis-clean or --app frequency-studio.
+
+## MathViz Pro — 20 October 2026
+
+MathViz Pro 1.0.0+1 is listed at apps/mathviz-pro/ with overview, privacy, support and publishing-preparation pages. It is In testing, with local graph storage and no account/cloud component. No APK or store availability is advertised. Regenerate using `python "D:/ProiecteAI/MATHVIZ PRO/mathviz_pro/tool/sync_public_site.py" --site-root D:/ProiecteAI/praxis-science-lab`. Existing app pages are preserved. Production deployment and verified live routes are recorded in the MathViz project docs.
+
+## Website maintenance
+
+Run `python scripts/build_catalogs.py` to rebuild cards directly from `scripts/apps.json` and refresh metadata. `catalog_cards.json` stores web-project cards only. Run `python scripts/check_site.py` (standard library only), `python -m unittest discover -s scripts -p "test_*.py"`, and `node scripts/build_public.cjs`. Optional thumbnail authoring uses `node scripts/build_thumbnails.cjs` with Sharp installed or `SHARP_MODULE` set to its module path. Original artwork is preserved.
+
+See `AUDIT_REMEDIATION_2026-11-06.md` for verified fixes, disagreements and remaining hosting actions.

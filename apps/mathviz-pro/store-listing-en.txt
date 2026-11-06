@@ -1,0 +1,19 @@
+MathViz Pro
+
+Short description
+Explore graphs, animated parameters, tables and mathematical ideas offline.
+
+Full description
+MathViz Pro is an offline Android graphing calculator. Plot explicit functions, implicit equations, inequalities, polar curves and point tables. Pan, zoom and inspect approximate coordinates. Equal axis scaling keeps circles round when the graph area changes.
+
+Explore parameter sliders and animations, import two-column CSV/TSV data and save graphs locally with thumbnails. Export PNG, PDF, LaTeX, vector SVG and animated GIF files to a location you choose.
+
+Math tools provides step-by-step derivatives for supported functions and linear or quadratic least-squares fits for tables. Classroom mode enlarges the graph, while Practice includes 10 local questions with explanations. English, Romanian and Spanish are included.
+
+All graphing tools are free. The development editions show test advertisements and include a planned one-time Remove Ads purchase. Commercial purchase products and production signing are not configured. No subscription, account or cloud synchronization is required or included. The app is in testing; there is no public store release or APK download on this page.
+
+Publisher: Praxis Science Lab
+Support: contact@praxissciencelab.app
+Website: https://praxissciencelab.app/apps/mathviz-pro/
+Privacy: https://praxissciencelab.app/apps/mathviz-pro/privacy/
+Suggested category: Education

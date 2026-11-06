@@ -1322,5 +1322,158 @@
         "sha256": "F97DED1F88AF8DDA70596B46E6A0E595532F410F0BEF3A49629F637C762E83E8"
       }
     ]
+  },
+  {
+    "slug": "flowistry",
+    "name": "Flowistry",
+    "title": "Flowistry",
+    "repo": "FLOWISTRY-GATA",
+    "package": "app.praxis.flowistry",
+    "version": "0.1.0 (1)",
+    "policy_date": "2026-10-16",
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Puzzle",
+    "short": "Sort colors, plan each pour and explore a calm offline puzzle game.",
+    "publishing_assets": false,
+    "description": "Flowistry is an Android color-sorting puzzle in development. Pour matching colors between tubes and plan your moves. The development project includes a 240-level campaign, daily and weekly puzzles, Zen play and a puzzle editor. Mechanics, accessibility and store integrations are undergoing verification.\n\nCore puzzles work offline without a developer account. Android 8.0 or later is required. Google Play and Huawei AppGallery releases are being prepared; no public app download or store release is available from this page.",
+    "data": "Puzzle progress, attempts, preferences and editor drafts are stored on the device. No developer account or separate analytics service is required.",
+    "permissions": "Network access supports optional store services; vibration supports feedback. Store-specific SDKs have their own privacy practices.",
+    "retention": "Clear app storage to remove local progress and preferences. Earlier test builds may be included in Android system backup; privacy information explains version differences.",
+    "safety": "A recreational puzzle game.",
+    "ads_notice": "Commercial advertising and purchases are not activated. Store integrations are under development.",
+    "data_safety_note": "Review the exact signed artifact before submitting store declarations.",
+    "checks": [
+      "Verify save/resume and all puzzle mechanics.",
+      "Verify store-specific consent, purchase and restoration flows.",
+      "Test accessibility and representative Android/Huawei devices."
+    ]
+  },
+  {
+    "slug": "auralis",
+    "name": "AURALIS",
+    "title": "AURALIS - Pure Tones & Focus",
+    "repo": "AURALIS",
+    "version": "0.1.0",
+    "package": "com.praxissciencelab.auralis",
+    "category": "Health & Fitness",
+    "status": "In testing",
+    "policy_date": "2026-10-18",
+    "short": "Offline pure tones, binaural sound sessions and a four-layer mixer.",
+    "separate_generator": "AURALIS/auralis_project/tool/sync_public_site.py",
+    "description": "AURALIS brings pure tones and binaural sound sessions together in an offline listening app.\n\nChoose from 16 catalog sounds or adjust a pure tone from 20 to 20,000 Hz in 0.1 Hz steps. Binaural mode sends different tones to the left and right channels, using a 1–40 Hz difference and a 100–200 Hz carrier. Use stereo headphones for binaural listening; actual speaker and headphone output depends on your device.\n\nBuild a mix with up to four layers, adjust each volume, mute or remove layers, and save a named preset. Keep favorite sounds, rename or delete presets, and revisit your local session history.\n\nSet sessions from 1 to 120 minutes, choose fade-in and fade-out, pause or stop playback, and continue listening with the screen locked. The app reminds you to take a break when a session ends. A volume limit is enabled by default; higher app volume requires confirmation. This limit does not measure sound pressure at your ears.\n\nUse English, Romanian or Spanish, with Dark and Light themes. Preferences, favorites, saved mixes and history stay on your device. This version has no advertising, purchases, account or app backend.\n\nThis app offers sounds for relaxation, focus and general well-being. It is not a medical device and does not provide diagnosis, treatment or prevention. Effects may vary from person to person. Do not use at high volume for long periods. If you have hearing conditions, consult a specialist.",
+    "language": "English, Romanian and Spanish; Dark and Light themes.",
+    "data": "AURALIS generates sound locally. Language, appearance, listening preferences, onboarding choices, favorites, saved mixes and session history are stored in the app's local database. We do not receive these records. The app has no user account, advertising, purchases, analytics or application backend.",
+    "permissions": "The operating system handles sound output, playback title/state, media controls and audio interruptions. Background playback uses Android's foreground media service and notification or iOS background audio. The app does not record your microphone or request location or phone-state access. The bundled prototype viewer blocks external resources. The Android release does not request Internet access.",
+    "retention": "Local records remain until you remove them, clear app storage or delete the app. On iOS, offloading an app can retain its data; use Delete App to remove it. Android app backup is disabled in this version. System backups on other platforms may retain or restore data under your device settings; manage those backups separately. We cannot remotely inspect or erase a database stored only on your device.",
+    "safety": "This app offers sounds for relaxation, focus and general well-being. It is not a medical device and does not provide diagnosis, treatment or prevention. Effects may vary from person to person. Do not use at high volume for long periods. If you have hearing conditions, consult a specialist.",
+    "checks": [
+      "Launch offline, choose EN/RO/ES, change the theme and restart.",
+      "Try pure tone adjustment, binaural listening with stereo headphones, favorites and mixes of up to four layers.",
+      "Save, rename and delete a preset; pause, resume, stop and check local history.",
+      "Check screen-lock playback, media controls, a phone interruption, headphone unplug and the timer on your own device.",
+      "Use a comfortable low volume and take breaks. The app limit does not measure acoustic sound pressure."
+    ],
+    "gaps": [
+      "Production signing is not configured; the owner chose to prepare a dedicated AURALIS key later.",
+      "Physical Google/Huawei headphone, latency, long-session and power-management checks remain required.",
+      "Complete Play Console account, Data safety, foreground-media, health-content, audience/rating and test-track review against the final signed release.",
+      "iOS sources are configured, but Xcode compilation, signing and physical iPhone verification have not run."
+    ],
+    "evidence": [
+      "pubspec.lock",
+      "lib/core/audio/",
+      "lib/data/db.dart",
+      "data/privacy/",
+      "qa/ANDROID_EMULATOR_REPORT.md"
+    ],
+    "screenshots": [
+      {
+        "file": "screenshot-01-home.png",
+        "alt": "AURALIS home screen in English",
+        "caption": "Home",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-02-generator.png",
+        "alt": "AURALIS generator screen in English",
+        "caption": "Generator",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-03-mixer.png",
+        "alt": "AURALIS mixer screen in English",
+        "caption": "Mixer",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-04-favorites.png",
+        "alt": "AURALIS favorites screen in English",
+        "caption": "Favorites",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "file": "screenshot-05-settings.png",
+        "alt": "AURALIS settings screen in English",
+        "caption": "Settings",
+        "width": 1080,
+        "height": 1920
+      }
+    ],
+    "screenshots_version": "0.1.0",
+    "data_safety_note": "Candidate: local app records are not transmitted to Praxis Science Lab. No advertising, analytics or backend is active. Review the exact signed artifact and voluntary support correspondence before submitting final declarations.",
+    "health_notice": "Relaxation/focus and general well-being sound app. Review the applicable health-content declaration accurately; no diagnosis, treatment, Health Connect or clinical claims."
+  },
+  {
+    "slug": "questmind",
+    "name": "QuestMind",
+    "title": "QuestMind",
+    "repo": "QUESTMIND/QuestMind",
+    "package": "com.praxissciencelab.questmind",
+    "version": "2.2.1+6",
+    "policy_date": "2026-10-20",
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Puzzle",
+    "publishing_assets": false,
+    "separate_generator": "python D:/ProiecteAI/QUESTMIND/QuestMind/tool/sync_public_site.py --site-root D:/ProiecteAI/praxis-science-lab",
+    "short": "Explore 100 offline levels with seven brain-teasing puzzle mechanics.",
+    "description": "QuestMind is an offline Android puzzle adventure for ages 13+. Explore 100 levels in five regions with quiz, math, logic, memory, observation, matching-letter connections and untangling challenges. English, Romanian and Spanish, a searchable offline guide, local progress, achievements and a coin shop are included. Android 7.0 or later. Google Play and Huawei AppGallery editions are in development; there is no public store release on this page."
+  },
+  {
+    "slug": "mathviz-pro",
+    "name": "MathViz Pro",
+    "title": "MathViz Pro",
+    "repo": "MATHVIZ PRO/mathviz_pro",
+    "package": "com.mathviz.mathviz_pro",
+    "version": "1.0.0+1",
+    "policy_date": "2026-10-20",
+    "language": "English, Romanian and Spanish",
+    "status": "In testing",
+    "category": "Education",
+    "publishing_assets": false,
+    "short": "Explore graphs, animated parameters, tables and mathematical ideas offline.",
+    "description": "MathViz Pro is an offline Android graphing calculator. Plot explicit functions, implicit equations, inequalities, polar curves and point tables. Pan, zoom and inspect approximate coordinates. Equal axis scaling keeps circles round when the graph area changes.\n\nExplore parameter sliders and animations, import two-column CSV/TSV data and save graphs locally with thumbnails. Export PNG, PDF, LaTeX, vector SVG and animated GIF files to a location you choose.\n\nMath tools provides step-by-step derivatives for supported functions and linear or quadratic least-squares fits for tables. Classroom mode enlarges the graph, while Practice includes 10 local questions with explanations. English, Romanian and Spanish are included.\n\nAll graphing tools are free. The development editions show test advertisements and include a planned one-time Remove Ads purchase. Commercial purchase products and production signing are not configured. No subscription, account or cloud synchronization is required or included. The app is in testing; there is no public store release or APK download on this page.",
+    "safety": "Graphs, coordinates and fits are numerical approximations. Sampling can miss small features or discontinuities. Symbolic derivatives support a limited subset and must be used on the original differentiable domain. This is an educational tool, not a universal symbolic algebra system.",
+    "data": "Graphs, expressions, table values, parameters, thumbnails, language preferences and the viewed region are stored on the device. Mathematical calculations run locally. There is no MathViz account, remote graph database or cloud synchronization. Exported files are written only to the destination selected in the Android document picker.",
+    "permissions": "The Google edition integrates Google Mobile Ads/UMP and Play Billing. The Huawei edition integrates Huawei Ads/Consent and IAP separately. Advertising services can process device identifiers, network information, interactions and diagnostics under their own policies, including during test advertising. Google or Huawei handles store payments; the developer does not receive payment-card details. Verified purchase evidence is kept privately for offline ad removal. No microphone, camera or location access is needed for graphing. File import/export uses the Android document picker. Opening screen-mirroring settings is optional; screen transmission, if enabled by the user, is managed by Android and the selected receiver.",
+    "retention": "Saved graphs and preferences remain until removed or app storage is cleared. Uninstalling removes private local app data; separately exported files remain in their chosen locations. Advertising and store providers control their own records. Support correspondence is retained only as needed for the request and applicable obligations.",
+    "ads_notice": "Development builds use test advertisements. All graphing tools are free; one-time Remove Ads is planned, with no subscription. Commercial purchasing is not configured.",
+    "data_safety_note": "The app has no developer-operated graph backend. Advertising and billing SDK behavior must still be declared for the exact Google/Huawei release. Test ads do not imply that no provider connection or device information is processed. Store declarations are pending.",
+    "checks": [
+      "Plot y=x^2, sin(x) and x^2+y^2=4 in portrait and landscape, with equal axis units.",
+      "Check pan, zoom, sliders, local save/reopen, CSV validation and file exports.",
+      "Check supported derivative steps, table fits, Classroom and local Practice.",
+      "Check offline use, translations, advertising placement and purchase restoration with configured store test products."
+    ],
+    "gaps": [
+      "Production signing and store-specific purchase/consent configuration.",
+      "Independent Huawei testing on a real device without Google Mobile Services.",
+      "Final audience, privacy, Data safety and store review for the exact submitted builds."
+    ]
   }
 ]
