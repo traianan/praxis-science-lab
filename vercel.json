@@ -71,6 +71,24 @@
           "value": "public, max-age=3600, must-revalidate"
         }
       ]
+    },
+    {
+      "source": "/publishing/",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
+    },
+    {
+      "source": "/apps/:app/publishing/",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
     }
   ],
   "buildCommand": "node scripts/build_public.cjs",
