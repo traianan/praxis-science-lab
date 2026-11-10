@@ -24,7 +24,7 @@ if (fs.existsSync(path.dirname(output)) && fs.lstatSync(path.dirname(output)).is
 fs.rmSync(output, {recursive: true, force: true});
 fs.mkdirSync(output, {recursive: true});
 for (const name of roots) copy(path.join(root, name), path.join(output, name));
-for (const name of ['index.html', '404.html', 'robots.txt', 'sitemap.xml', '.nojekyll']) {
+for (const name of ['index.html', '404.html', 'robots.txt', 'sitemap.xml', 'app-ads.txt', '.nojekyll']) {
   fs.copyFileSync(path.join(root, name), path.join(output, name));
 }
 console.log('Public build created in build/public (private projects and source files excluded).');
