@@ -68,7 +68,7 @@ class SiteTests(unittest.TestCase):
             (root/'scripts/build_public.cjs').write_bytes((ROOT/'scripts/build_public.cjs').read_bytes())
             for name in ['assets', 'apps', 'privacy', 'publishing', 'contact', 'legal', 'terms', 'projects', 'pfa-studio']:
                 (root/name).mkdir()
-            for name in ['index.html', '404.html', 'robots.txt', 'sitemap.xml', '.nojekyll']:
+            for name in ['index.html', '404.html', 'robots.txt', 'sitemap.xml', 'app-ads.txt', '.nojekyll']:
                 (root/name).write_text('public')
             for name in ['pfa-studio/.env.local', 'apps/private.db', 'apps/.env', 'scripts/private.json']:
                 (root/name).write_text('PRIVATE_FIXTURE')
